@@ -14,12 +14,12 @@ $(document).ready(function() {
 		var login    = $("form.login-form input#username").val();
 		var password = $("form.login-form input#password").val();
 		var value    = '{"login":"'+login+'", "password":"'+password+'"}';
-		var data = {"data":value}
+		var data = {"data":value};
 		
-		var proxy = "external-server/php/ApiProxy.php?rest=";
+		//var proxy = "external-server/php/ApiProxy.php?rest=";
 		//var url   = proxy+"http://lucweb.tempsite.ws/saga/json.php"; 
 		//var url   = proxy+"http://lucweb.tempsite.ws/oficina/cadastra.php"; 
-		var url = proxy+"http://10.100.10.161:8080/saga-web/rest/authenticate/login"
+		//var url = proxy+"http://10.100.10.161:8080/saga-web/rest/authenticate/login"
 
 		authenticateLogin(url, data);
 	});

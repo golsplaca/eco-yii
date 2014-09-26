@@ -70,7 +70,6 @@ function useCss(tag, url, use){
 	useJs('head', 'control/js/view/error.js');
 
 	//Controllers
-	useJs('head', 'control/js/controller/page/requests.js');
 	useJs('head', 'control/js/controller/cookies/cookies.js');
 	useJs('head', 'control/js/controller/ng-view.js');
 	useJs('head', 'control/js/controller/scope/controller.js');

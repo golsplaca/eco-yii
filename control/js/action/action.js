@@ -1,6 +1,5 @@
 function actionCtrl($scope){
 
-/*
 	$scope.btnSearch = "Adicionar";
 
 	$scope.remove = function(index, scopeName, action){
@@ -34,7 +33,7 @@ function actionCtrl($scope){
 		$scope.btnSearch = "Adicionar";	
 	}
 
-	$scope.insert = function(url, location, scope){
+	$scope.insertDT= function(url, location, scope){
 		if($scope.btnSearch != 'Adicionar'){
 			$scope.saveUpdateDt(scope);
 		}else{
@@ -55,6 +54,5 @@ function actionCtrl($scope){
 	    }
 	}
 	//breadcrumb
-	breadcrumb($scope);
-	*/
+	//breadcrumb($scope);
 }

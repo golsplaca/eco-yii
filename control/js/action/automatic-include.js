@@ -15,8 +15,8 @@ function automaticInclude($scope){
 			var n 		= strUrl.indexOf("/");
 			var qt 		= strUrl.indexOf(".");
 			var paste 	= strUrl.substring(0, n);
-			var fileCss	= "view/modulo/"+paste+"/css/"+strUrl.substring(n + 1, qt)+".css";
-			var fileJs	= "view/modulo/"+paste+"/js/"+strUrl.substring(n + 1, qt)+".js";
+			var fileCss	= "view/modulos/"+paste+"/css/"+strUrl.substring(n + 1, qt)+".css";
+			var fileJs	= "view/modulos/"+paste+"/js/"+strUrl.substring(n + 1, qt)+".js";
 
 			if(velidateFile(fileCss)){
 				useCss('.contentNgView', fileCss);

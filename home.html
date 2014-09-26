@@ -5,7 +5,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<title>Saga...</title>
+		<title>yii...</title>
 		<link rel="shortcut icon" href="public/images/SAGA-30px.png">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 
@@ -15,97 +15,9 @@
 
 </head>
 
-<body ng-controller='pageController' style="background:rgba(249, 249, 249, 0.35);" class="theme-default main-menu-animated animate-mm-sm animate-mm-md animate-mm-lg" style="">
+	<body ng-controller='pageController' style="background:rgba(249, 249, 249, 0.35);" class="theme-default main-menu-animated animate-mm-sm animate-	-md animate-mm-lg" style="">
+		<div class="contentNgView" ng-view></div>		
 
-	<script>var init = [];</script>
-	<div id="main-wrapper" >
+	</body>
 
-		<div id="main-navbar" class="navbar navbar-inverse" role="navigation">
-			<button type="button" id="main-menu-toggle"  style="background:#d9534f; color:#fff;">
-				<i class="glyphicon glyphicon-list"></i></button>
-			
-			<div class="navbar-inner" >
-				<!-- Main navbar header -->
-				<div class="navbar-header">
-
-					<!-- Logo -->
-					<a href="" class="navbar-brand">
-						<img alt="" style="max-height:35px;" src="public/images/rw.png">
-					</a>
-
-					<!-- Main navbar toggle -->
-					<button type="button" style="margin-top:15px;" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar-collapse"><i class="glyphicon glyphicon-user"></i></button>
-
-				</div> <!-- / .navbar-header -->
-
-				<div id="main-navbar-collapse" class="collapse navbar-collapse main-navbar-collapse" style="height: 0px;">
-					<div>
-						<div class="right clearfix" >
-							<ul class="nav navbar-nav pull-right right-navbar-nav">
-							</ul> <!-- / .navbar-nav -->
-						</div> <!-- / .right -->
-					</div>
-				</div> <!-- / #main-navbar-collapse -->
-			</div> <!-- / .navbar-inner -->
-		</div> <!-- / #main-navbar -->
-	<!-- /2. $END_MAIN_NAVIGATION -->
-
-
-	<!-- 4. $MAIN_MENU =================================================================================
-			Main menu		
-			Notes:
-			* to make the menu item active, add a class 'active' to the <li>
-			  example: <li class="active">...</li>
-			* multilevel submenu example:
-				<li class="mm-dropdown">
-				  <a href="#"><span class="mm-text">Submenu item text 1</span></a>
-				  <ul>
-					<li>...</li>
-					<li class="mm-dropdown">
-					  <a href="#"><span class="mm-text">Submenu item text 2</span></a>
-					  <ul>
-						<li>...</li>
-						...
-					  </ul>
-					</li>
-					...
-				  </ul>
-				</li>
-	-->
-		<div id="main-menu" role="navigation" >
-			<div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto;  height: 100%;">
-				<!--mountar menu dinâmico-->
-				<div id="main-menu-inner" style="overflow: hidden; width: auto; height: 100%;">	</div>
-				<div class="slimScrollBar" style="background-color: rgb(0, 0, 0); width: 7px; position: absolute; top: 0px; opacity: 0.4; display: none; border-top-left-radius: 7px; border-top-right-radius: 7px; border-bottom-right-radius: 7px; border-bottom-left-radius: 7px; z-index: 99; right: 1px; height: 139px; background-position: initial initial; background-repeat: initial initial;"></div>
-				<div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-top-left-radius: 7px; border-top-right-radius: 7px; border-bottom-right-radius: 7px; border-bottom-left-radius: 7px; background-color: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px; background-position: initial initial; background-repeat: initial initial;"></div>
-
-			</div> <!-- / #main-menu-inner -->
-		</div> <!-- / #main-menu -->
-	<!-- /4. $MAIN_MENU -->
-
-		<!-- / #content-wrapper #485B7F #054F77 #3B5998 #ee5f5b-->
-		<div id="main-menu-bg" style="background:#333; box-shadow: 0px 0px 10px #666;" >	</div>
-
-		<!-- / #content-body-->
-		<div  id="content-wrapper">
-			<ul class="breadcrumb breadcrumb-page">
-				<li><a href="">SAGA</a></li> 
-				<li><a href="#{{i.url}}" ng-repeat="i in breadcrumb">{{i.name}}</a></li> 
-			</ul>
-			<!--<div class="page-header"></div>-->
-			<!-- Div que recebe todas as telas do sistema ============================================-->
-			<!-- Button trigger modal -->
-
-			<div class="contentNgView" ng-view></div>		
-
-		</div>
-	</div> <!-- / #main-wrapper -->
-
-	<script type="text/javascript">
-		init.push(function () {
-			// Javascript code here
-		})
-		window.PixelAdmin.start(init);
-	</script>
-</body>
 </html>

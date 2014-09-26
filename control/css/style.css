@@ -39,94 +39,89 @@
   text-align: center;
 }
 
-.icon-menu-vertical{
-  float: left;
-  width: 30px;
-  height: 30px;
-  padding: 0px;
-  margin-right: 10px;
+/*!
+ * Start Bootstrap - Heroic Features HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+body {
+    background: #fff;
+     text-shadow: 0 1px 3px rgba(0,0,0,.5); 
 }
-.col-sm-3 ul li a{
-  min-height: 45px;
+a:hover{
+  background: #999;
+}
+.hero-spacer {
+    margin-top: 50px;
+    background: #333;
 }
 
-.navbar-brand > .glyphicon{
-  cursor: pointer;
+.hero-feature {
+    margin-bottom: 0px;
 }
 
-.col-sm-3-config{
-  max-width: 80px;
+footer {
+    margin: 50px 0;
 }
 
-.mmc #main-menu ul.navigation>.mm-dropdown>a:before {
-  display: none;
-}
-#main-menu .mm-dropdown>a:before {
-  display: none;
+.thumbnail{
+  padding: 0px; 
 }
 
-#main-navbar .dropdown>a:after {
-  display: none;
-}
-
-#main-menu ul.navigation>li>a>.mm-text{
-  color:#eee ;
-}
-
-#main-menu ul.navigation>li>a>.mm-text:hover{
-  color:#fff;
-}
-
-.panel-default > .color-default{
+.thumbnail .caption {
+  padding: 0 10px;
   color: #333;
 }
 
-.color-default{
-/*background-image: linear-gradient(to bottom,#d9534f 0,#ee5f5b 100%);*/
-  background: #D6D6D6;
-  color:#333;
-}
-.table > thead > tr > th {
-  font-weight: bold;
-}
-.table{
-  margin-bottom: 0px;
-}
-.contentNgView{
-  min-height: 500px;
+/*config - menu */
+
+.navbar-inverse {
+border-color: #999;
 }
 
-.panel-body{
-  margin: 0px;
-  padding: 0px;
+.navbar{
+  margin-bottom: 0;
 }
 
-
-/**----------------------------------------------------**/
-#main-menu .navigation > li {
-  border-bottom:1px solid #999;
+.config_logo{
+  width: 100%;
+  text-align: center;
+}
+img.logo{
+  height: 80px;
 }
 
-
-
-
-/*config input  ------------- - -- -------------------------*/
-.form-control, .btn, .panel{
-  border-radius: 1px;
+.top-busca{
+  background: #fff;
+  padding: 10px 0 0 0;
+}
+.box-shandow{
 }
 
-.panel{
-
+/*pagina produto*/
+.breve_descricao_produto{
+  min-height: 200px;
+  background: #fff;
+  padding: 0;
+  text-align: left;
+  padding: 10px;
+}
+.descricao_produto{
+  min-height: 200px;
+  background: #fff;
+  padding: 0;
+  text-align: left;
+  padding: 10px;
+  margin-top: 20px;
 }
 
-
-.theme-default .dropdown-menu>li.active>a, .theme-default .dropdown-menu>li>a:hover, .theme-default .nav-pills>li.active>a, .theme-default .nav-pills>li.active>a:focus, .theme-default .nav-pills>li.active>a:hover {
-background: #d9534f;
+/*login */
+.div-login{
+  background: #fff;
+  padding: 20px 5px 20px 5px;
 }
 
-.theme-default .btn-right, .theme-default .btn-right:focus {
-  float: right;
-}
 /*gerenciamento usuario*/
 .seta-cima {
   transition: all 0.6s ease-out 0s;
@@ -144,13 +139,6 @@ background: #d9534f;
   margin:-25px 0 0 0px;
 }
 
-.user-manage{
-  border-top:1px solid #ddd;
-  background: #eee;
-  min-height: 200px; 
-  padding-top: 15px; 
-  padding-bottom: 30px; 
-}
 
 /* modal -------------------------------------------------- */
 .modal-dialog {
