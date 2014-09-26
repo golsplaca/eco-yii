@@ -1,0 +1,159 @@
+/*-------content----------------*/
+#loading-bar .bar{
+  background: #d9534f;
+}
+#loading-bar-spinner{
+  margin-left: 50%;
+  margin-top: 150px;
+}
+#loading-bar-spinner .spinner-icon {
+  border-top-color: #333;
+  border-left-color: #d9534f;
+  border-bottom-color: #d9534f;
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+}
+.contentLoadding{
+  margin-left:calc(50% - 40px);
+  margin-top: 100px;
+  color:#333;
+  font-weight: bold;
+  font-size: 11px;
+}
+
+.row {
+    margin-right: -0;
+}
+.dropdown{
+  cursor: pointer;
+}
+.alert{
+  margin: 0px;
+  border-radius: 0px;
+  position: absolute;
+  z-index: 100000;
+  width: 100%;
+  font-size: 14px;
+  height: 45px;
+  text-align: center;
+}
+
+.icon-menu-vertical{
+  float: left;
+  width: 30px;
+  height: 30px;
+  padding: 0px;
+  margin-right: 10px;
+}
+.col-sm-3 ul li a{
+  min-height: 45px;
+}
+
+.navbar-brand > .glyphicon{
+  cursor: pointer;
+}
+
+.col-sm-3-config{
+  max-width: 80px;
+}
+
+.mmc #main-menu ul.navigation>.mm-dropdown>a:before {
+  display: none;
+}
+#main-menu .mm-dropdown>a:before {
+  display: none;
+}
+
+#main-navbar .dropdown>a:after {
+  display: none;
+}
+
+#main-menu ul.navigation>li>a>.mm-text{
+  color:#eee ;
+}
+
+#main-menu ul.navigation>li>a>.mm-text:hover{
+  color:#fff;
+}
+
+.panel-default > .color-default{
+  color: #333;
+}
+
+.color-default{
+/*background-image: linear-gradient(to bottom,#d9534f 0,#ee5f5b 100%);*/
+  background: #D6D6D6;
+  color:#333;
+}
+.table > thead > tr > th {
+  font-weight: bold;
+}
+.table{
+  margin-bottom: 0px;
+}
+.contentNgView{
+  min-height: 500px;
+}
+
+.panel-body{
+  margin: 0px;
+  padding: 0px;
+}
+
+
+/**----------------------------------------------------**/
+#main-menu .navigation > li {
+  border-bottom:1px solid #999;
+}
+
+
+
+
+/*config input  ------------- - -- -------------------------*/
+.form-control, .btn, .panel{
+  border-radius: 1px;
+}
+
+.panel{
+
+}
+
+
+.theme-default .dropdown-menu>li.active>a, .theme-default .dropdown-menu>li>a:hover, .theme-default .nav-pills>li.active>a, .theme-default .nav-pills>li.active>a:focus, .theme-default .nav-pills>li.active>a:hover {
+background: #d9534f;
+}
+
+.theme-default .btn-right, .theme-default .btn-right:focus {
+  float: right;
+}
+/*gerenciamento usuario*/
+.seta-cima {
+  transition: all 0.6s ease-out 0s;
+  -webkit-transition: all 0.6s ease-out 0s;
+  -moz-transition: all 0.6s ease-out 0s;
+  -ms-transition: all 0.6s ease-out 0s;
+  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #ddd;
+  margin:-25px 0 0 0px;
+}
+
+.user-manage{
+  border-top:1px solid #ddd;
+  background: #eee;
+  min-height: 200px; 
+  padding-top: 15px; 
+  padding-bottom: 30px; 
+}
+
+/* modal -------------------------------------------------- */
+.modal-dialog {
+  width: 300px;
+  margin: 50px auto;
+}

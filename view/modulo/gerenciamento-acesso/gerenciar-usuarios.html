@@ -1,0 +1,86 @@
+<div class="panel panel-default">
+  <div class="panel-heading"><h3>Gerenciar Usuários:</h3></div>
+  <div class="panel-body">
+  
+	<div class="col-md-12" style=" padding:15px;">	
+	<div style="float:left; font-weight:bold; margin-top:15px;">
+		<span class="glyphicon glyphicon-user"></span> {{userManage}}</div>  	
+	  	<div class="input-group col-md-5 col-md-offset-7" style="max-width:400px;">
+	      <input type="text" ng-model="asyncSelected" typeahead="address for address in getLocation($viewValue)" typeahead-loading="loadingLocations" placeholder="Usuário" class="form-control">
+	      <span class="input-group-btn">
+	        <button ng-click="searchUserManage()" class="btn btn-default" type="button">
+	        	<span class="glyphicon glyphicon-cog"></span> Gerenciar
+	        </button>
+	      </span>
+	    </div>
+	</div>  
+
+
+<div ng-show="userTools" class="col-sm-12 user-manage">
+	<div class="seta-cima"></div>
+
+	<div class="col-md-12">
+		<div style="float:left; margin-top:15px;"><h4>Grupos de Usuários:</h4></div>  	
+	  	<div class="input-group col-md-5 col-md-offset-7" style="margin-top:15px;">
+	      	<select class="form-control">
+          		<option ng-repeat="i in scopeList['grups_user']" value="" >{{i.nome}}</option>
+        	</select>
+	    </div>
+	</div>  
+
+	<div class="col-md-12">	
+		<hr class="hrDivider"/>
+		<div style="margin:15px 0; float:left;">
+			<div class="col-md-6" style="padding-right:0px; padding-left:0px;">
+				<h4>Perfil de funções:</h4></div>
+			
+			<div class="col-md-6" style="padding-right:0px; padding-left:0px;">
+
+				<div class="input-group">
+				  <input type="text" ng-model="searchPerfil" placeholder="Filtrar perfis" class="form-control">
+				  <span class="input-group-addon">
+				  	<span class="glyphicon glyphicon-search"></span>
+				  </span>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="table-responsive panel" style="max-height:225px; overflow:auto;">  
+
+	      <table class="table table-bordered table-striped  table-hover">
+	        <colgroup>
+	          <col class="col-xs-11">
+	          <col class="col-xs-1">
+	        </colgroup>
+	        <thead>
+	          <tr>
+	            <th>Descrição de perfis</th>
+	            <th  style="text-align:center;">Selecionar</th>
+	          </tr>
+	        </thead>
+	          <tr ng-repeat="i in scopeList['grups_user'] | filter:searchPerfil" class="groupUser{{i.id}}"  >
+	           <td title="Atualizar funcionalidades deste perfil" class="activeTr" >{{i.grupo}}</td>
+	            <td style="text-align:center;">
+
+	              <input type="checkbox">
+
+	            </td>
+	          </tr> 
+	      </table>
+	    </div>  	
+  	    <button ng-click="saveUserChanges()" class="btn btn-right btn-default" type="button">
+	       	<span class="glyphicon glyphicon-ok"></span> Salvar
+	    </button>
+
+        <button ng-click="cancelUserChanges()" style="margin-right:15px;" class="btn btn-right btn-default" type="button">
+        	<span class="glyphicon glyphicon-remove"></span> Cancelar
+        </button> 	
+	</div>  
+
+	
+
+</div>
+
+</div>
+</div>

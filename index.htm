@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html class="gt-ie8 gt-ie9 not-ie pxajs">
+	
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Bem vindo ao SAGA - sistema academico</title>
+		<link rel="shortcut icon" href="public/images/SAGA-30px.png">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+		<script type="text/javascript"> window.jQuery || document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js">'+"<"+"/script>"); </script>
+		<script type="text/javascript" src="control/js/library/jquery.min.js"></script>
+        <script src="control/js/include-login.js"></script>
+	</head>
+
+<body class="theme-default main-menu-animated animate-mm-sm animate-mm-md animate-mm-lg">
+
+	<div id="main-wrapper">
+
+		<div id="main-navbar" class="navbar navbar-inverse" role="navigation">		
+			<div class="navbar-inner">
+				<!-- Main navbar header -->
+				<div class="navbar-header" style="padding-left: 0px!important;">
+					<!-- Logo -->
+					<a href="" class="navbar-brand">
+						<img alt="" style="max-height:35px;" src="public/images/rw.png">
+					</a>
+				</div> <!-- / .navbar-header -->
+				<div id="main-navbar-collapse" class="collapse navbar-collapse main-navbar-collapse" style="height: 0px;"></div> <!-- / #main-navbar-collapse -->
+			</div> <!-- / .navbar-inner -->
+		</div> <!-- / #main-navbar -->
+	<!-- /2. $END_MAIN_NAVIGATION -->
+
+	</div>
+
+	<div class="col-md-4 col-md-offset-4" style="margin-top:80px;">
+	    <div class="thumbnail" style="padding: 30px 30px 30px 30px;">
+			<h2> Seja bem-vindo! </h2>
+			<hr/>
+			<form method="post" style="text-align:center; margin-bottom:50px;" class="validate login-form" >
+			<!--saga-web/rwadapter/authenticate/login-->
+			  	<div class="form-group">
+				    <input type="text" class="form-control data required" minlength="5" name="username" id="username" placeholder="Usuário">
+			  	</div>
+				<div class="form-group">
+				    <input type="password" class="form-control" name="password" id="password" placeholder="Senha">
+				</div>
+			    <button class="btn btn-danger btn-login" style="width:100%;" data-loading-text="Loading..." >
+			    	Entrar
+			    </button> 
+
+				<div style="margin-top:10px; float:left;">
+					Esqueceu sua senha ?
+					<a href="#"> clique aqui </a>
+				</div>
+			</form>
+			<img src="public/images/saga.png">
+	    </div>
+	</div>
+
+	</body>
+</html>

@@ -1,0 +1,30 @@
+.validate label
+{
+    display: block;
+    padding:6px;
+    padding-left:0px;
+    margin-top:8px; 
+    color:#666;
+}
+.validate .invalid
+{
+    border:1px solid red;
+    -moz-box-shadow: 0 0 2px red;
+    -webkit-box-shadow: 0 0 2px red;
+    box-shadow: 0 0 2px red;    
+    background: url(../images/error.png) no-repeat right;
+
+}
+.validate .valid
+{
+    background: url(../images/success.png) no-repeat right;  
+}
+
+.validate div span, .validate p span, .validate strong span, .input-group > span
+{
+	border:0px solid red;
+    color:red;
+    font-size: 11px;    
+	display:block;
+    position: static;
+}

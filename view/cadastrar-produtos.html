@@ -1,0 +1,50 @@
+  
+<script src="inc_library/validates-forms/mount-form/mount-form.js"></script>
+
+<h2> Cadastro de produtos: </h2>
+<hr />
+<form id="cadastro-produtos" location="/listar-produtos" url="angular-js/arquivos-teste/cadastra.php" class="validate" >
+
+	<div class="col-sm-8">
+	  <div class="inputText"
+	     data-label="Nome"
+	     data-name="name"
+	     ng-model="user.name"
+	     data-class="required"
+	     data-span ="Nome do produto">
+	  </div>
+	  <div class="inputText"
+	     data-label="Fabricante"
+	     data-name="fabricante"
+	     ng-model="user.fabricante"
+	     data-class=""
+	     data-span ="text">
+	  </div>
+	  <div class="inputText"
+	     data-label="modelo"
+	     data-name="modelo"
+	     ng-model="user.modelo"
+	     data-class=""
+	     data-span ="text">
+	  </div>
+	  <div  class="inputText"
+	     data-label="Preço"
+	     data-name="preco"
+	     ng-model="user.preco"
+	     data-class=""
+	     data-span ="text">
+	  </div>
+<br /> 
+	<button type="reset" class="btn btn-danger" ng-click="reset()">RESET</button>
+    <button type="submit" class="btn btn-primary" ng-click="update(user)" >
+    	SAVE
+    </button>
+	<br />
+	<br /> 
+
+  <pre>form = {{user | json}}</pre>
+  <pre>master = {{master | json}}</pre>  
+  	</div>      
+</form>
+
+

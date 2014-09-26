@@ -1,0 +1,170 @@
+<div class="col-md-12 panel panel-default" style="padding:0px;">
+  <div class="panel-heading"><h3>Gerenciar perfil de funções</h3></div>
+
+  <div class="panel-body gerenciamento-grupos">
+
+
+ <div class="gerenciamento-search" ng-hide="associated_display">   
+<h4 ng-hide="functionality_display" >Perfis Cadastrados</h4>
+  <label class="display-none label{{btnSearch}}">Editar:</label>
+
+    <form id="" location="" url="" class="" >
+    
+        <div class="input-group col-sm-12" >
+          <input type="text" name="grupo" ng:model="searchPerfil" placeholder="Descrição"  class="maskInput required form-control" >
+          <span class="input-group-btn">
+        <button type="submit" ng-click="update('insert', 'grups_user')" class="btn btn-default btn-right padding-margin">{{btnSearch}}</button>
+          </span>
+        </div>
+
+    </form>
+
+  </div>
+
+    <div ng-hide="functionality_display || associated_display"  class="table-responsive panel" style="max-height:225px; margin:0 15px 15px 15px; overflow:auto;">  
+
+      <table class="table table-bordered table-striped  table-hover">
+        <colgroup>
+          <col class="col-xs-10">
+          <col class="col-xs-2">
+        </colgroup>
+        <thead>
+          <tr>
+            <th>Perfil</th>
+            <th  style="text-align:center;">Ações</th>
+          </tr>
+        </thead>
+          <tr ng-repeat="i in scopeList['grups_user'] | filter:searchPerfil" class="groupUser{{i.id}}"  >
+           <td title="Atualizar funcionalidades deste perfil" class="activeTr" >{{i.grupo}}</td>
+            <td style="text-align:center;">
+
+              <span class="glyphicon glyphicon-random" ng:click="getUsersAssociated(i.id, 'grups_user', i.grupo)" title="Associar usuários ao perfil {{i.grupo}}"></span> | 
+
+              <span ng:click="updateDt(i.id, i.grupo, 'grups_user')" title="Editar perfil {{i.grupo}}" class="glyphicon glyphicon-pencil"></span> | 
+
+              <span ng:click="cacheScope(i.id, 'grups_user', 'Excluir perfil ?')" title="Excluir perfil {{i.grupo}}" class="glyphicon glyphicon-remove"
+              data-toggle="modal" data-target=".bs-example-modal-sm"></span>
+
+            </td>
+          </tr> 
+      </table>
+    </div>
+
+
+<!-- Panel de funcionalidades do sistemas. ........................................................... -->
+<div ng-show="functionality_display" class="panelDragAndDrop">
+  
+  <span style="float:right; color:#d9534f; cursor:pointer;" 
+        ng-click="hideFunctionality()" 
+        class="glyphicon glyphicon-remove">
+  </span>
+  
+  <h4>Funcionlidades {{grupo_name}}</h4><hr />
+  
+    
+    <div class="input-group col-sm-12" style="margin-bottom:15px;">
+          <input type="text" name="grupo" ng:model="searchFunction" placeholder="digita algo para buscar"  class="form-control" >
+          <span class="input-group-btn">
+        <button class="btn btn-default btn-right padding-margin"><span class="glyphicon glyphicon-search"></span></button>
+          </span>
+    </div>
+
+
+ <div class="table-responsive panel" style="max-height:250px; margin-top:15px; overflow:auto;">  
+    <table class="table table-bordered table-striped  table-hover">
+      <colgroup>
+        <col class="col-xs-10">
+        <col class="col-xs-2">
+      </colgroup>
+      <thead>
+        <tr>
+          <th>Funcionalidades</th>
+        </tr>
+      </thead>   
+      <tbody>
+        <tr  ng-repeat="i in scopeList['functionality'] | filter:searchFunction">
+          <td style="color:#d9534f" >{{i.name}}
+            
+            <div class="operacoesPerfilFuncoes" >
+              <div style="float:left;" ng-repeat="x in i.operations" >
+                <input type="checkbox" value="{{x.id}}" /><span class="glyphicon {{x.icon}}"></span> {{x.name}} 
+              </div>
+            </div>
+
+          </td>
+        </tr>
+       <tbody> 
+    </table>  
+  </div>
+
+</div>
+
+
+<!-- associaçao de usuarios à um perfil .................................................-->
+<div ng-show="associated_display"  style="margin-top:15px;" class="panelDragAndDrop">
+<span style="float:right; color:#d9534f; cursor:pointer;" ng-click="hideAssociated()" class="glyphicon glyphicon-remove"></span>
+
+    <h4>Associar usuário ao perfil {{grupo_name}}</h4>
+    
+    <hr />
+
+    <div class="input-group col-md-12 seach-grid">
+        <input type="text"  ng-model="searchText" placeholder="Usuários" class="form-control">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button">
+            <span class="glyphicon glyphicon-search"></span>
+          </button>
+        </span>
+      </div>
+
+    <div class="row" id="list-grid-relations">
+      <div class="col-md-6" >
+        <div class="panel panel-default">
+          <div class="panel-heading color-default"> Usuários não associados </div>
+          <div class="panel-body" style="padding:0px;"> 
+                      <div class="loadding-drag-drop" style="position:absolute; z-index:50000; display:none; margin-left:calc(50% - 15px); margin-top:115px;">
+              <div id="loading-bar-drag-drop"><div class="spinner-icon"></div></div>
+            </div>
+              <ul id="grupos_usuarios"  class="list-group sortable ui-sortable" style="margin:0px;" >
+
+                <li class="list-group-item" ng-repeat="i in scopeList['grupos_usuarios'] | filter:searchText" value="{{i.id}}" index="{{$index}}" >{{i.name}}</li>  
+            </ul>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="panel panel-default">
+        <div class="panel-heading color-default"> Usuários associados </div>
+          <div class="panel-body" style="padding:0px;">
+            <div class="loadding-drag-drop" style="position:absolute; z-index:50000; display:none; margin-left:calc(50% - 15px); margin-top:115px;">
+              <div id="loading-bar-drag-drop"><div class="spinner-icon"></div></div>
+            </div>
+          <ul id="associacao_usuarios" class="list-group sortable ui-sortable" style="margin:0px;" list="associacao_usuarios">
+            
+              <li ng-repeat="i in scopeList['associacao_usuarios'] | filter:searchText" value="{{i.id}}" index="{{$index}}" class="list-group-item">{{i.name}}</li>
+          </ul>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+	</div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" ng-click="cancel()" aria-hidden="true">×</button>
+          <h4 class="modal-title" id="mySmallModalLabel">{{msgCofirm}}</h4>
+        </div>
+        <div class="modal-body">
+          <button class="btn btn-danger btn-right" data-dismiss="modal" ng-click="confirmRemover()">Sim</button>
+            <button class="btn btn-warnin btn-right" data-dismiss="modal">Não</button>
+        </div>
+    </div>
+  </div>
+</div>

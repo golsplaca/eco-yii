@@ -1,0 +1,14 @@
+@import url("style.css");
+
+.operacoesPerfilFuncoes{
+	margin-top: 10px;
+	padding-top: 10px;
+	border-top:1px solid #ddd; 
+	color: #333;
+}
+
+.operacoesPerfilFuncoes input{
+	margin: 5px 5px 0 20px;
+}
+
+
