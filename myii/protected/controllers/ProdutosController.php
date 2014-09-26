@@ -51,6 +51,14 @@ class ProdutosController extends Controller
 	 */
 	public function actionView($id)
 	{
+
+		if(isset($_GET['json'])){
+			foreach ($this->loadModel($id) as $key => $value) {
+						$dataValue[0][$key] = $value;
+			}
+			echo json_encode($dataValue);
+			return;
+		}
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
 		));
