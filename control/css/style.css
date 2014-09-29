@@ -44,12 +44,24 @@
  * Code licensed under the Apache License v2.0.
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
+ .navbar-nav > li > a {
+padding-top: 15px;
+padding-bottom: 15px;
+background: transparent;
+color: #555;
+}
+.navbar-nav > li > a:hover {
+padding-top: 15px;
+padding-bottom: 15px;
+background: transparent;
+color: #999;
+}
 
 body {
     background: #fff;
-     text-shadow: 0 1px 3px rgba(0,0,0,.5); 
+     text-shadow: 0 0px 1px rgba(0,0,0,.2); 
 }
-a:hover{
+.nav a:hover{
   background: #999;
 }
 .hero-spacer {

@@ -1,13 +1,16 @@
 function pageController($scope, $http, $timeout, cfpLoadingBar){
-	$(".contentNgView").hide();	
-	'use strict';
-	try{
-	  	automaticInclude($scope);
-	}catch(e){ console.log("Erro include: "+e); }
+	
+	$(document).ready(function(){
+			$(".contentNgView").hide();
+		setTimeout(function(){	
+			$(".contentNgView").fadeIn(1000);
+		}, 100);
+	});
 
-	$(".contentNgView").fadeIn(1000);
-	cfpLoadingBar.complete();
-    $scope.scopeList = {};
+
+		cfpLoadingBar.complete();
+		console.log($scope.scopeList);
+	    $scope.scopeList = {};
 
 	  $scope.currentPage = 1;
 	  $scope.executeScope = function(){
@@ -22,11 +25,21 @@ function pageController($scope, $http, $timeout, cfpLoadingBar){
 	  	}else{
 	  		cfpLoadingBar.complete();
 	  	}
-	  }
+	  };
 
 	//Recebe e seta dados de formularios
 	validateForms($scope);
 	//Controle de ações
 	actionCtrl($scope);
 
+	$scope.searchCategory = function(){
+		url = 'myii/index.php?r=ecoCategoria/index&json';
+		$scope.searchDb(url, null, null, 'category');
+	};
+
+	$scope.carregarBanner = function(){
+		url = 'myii/index.php?r=ecoBanner/index&json';
+		$scope.searchDb(url, null, null, 'banner');
+	};
+	cfpLoadingBar.complete();
 }

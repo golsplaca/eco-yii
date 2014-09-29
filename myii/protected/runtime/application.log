@@ -1511,3 +1511,706 @@ Stack trace:
 REQUEST_URI=/lucweb/eco-yii/myii/index.php?ajax=banner-grid&id=15&r=banner%2Fdelete
 HTTP_REFERER=http://localhost/lucweb/eco-yii/myii/index.php?r=banner/admin
 ---
+2014/09/26 21:44:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "creat".' in /var/www/html/lucweb/eco-yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CController.php(270): CController->missingAction('creat')
+#1 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): CController->run('creat')
+#2 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('produtos/creat')
+#3 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=produtos/creat
+---
+2014/09/26 21:55:21 [error] [exception.CException] exception 'CException' with message 'Alias "application.modules.banner.EcoBanner" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /var/www/html/lucweb/eco-yii/framework/YiiBase.php:322
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/gii/generators/crud/CrudCode.php(59): YiiBase::import('application.mod...', true)
+#1 /var/www/html/lucweb/eco-yii/framework/validators/CInlineValidator.php(42): CrudCode->validateModel('model', Array)
+#2 /var/www/html/lucweb/eco-yii/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(CrudCode), 'model')
+#3 /var/www/html/lucweb/eco-yii/framework/base/CModel.php(159): CValidator->validate(Object(CrudCode), NULL)
+#4 /var/www/html/lucweb/eco-yii/framework/gii/CCodeGenerator.php(159): CModel->validate()
+#5 /var/www/html/lucweb/eco-yii/framework/gii/CCodeGenerator.php(63): CCodeGenerator->prepare()
+#6 /var/www/html/lucweb/eco-yii/framework/web/actions/CInlineAction.php(49): CCodeGenerator->actionIndex()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /var/www/html/lucweb/eco-yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): CController->run('index')
+#11 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('gii/crud/index')
+#12 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#13 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=gii/crud/index
+HTTP_REFERER=http://localhost/lucweb/eco-yii/myii/index.php?r=gii/crud/index
+---
+2014/09/26 21:57:47 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ecommerce.banner' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `banner`.
+in /var/www/html/lucweb/eco-yii/myii/protected/views/banner/index.php (20)
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/BannerController.php (143)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2014/09/26 21:57:47 [error] [exception.CDbException] exception 'CDbException' with message 'The table "banner" for active record class "Banner" cannot be found in the database.' in /var/www/html/lucweb/eco-yii/framework/db/ar/CActiveRecord.php:2362
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Banner))
+#1 /var/www/html/lucweb/eco-yii/framework/db/ar/CActiveRecord.php(658): CActiveRecord->getMetaData()
+#2 /var/www/html/lucweb/eco-yii/framework/db/ar/CActiveRecord.php(1601): CActiveRecord->getTableSchema()
+#3 /var/www/html/lucweb/eco-yii/framework/web/CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#4 /var/www/html/lucweb/eco-yii/framework/web/CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#5 /var/www/html/lucweb/eco-yii/framework/web/CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CDataProvider.php(168): CActiveDataProvider->fetchData()
+#7 /var/www/html/lucweb/eco-yii/framework/zii/widgets/CBaseListView.php(111): CDataProvider->getData()
+#8 /var/www/html/lucweb/eco-yii/framework/zii/widgets/CListView.php(211): CBaseListView->init()
+#9 /var/www/html/lucweb/eco-yii/framework/web/CBaseController.php(147): CListView->init()
+#10 /var/www/html/lucweb/eco-yii/framework/web/CBaseController.php(172): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#11 /var/www/html/lucweb/eco-yii/myii/protected/views/banner/index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#12 /var/www/html/lucweb/eco-yii/framework/web/CBaseController.php(126): require('/var/www/html/l...')
+#13 /var/www/html/lucweb/eco-yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/l...', Array, true)
+#14 /var/www/html/lucweb/eco-yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/html/l...', Array, true)
+#15 /var/www/html/lucweb/eco-yii/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#16 /var/www/html/lucweb/eco-yii/myii/protected/controllers/BannerController.php(143): CController->render('index', Array)
+#17 /var/www/html/lucweb/eco-yii/framework/web/actions/CInlineAction.php(49): BannerController->actionIndex()
+#18 /var/www/html/lucweb/eco-yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#19 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#21 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#25 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): CController->run('')
+#27 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('banner')
+#28 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#29 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=banner
+---
+2014/09/26 21:58:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "modules/banner".' in /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('modules/banner')
+#1 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=modules/banner
+---
+2014/09/26 21:58:10 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ecommerce.banner' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `banner`.
+in /var/www/html/lucweb/eco-yii/myii/protected/views/banner/index.php (20)
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/BannerController.php (143)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2014/09/26 21:58:10 [error] [exception.CDbException] exception 'CDbException' with message 'The table "banner" for active record class "Banner" cannot be found in the database.' in /var/www/html/lucweb/eco-yii/framework/db/ar/CActiveRecord.php:2362
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Banner))
+#1 /var/www/html/lucweb/eco-yii/framework/db/ar/CActiveRecord.php(658): CActiveRecord->getMetaData()
+#2 /var/www/html/lucweb/eco-yii/framework/db/ar/CActiveRecord.php(1601): CActiveRecord->getTableSchema()
+#3 /var/www/html/lucweb/eco-yii/framework/web/CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#4 /var/www/html/lucweb/eco-yii/framework/web/CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#5 /var/www/html/lucweb/eco-yii/framework/web/CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CDataProvider.php(168): CActiveDataProvider->fetchData()
+#7 /var/www/html/lucweb/eco-yii/framework/zii/widgets/CBaseListView.php(111): CDataProvider->getData()
+#8 /var/www/html/lucweb/eco-yii/framework/zii/widgets/CListView.php(211): CBaseListView->init()
+#9 /var/www/html/lucweb/eco-yii/framework/web/CBaseController.php(147): CListView->init()
+#10 /var/www/html/lucweb/eco-yii/framework/web/CBaseController.php(172): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#11 /var/www/html/lucweb/eco-yii/myii/protected/views/banner/index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#12 /var/www/html/lucweb/eco-yii/framework/web/CBaseController.php(126): require('/var/www/html/l...')
+#13 /var/www/html/lucweb/eco-yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/l...', Array, true)
+#14 /var/www/html/lucweb/eco-yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/html/l...', Array, true)
+#15 /var/www/html/lucweb/eco-yii/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#16 /var/www/html/lucweb/eco-yii/myii/protected/controllers/BannerController.php(143): CController->render('index', Array)
+#17 /var/www/html/lucweb/eco-yii/framework/web/actions/CInlineAction.php(49): BannerController->actionIndex()
+#18 /var/www/html/lucweb/eco-yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#19 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#21 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#25 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): CController->run('')
+#27 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('banner')
+#28 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#29 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=banner
+---
+2014/09/26 21:58:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "modules/asdfbanner".' in /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('modules/asdfban...')
+#1 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=modules/asdfbanner
+---
+2014/09/26 21:59:49 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ecommerce.banner' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `banner`.
+in /var/www/html/lucweb/eco-yii/myii/protected/views/banner/index.php (20)
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/BannerController.php (143)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2014/09/26 21:59:49 [error] [exception.CDbException] exception 'CDbException' with message 'The table "banner" for active record class "Banner" cannot be found in the database.' in /var/www/html/lucweb/eco-yii/framework/db/ar/CActiveRecord.php:2362
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Banner))
+#1 /var/www/html/lucweb/eco-yii/framework/db/ar/CActiveRecord.php(658): CActiveRecord->getMetaData()
+#2 /var/www/html/lucweb/eco-yii/framework/db/ar/CActiveRecord.php(1601): CActiveRecord->getTableSchema()
+#3 /var/www/html/lucweb/eco-yii/framework/web/CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#4 /var/www/html/lucweb/eco-yii/framework/web/CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#5 /var/www/html/lucweb/eco-yii/framework/web/CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CDataProvider.php(168): CActiveDataProvider->fetchData()
+#7 /var/www/html/lucweb/eco-yii/framework/zii/widgets/CBaseListView.php(111): CDataProvider->getData()
+#8 /var/www/html/lucweb/eco-yii/framework/zii/widgets/CListView.php(211): CBaseListView->init()
+#9 /var/www/html/lucweb/eco-yii/framework/web/CBaseController.php(147): CListView->init()
+#10 /var/www/html/lucweb/eco-yii/framework/web/CBaseController.php(172): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#11 /var/www/html/lucweb/eco-yii/myii/protected/views/banner/index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#12 /var/www/html/lucweb/eco-yii/framework/web/CBaseController.php(126): require('/var/www/html/l...')
+#13 /var/www/html/lucweb/eco-yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/l...', Array, true)
+#14 /var/www/html/lucweb/eco-yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/html/l...', Array, true)
+#15 /var/www/html/lucweb/eco-yii/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#16 /var/www/html/lucweb/eco-yii/myii/protected/controllers/BannerController.php(143): CController->render('index', Array)
+#17 /var/www/html/lucweb/eco-yii/framework/web/actions/CInlineAction.php(49): BannerController->actionIndex()
+#18 /var/www/html/lucweb/eco-yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#19 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#21 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#25 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): CController->run('')
+#27 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('banner')
+#28 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#29 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=banner
+---
+2014/09/26 22:02:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "banner".' in /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('banner')
+#1 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=banner
+---
+2014/09/26 22:02:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "banner".' in /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('banner')
+#1 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=banner
+---
+2014/09/26 22:02:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "banner".' in /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('banner')
+#1 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=banner
+---
+2014/09/26 22:15:17 [error] [php] Undefined variable: locations (/var/www/html/lucweb/eco-yii/myii/protected/views/ecoBanner/_form.php:48)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CController.php(869): EcoBannerController->renderFile()
+#1 /var/www/html/lucweb/eco-yii/myii/protected/views/ecoBanner/create.php(18): EcoBannerController->renderPartial()
+#2 /var/www/html/lucweb/eco-yii/framework/web/CBaseController.php(126): require()
+#3 /var/www/html/lucweb/eco-yii/framework/web/CBaseController.php(95): EcoBannerController->renderInternal()
+#4 /var/www/html/lucweb/eco-yii/framework/web/CController.php(869): EcoBannerController->renderFile()
+#5 /var/www/html/lucweb/eco-yii/framework/web/CController.php(782): EcoBannerController->renderPartial()
+#6 /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoBannerController.php(85): EcoBannerController->render()
+#7 /var/www/html/lucweb/eco-yii/framework/web/actions/CInlineAction.php(49): EcoBannerController->actionCreate()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#9 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoBannerController->runAction()
+#10 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#11 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#12 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoBannerController->filterAccessControl()
+#13 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#14 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#15 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoBannerController->runActionWithFilters()
+#16 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoBannerController->run()
+#17 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#18 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#19 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoBanner/create
+in /var/www/html/lucweb/eco-yii/myii/protected/views/ecoBanner/_form.php (48)
+in /var/www/html/lucweb/eco-yii/myii/protected/views/ecoBanner/create.php (18)
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoBannerController.php (85)
+2014/09/26 22:15:26 [error] [exception.CException] exception 'CException' with message 'Property "EcoBanner.location" is not defined.' in /var/www/html/lucweb/eco-yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/db/ar/CActiveRecord.php(145): CComponent->__get('location')
+#1 /var/www/html/lucweb/eco-yii/framework/web/helpers/CHtml.php(2529): CActiveRecord->__get('location')
+#2 /var/www/html/lucweb/eco-yii/framework/web/helpers/CHtml.php(1802): CHtml::resolveValue(Object(EcoBanner), 'location')
+#3 /var/www/html/lucweb/eco-yii/framework/web/widgets/CActiveForm.php(847): CHtml::activeDropDownList(Object(EcoBanner), 'location', Array, Array)
+#4 /var/www/html/lucweb/eco-yii/myii/protected/views/ecoBanner/_form.php(48): CActiveForm->dropDownList(Object(EcoBanner), 'location', Array)
+#5 /var/www/html/lucweb/eco-yii/framework/web/CBaseController.php(126): require('/var/www/html/l...')
+#6 /var/www/html/lucweb/eco-yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/l...', Array, true)
+#7 /var/www/html/lucweb/eco-yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/html/l...', Array, true)
+#8 /var/www/html/lucweb/eco-yii/myii/protected/views/ecoBanner/create.php(18): CController->renderPartial('_form', Array)
+#9 /var/www/html/lucweb/eco-yii/framework/web/CBaseController.php(126): require('/var/www/html/l...')
+#10 /var/www/html/lucweb/eco-yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/l...', Array, true)
+#11 /var/www/html/lucweb/eco-yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/html/l...', Array, true)
+#12 /var/www/html/lucweb/eco-yii/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#13 /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoBannerController.php(85): CController->render('create', Array)
+#14 /var/www/html/lucweb/eco-yii/framework/web/actions/CInlineAction.php(49): EcoBannerController->actionCreate()
+#15 /var/www/html/lucweb/eco-yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#16 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#17 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#18 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#19 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#21 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#22 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): CController->run('create')
+#24 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ecoBanner/creat...')
+#25 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#26 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoBanner/create
+HTTP_REFERER=http://localhost/lucweb/eco-yii/myii/index.php?r=ecoBanner/index
+---
+2014/09/26 22:15:37 [error] [php] Missing argument 3 for CActiveForm::dropDownList(), called in /var/www/html/lucweb/eco-yii/myii/protected/views/ecoBanner/_form.php on line 48 and defined (/var/www/html/lucweb/eco-yii/framework/web/widgets/CActiveForm.php:845)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CBaseController.php(95): EcoBannerController->renderInternal()
+#1 /var/www/html/lucweb/eco-yii/framework/web/CController.php(869): EcoBannerController->renderFile()
+#2 /var/www/html/lucweb/eco-yii/myii/protected/views/ecoBanner/create.php(18): EcoBannerController->renderPartial()
+#3 /var/www/html/lucweb/eco-yii/framework/web/CBaseController.php(126): require()
+#4 /var/www/html/lucweb/eco-yii/framework/web/CBaseController.php(95): EcoBannerController->renderInternal()
+#5 /var/www/html/lucweb/eco-yii/framework/web/CController.php(869): EcoBannerController->renderFile()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(782): EcoBannerController->renderPartial()
+#7 /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoBannerController.php(85): EcoBannerController->render()
+#8 /var/www/html/lucweb/eco-yii/framework/web/actions/CInlineAction.php(49): EcoBannerController->actionCreate()
+#9 /var/www/html/lucweb/eco-yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#10 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoBannerController->runAction()
+#11 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#12 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#13 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoBannerController->filterAccessControl()
+#14 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#15 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#16 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoBannerController->runActionWithFilters()
+#17 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoBannerController->run()
+#18 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#19 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#20 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoBanner/create
+in /var/www/html/lucweb/eco-yii/myii/protected/views/ecoBanner/_form.php (48)
+in /var/www/html/lucweb/eco-yii/myii/protected/views/ecoBanner/create.php (18)
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoBannerController.php (85)
+2014/09/26 22:19:55 [error] [exception.CException] exception 'CException' with message 'Property "EcoBanner.img" is not defined.' in /var/www/html/lucweb/eco-yii/framework/base/CComponent.php:173
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/db/ar/CActiveRecord.php(161): CComponent->__set('img', '7274-')
+#1 /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoBannerController.php(76): CActiveRecord->__set('img', '7274-')
+#2 /var/www/html/lucweb/eco-yii/framework/web/actions/CInlineAction.php(49): EcoBannerController->actionCreate()
+#3 /var/www/html/lucweb/eco-yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#10 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): CController->run('create')
+#12 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ecoBanner/creat...')
+#13 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoBanner/create
+HTTP_REFERER=http://localhost/lucweb/eco-yii/myii/index.php?r=ecoBanner/create
+---
+2014/09/26 22:20:08 [error] [exception.CException] exception 'CException' with message 'Property "EcoBanner.img" is not defined.' in /var/www/html/lucweb/eco-yii/framework/base/CComponent.php:173
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/db/ar/CActiveRecord.php(161): CComponent->__set('img', '4254-')
+#1 /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoBannerController.php(76): CActiveRecord->__set('img', '4254-')
+#2 /var/www/html/lucweb/eco-yii/framework/web/actions/CInlineAction.php(49): EcoBannerController->actionCreate()
+#3 /var/www/html/lucweb/eco-yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#10 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): CController->run('create')
+#12 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ecoBanner/creat...')
+#13 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoBanner/create
+HTTP_REFERER=http://localhost/lucweb/eco-yii/myii/index.php?r=ecoBanner/create
+---
+2014/09/26 22:20:18 [error] [exception.CException] exception 'CException' with message 'Property "EcoBanner.img" is not defined.' in /var/www/html/lucweb/eco-yii/framework/base/CComponent.php:173
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/db/ar/CActiveRecord.php(161): CComponent->__set('img', '9028-')
+#1 /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoBannerController.php(76): CActiveRecord->__set('img', '9028-')
+#2 /var/www/html/lucweb/eco-yii/framework/web/actions/CInlineAction.php(49): EcoBannerController->actionCreate()
+#3 /var/www/html/lucweb/eco-yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#10 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): CController->run('create')
+#12 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ecoBanner/creat...')
+#13 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoBanner/create
+HTTP_REFERER=http://localhost/lucweb/eco-yii/myii/index.php?r=ecoBanner/create
+---
+2014/09/26 22:28:35 [error] [exception.CException] exception 'CException' with message 'Property "EcoBanner.img" is not defined.' in /var/www/html/lucweb/eco-yii/framework/base/CComponent.php:173
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/db/ar/CActiveRecord.php(161): CComponent->__set('img', '5715-')
+#1 /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoBannerController.php(76): CActiveRecord->__set('img', '5715-')
+#2 /var/www/html/lucweb/eco-yii/framework/web/actions/CInlineAction.php(49): EcoBannerController->actionCreate()
+#3 /var/www/html/lucweb/eco-yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#10 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): CController->run('create')
+#12 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ecoBanner/creat...')
+#13 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoBanner/create
+HTTP_REFERER=http://localhost/lucweb/eco-yii/myii/index.php?r=ecoBanner/create
+---
+2014/09/26 22:29:42 [error] [exception.CException] exception 'CException' with message 'Property "EcoBanner.img" is not defined.' in /var/www/html/lucweb/eco-yii/framework/base/CComponent.php:173
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/db/ar/CActiveRecord.php(161): CComponent->__set('img', '1128-')
+#1 /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoBannerController.php(76): CActiveRecord->__set('img', '1128-')
+#2 /var/www/html/lucweb/eco-yii/framework/web/actions/CInlineAction.php(49): EcoBannerController->actionCreate()
+#3 /var/www/html/lucweb/eco-yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#10 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): CController->run('create')
+#12 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ecoBanner/creat...')
+#13 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoBanner/create
+HTTP_REFERER=http://localhost/lucweb/eco-yii/myii/index.php?r=ecoBanner/create
+---
+2014/09/26 22:30:49 [error] [exception.CException] exception 'CException' with message 'Property "EcoBanner.img" is not defined.' in /var/www/html/lucweb/eco-yii/framework/base/CComponent.php:173
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/db/ar/CActiveRecord.php(161): CComponent->__set('img', '9779-')
+#1 /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoBannerController.php(76): CActiveRecord->__set('img', '9779-')
+#2 /var/www/html/lucweb/eco-yii/framework/web/actions/CInlineAction.php(49): EcoBannerController->actionCreate()
+#3 /var/www/html/lucweb/eco-yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#10 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): CController->run('create')
+#12 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ecoBanner/creat...')
+#13 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoBanner/create
+HTTP_REFERER=http://localhost/lucweb/eco-yii/myii/index.php?r=ecoBanner/create
+---
+2014/09/26 22:31:04 [error] [exception.CException] exception 'CException' with message 'Property "EcoBanner.img" is not defined.' in /var/www/html/lucweb/eco-yii/framework/base/CComponent.php:173
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/db/ar/CActiveRecord.php(161): CComponent->__set('img', '5045-1972422_62...')
+#1 /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoBannerController.php(76): CActiveRecord->__set('img', '5045-1972422_62...')
+#2 /var/www/html/lucweb/eco-yii/framework/web/actions/CInlineAction.php(49): EcoBannerController->actionCreate()
+#3 /var/www/html/lucweb/eco-yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#10 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): CController->run('create')
+#12 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ecoBanner/creat...')
+#13 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoBanner/create
+HTTP_REFERER=http://localhost/lucweb/eco-yii/myii/index.php?r=ecoBanner/create
+---
+2014/09/26 22:33:13 [error] [php] chmod(): No such file or directory (/var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoBannerController.php:79)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoBannerController->runAction()
+#2 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoBannerController->filterAccessControl()
+#5 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoBannerController->runActionWithFilters()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoBannerController->run()
+#9 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoBanner/create
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoBannerController.php (79)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2014/09/26 22:35:08 [error] [php] unlink(/var/www/html/lucweb/eco-yii/myii/protected/../../public/images/banner/asasdf): No such file or directory (/var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoBannerController.php:126)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#1 /var/www/html/lucweb/eco-yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#2 /var/www/html/lucweb/eco-yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoBannerController->runAction()
+#4 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1116): CFilterChain->run()
+#5 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoBannerController->filterPostOnly()
+#6 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#7 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#9 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoBannerController->filterAccessControl()
+#10 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#11 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#12 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoBannerController->runActionWithFilters()
+#13 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoBannerController->run()
+#14 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#15 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#16 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?ajax=eco-banner-grid&id=1&r=ecoBanner%2Fdelete
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoBannerController.php (126)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2014/09/26 22:36:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "banner".' in /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('banner')
+#1 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=banner
+---
+2014/09/26 23:03:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ecoategoria/admin".' in /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ecoategoria/adm...')
+#1 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoategoria/admin
+---
+2014/09/27 00:12:17 [error] [php] Invalid argument supplied for foreach() (/var/www/html/lucweb/eco-yii/framework/zii/widgets/CListView.php:325)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/zii/widgets/CBaseListView.php(150): preg_replace_callback()
+#1 /var/www/html/lucweb/eco-yii/framework/zii/widgets/CBaseListView.php(135): CListView->renderContent()
+#2 /var/www/html/lucweb/eco-yii/framework/web/CBaseController.php(173): CListView->run()
+#3 /var/www/html/lucweb/eco-yii/myii/protected/views/ecoCategoria/index.php(8): EcoCategoriaController->widget()
+#4 /var/www/html/lucweb/eco-yii/framework/web/CBaseController.php(126): require()
+#5 /var/www/html/lucweb/eco-yii/framework/web/CBaseController.php(95): EcoCategoriaController->renderInternal()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(869): EcoCategoriaController->renderFile()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CController.php(782): EcoCategoriaController->renderPartial()
+#8 /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoCategoriaController.php(135): EcoCategoriaController->render()
+#9 /var/www/html/lucweb/eco-yii/framework/web/actions/CInlineAction.php(49): EcoCategoriaController->actionIndex()
+#10 /var/www/html/lucweb/eco-yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#11 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoCategoriaController->runAction()
+#12 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#14 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoCategoriaController->filterAccessControl()
+#15 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#16 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#17 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoCategoriaController->runActionWithFilters()
+#18 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoCategoriaController->run()
+#19 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#20 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#21 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoCategoria/index&json
+in /var/www/html/lucweb/eco-yii/myii/protected/views/ecoCategoria/index.php (8)
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoCategoriaController.php (135)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2014/09/28 13:39:26 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /var/www/html/lucweb/eco-yii/framework/web/CController.php:336
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): CController->run('view')
+#9 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ecoCategoria/vi...')
+#10 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoCategoria/view
+---
+2014/09/28 13:44:07 [error] [php] Object of class CPagination could not be converted to string (/var/www/html/lucweb/eco-yii/framework/zii/widgets/CBaseListView.php:277)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/zii/widgets/CBaseListView.php(160): preg_replace_callback()
+#1 /var/www/html/lucweb/eco-yii/framework/zii/widgets/CBaseListView.php(145): CListView->renderContent()
+#2 /var/www/html/lucweb/eco-yii/framework/web/CBaseController.php(173): CListView->run()
+#3 /var/www/html/lucweb/eco-yii/myii/protected/views/ecoCategoria/index.php(26): EcoCategoriaController->widget()
+#4 /var/www/html/lucweb/eco-yii/framework/web/CBaseController.php(126): require()
+#5 /var/www/html/lucweb/eco-yii/framework/web/CBaseController.php(95): EcoCategoriaController->renderInternal()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(869): EcoCategoriaController->renderFile()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CController.php(782): EcoCategoriaController->renderPartial()
+#8 /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoCategoriaController.php(135): EcoCategoriaController->render()
+#9 /var/www/html/lucweb/eco-yii/framework/web/actions/CInlineAction.php(49): EcoCategoriaController->actionIndex()
+#10 /var/www/html/lucweb/eco-yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#11 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoCategoriaController->runAction()
+#12 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#14 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoCategoriaController->filterAccessControl()
+#15 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#16 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#17 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoCategoriaController->runActionWithFilters()
+#18 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoCategoriaController->run()
+#19 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#20 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#21 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoCategoria/index
+in /var/www/html/lucweb/eco-yii/myii/protected/views/ecoCategoria/index.php (26)
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoCategoriaController.php (135)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2014/09/28 13:45:48 [error] [php] Undefined variable: pager (/var/www/html/lucweb/eco-yii/framework/zii/widgets/CBaseListView.php:121)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CBaseController.php(172): EcoCategoriaController->createWidget()
+#1 /var/www/html/lucweb/eco-yii/myii/protected/views/ecoCategoria/index.php(8): EcoCategoriaController->widget()
+#2 /var/www/html/lucweb/eco-yii/framework/web/CBaseController.php(126): require()
+#3 /var/www/html/lucweb/eco-yii/framework/web/CBaseController.php(95): EcoCategoriaController->renderInternal()
+#4 /var/www/html/lucweb/eco-yii/framework/web/CController.php(869): EcoCategoriaController->renderFile()
+#5 /var/www/html/lucweb/eco-yii/framework/web/CController.php(782): EcoCategoriaController->renderPartial()
+#6 /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoCategoriaController.php(135): EcoCategoriaController->render()
+#7 /var/www/html/lucweb/eco-yii/framework/web/actions/CInlineAction.php(49): EcoCategoriaController->actionIndex()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#9 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoCategoriaController->runAction()
+#10 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#11 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#12 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoCategoriaController->filterAccessControl()
+#13 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#14 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#15 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoCategoriaController->runActionWithFilters()
+#16 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoCategoriaController->run()
+#17 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#18 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#19 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoCategoria/index&json
+in /var/www/html/lucweb/eco-yii/myii/protected/views/ecoCategoria/index.php (8)
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoCategoriaController.php (135)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2014/09/28 19:26:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "iview".' in /var/www/html/lucweb/eco-yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CController.php(270): CController->missingAction('iview')
+#1 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): CController->run('iview')
+#2 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ecoCategoria/iv...')
+#3 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?EcoCategoria%5Bcat_idD=&EcoCategoria%5Bcat_nome%5D=Sandalias&EcoCategoria%5Bcat_data%5D=&EcoCategoria_page=1&ajax=eco-categoria-grid&r=ecoCategoria%2Fiview
+---
+2014/09/28 19:26:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ecoCategoria%2view".' in /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ecoCategoria%2v...')
+#1 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?EcoCategoria%5Bcat_idD=&EcoCategoria%5Bcat_nome%5D=Sandalias&EcoCategoria%5Bcat_data%5D=&EcoCategoria_page=1&ajax=eco-categoria-grid&r=ecoCategoria%2view
+---
+2014/09/28 19:26:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ecoCategoria%2index".' in /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ecoCategoria%2i...')
+#1 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?EcoCategoria%5Bcat_idD=&EcoCategoria%5Bcat_nome%5D=Sandalias&EcoCategoria%5Bcat_data%5D=&EcoCategoria_page=1&ajax=eco-categoria-grid&r=ecoCategoria%2index
+---
+2014/09/28 19:26:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ecoCategoria%2view".' in /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ecoCategoria%2v...')
+#1 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?EcoCategoria%5Bcat_idD=&EcoCategoria%5Bcat_nome%5D=Sandalias&EcoCategoria%5Bcat_data%5D=&EcoCategoria_page=1&ajax=eco-categoria-grid&r=ecoCategoria%2view
+---
+2014/09/28 19:26:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "iview".' in /var/www/html/lucweb/eco-yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CController.php(270): CController->missingAction('iview')
+#1 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): CController->run('iview')
+#2 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ecoCategoria/iv...')
+#3 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?EcoCategoria%5Bcat_idD=&EcoCategoria%5Bcat_nome%5D=Sandalias&EcoCategoria%5Bcat_data%5D=&EcoCategoria_page=1&ajax=eco-categoria-grid&r=ecoCategoria%2Fiview
+---
+2014/09/28 19:26:44 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /var/www/html/lucweb/eco-yii/framework/web/CController.php:336
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): CController->run('view')
+#9 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ecoCategoria/vi...')
+#10 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?EcoCategoria%5Bcat_idD=&EcoCategoria%5Bcat_nome%5D=Sandalias&EcoCategoria%5Bcat_data%5D=&EcoCategoria_page=1&ajax=eco-categoria-grid&r=ecoCategoria%2Fview
+---
+2014/09/28 19:27:05 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /var/www/html/lucweb/eco-yii/framework/web/CController.php:336
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): CController->run('view')
+#9 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ecoCategoria/vi...')
+#10 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?EcoCategoria%5Bcat_idD=&EcoCategoria%5Bcat_nome%5D=Sandalias&EcoCategoria%5Bcat_data%5D=&EcoCategoria_page=1&ajax=eco-categoria-grid&r=ecoCategoria%2Fview
+---
+2014/09/28 19:43:46 [error] [exception.CException] exception 'CException' with message 'Property "EcoBanner.cat_id" is not defined.' in /var/www/html/lucweb/eco-yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/db/ar/CActiveRecord.php(145): CComponent->__get('cat_id')
+#1 /var/www/html/lucweb/eco-yii/myii/protected/views/ecoCategoria/_view.php(9): CActiveRecord->__get('cat_id')
+#2 /var/www/html/lucweb/eco-yii/framework/web/CBaseController.php(130): require('/var/www/html/l...')
+#3 /var/www/html/lucweb/eco-yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/l...', Array, false)
+#4 /var/www/html/lucweb/eco-yii/framework/zii/widgets/CListView.php(292): CBaseController->renderFile('/var/www/html/l...', Array)
+#5 /var/www/html/lucweb/eco-yii/framework/zii/widgets/CBaseListView.php(180): CListView->renderItems()
+#6 [internal function]: CBaseListView->renderSection(Array)
+#7 /var/www/html/lucweb/eco-yii/framework/zii/widgets/CBaseListView.php(163): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{sort...')
+#8 /var/www/html/lucweb/eco-yii/framework/zii/widgets/CBaseListView.php(148): CBaseListView->renderContent()
+#9 /var/www/html/lucweb/eco-yii/framework/web/CBaseController.php(173): CBaseListView->run()
+#10 /var/www/html/lucweb/eco-yii/myii/protected/views/ecoCategoria/index.php(26): CBaseController->widget('zii.widgets.CLi...', Array)
+#11 /var/www/html/lucweb/eco-yii/framework/web/CBaseController.php(126): require('/var/www/html/l...')
+#12 /var/www/html/lucweb/eco-yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/l...', Array, true)
+#13 /var/www/html/lucweb/eco-yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/html/l...', Array, true)
+#14 /var/www/html/lucweb/eco-yii/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#15 /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoCategoriaController.php(135): CController->render('index', Array)
+#16 /var/www/html/lucweb/eco-yii/framework/web/actions/CInlineAction.php(49): EcoCategoriaController->actionIndex()
+#17 /var/www/html/lucweb/eco-yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#18 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#20 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#24 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): CController->run('index')
+#26 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ecoCategoria/in...')
+#27 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#28 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoCategoria/index
+HTTP_REFERER=http://localhost/lucweb/eco-yii/myii/index.php?r=ecoCategoria/admin
+---
+2014/09/28 21:07:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "banner".' in /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('banner')
+#1 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=banner
+---
+2014/09/28 21:07:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "banner".' in /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('banner')
+#1 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=banner
+---

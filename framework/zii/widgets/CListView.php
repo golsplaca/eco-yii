@@ -282,16 +282,9 @@ class CListView extends CBaseListView
 			$owner=$this->getOwner();
 			$viewFile=$owner->getViewFile($this->itemView);
 			$j=0;
-			$r=false;
 			foreach($data as $i=>$item)
 			{
-				if(isset($_GET['json'])){
-					$r = true;
-					foreach ($item as $key => $value) {
-						$dataValue[$i][$key] = $value;
-					}
-
-				}else{
+				
 				$data=$this->viewData;
 				$data['index']=$i;
 				$data['data']=$item;
@@ -299,11 +292,6 @@ class CListView extends CBaseListView
 				$owner->renderFile($viewFile,$data);
 				if($j++ < $n-1)
 					echo $this->separator;
-				}
-			}
-			if($r){
-				echo json_encode($dataValue);
-				exit();
 			}
 		}
 		else

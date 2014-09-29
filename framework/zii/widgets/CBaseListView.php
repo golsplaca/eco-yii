@@ -109,7 +109,20 @@ abstract class CBaseListView extends CWidget
 			throw new CException(Yii::t('zii','The "dataProvider" property cannot be empty.'));
 
 		$this->dataProvider->getData();
-
+		$dataBase = $this->dataProvider->getData();
+		if(isset($_GET['json'])){
+			foreach($dataBase as $i=>$item)
+			{	
+				if($i < 1){
+					$dataValue[$i]['pages'] = $this->dataProvider->getPagination()->getPageCount();
+				}
+				foreach ($item as $key => $value) {
+					$dataValue[$i][$key] = $value;
+				}
+			}
+			echo json_encode($dataValue);
+			exit();
+		}
 		if(isset($this->htmlOptions['id']))
 			$this->id=$this->htmlOptions['id'];
 		else

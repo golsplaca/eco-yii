@@ -15,7 +15,7 @@
 
 </head>
 
-<body ng-controller='pageController' style="background:rgba(249, 249, 249, 0.35);" >
+<body ng-controller='pageController' style="" >
 
   <div class="container">
     <div class="col-lg-12">
@@ -38,13 +38,13 @@
 
 		<div class="col-lg-4" style="font-size:12px;" >
           	<ul class="nav navbar-nav navbar-right" style="color: #333;">                
-				<li style="text-align: center;">
-					<a href="#" style="color: #555;">
+				<li style="text-align: center; ">
+					<a href="#">
 						<span class="glyphicon glyphicon-user " style="font-size: 20px;"></span>
 						<br> Minha conta </a>
 				</li>
                 <li style="text-align: center;">
-                	<a href="#" style="color: #555;">
+                	<a href="#">
                 		<span class="glyphicon glyphicon-shopping-cart" style="font-size: 20px;"></span>
                 		<br> Carrinho </a>
                 </li>
@@ -79,14 +79,16 @@
 	                    <a href="#">Cantinho da cliente</a>
 	                </li>
 	                <li>
-	                    <a href="#">Contato</a>
+	                    <a href="#contato">Contato</a>
 	                </li>
 	            </ul>
 
-	            <ul class="nav navbar-nav navbar-right">
-	        		<li>
-	        			<a href="#" onclick="verCategoria()" >Categoria <span class="glyphicon glyphicon-th"></span></a>
-	        		</li>
+	            <ul class="nav navbar-nav navbar-right" ng-init="searchCategory();">
+	        		<li class="dropdown">
+			          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Categoria <span class="glyphicon glyphicon-th"></span></a>
+			          <ul class="dropdown-menu" role="menu">
+			            <li  ng-repeat="i in scopeList['category']"><a href="#{{cat_id}}">{{i.cat_nome}}</a></li>
+			          </ul></li>
 	      		</ul>
 	        </div>
 	        <!-- /.navbar-collapse -->
@@ -97,6 +99,7 @@
     <!-- Page Content -->
     <div class="container">
         <div class="col-lg-12" style="background:#fff; margin:20px 0;">
+        	<div class="contentNgView" ng-view></div>
         </div>
     </div>
 

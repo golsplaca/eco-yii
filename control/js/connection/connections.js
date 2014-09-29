@@ -8,7 +8,7 @@ function connection(url, data, location, $scope, cfpLoadingBar, scope){
 */
 		var proxy = "external-server/php/ApiProxy.php?rest=";
 		//var url    = proxy+"http://lucweb.tempsite.ws/oficina/index.php"; 	
-		url = proxy+url;
+		//url = proxy+url;
 		var params = {}; 
    		params = data;
    	
