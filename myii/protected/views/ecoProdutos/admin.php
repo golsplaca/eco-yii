@@ -56,6 +56,11 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'pro_data',
 		'pro_tamanho',
 		'pro_status',
+		'pro_img_1',
+		'pro_img_2',
+		'pro_img_3',
+		'pro_img_4',
+		'pro_img_5',
 		*/
 		array(
 			'class'=>'CButtonColumn',

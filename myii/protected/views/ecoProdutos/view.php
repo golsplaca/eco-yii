@@ -31,5 +31,10 @@ $this->menu=array(
 		'pro_data',
 		'pro_tamanho',
 		'pro_status',
+		'pro_img_1',
+		'pro_img_2',
+		'pro_img_3',
+		'pro_img_4',
+		'pro_img_5',
 	),
 )); ?>

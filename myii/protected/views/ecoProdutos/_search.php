@@ -38,12 +38,12 @@
 
 	<div class="row">
 		<?php echo $form->label($model,'pro_preco_de'); ?>
-		<?php echo $form->textField($model,'pro_preco_de',array('size'=>10,'maxlength'=>10)); ?>
+		<?php echo $form->textField($model,'pro_preco_de',array('size'=>20,'maxlength'=>20)); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->label($model,'pro_preco_por'); ?>
-		<?php echo $form->textField($model,'pro_preco_por',array('size'=>10,'maxlength'=>10)); ?>
+		<?php echo $form->textField($model,'pro_preco_por',array('size'=>20,'maxlength'=>20)); ?>
 	</div>
 
 	<div class="row">
@@ -59,6 +59,31 @@
 	<div class="row">
 		<?php echo $form->label($model,'pro_status'); ?>
 		<?php echo $form->textField($model,'pro_status'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'pro_img_1'); ?>
+		<?php echo $form->textField($model,'pro_img_1',array('size'=>60,'maxlength'=>200)); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'pro_img_2'); ?>
+		<?php echo $form->textField($model,'pro_img_2',array('size'=>60,'maxlength'=>200)); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'pro_img_3'); ?>
+		<?php echo $form->textField($model,'pro_img_3',array('size'=>60,'maxlength'=>200)); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'pro_img_4'); ?>
+		<?php echo $form->textField($model,'pro_img_4',array('size'=>60,'maxlength'=>200)); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'pro_img_5'); ?>
+		<?php echo $form->textField($model,'pro_img_5',array('size'=>60,'maxlength'=>200)); ?>
 	</div>
 
 	<div class="row buttons">

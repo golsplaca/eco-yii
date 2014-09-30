@@ -46,6 +46,26 @@
 	<?php echo CHtml::encode($data->pro_status); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('pro_img_1')); ?>:</b>
+	<?php echo CHtml::encode($data->pro_img_1); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('pro_img_2')); ?>:</b>
+	<?php echo CHtml::encode($data->pro_img_2); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('pro_img_3')); ?>:</b>
+	<?php echo CHtml::encode($data->pro_img_3); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('pro_img_4')); ?>:</b>
+	<?php echo CHtml::encode($data->pro_img_4); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('pro_img_5')); ?>:</b>
+	<?php echo CHtml::encode($data->pro_img_5); ?>
+	<br />
+
 	*/ ?>
 
 </div>

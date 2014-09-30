@@ -76,11 +76,40 @@ class EcoProdutosController extends Controller
 
 		if(isset($_POST['EcoProdutos']))
 		{
-			$model->attributes=$_POST['EcoProdutos'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->pro_id));
-		}
+			$preco_de = substr($_POST['EcoProdutos']['pro_preco_de'], 3);
+			$preco_de = str_replace('.', '', $preco_de);
+			$_POST['EcoProdutos']['pro_preco_de'] = str_replace(',', '.', $preco_de);
 
+			$preco_por = substr($_POST['EcoProdutos']['pro_preco_por'], 3);
+			$preco_por = str_replace('.', '', $preco_por);
+			$_POST['EcoProdutos']['pro_preco_por'] = str_replace(',', '.', $preco_por);
+
+			
+			$model->attributes=$_POST['EcoProdutos'];
+			foreach ($_POST['EcoProdutos'] as $key => $value) {
+				if(strpos($key,'pro_img_') !== false){
+					$rnd = rand(0,9999);
+					$uploadedFile[$key]=CUploadedFile::getInstance($model,$key);
+		            if($uploadedFile[$key] != ''){
+		            	$fileName[$key] = $rnd.'-'.$uploadedFile[$key];
+		            	$model->$key = $fileName[$key];
+		            }else{
+		            	$model->$key = null;
+		            }
+		            
+		        }
+			}
+			
+
+			if($model->save())
+				foreach ($fileName as $key => $value) {
+						$uploadedFile[$key]->saveAs(Yii::app()->basePath.'/../../public/images/produtos/'.$value);
+						chmod (Yii::app()->basePath.'/../../public/images/produtos/'.$value, 0755);
+				}
+
+				$this->redirect(array('view','id'=>$model->pro_id));
+		
+		}
 		$this->render('create',array(
 			'model'=>$model,
 		));
@@ -98,10 +127,49 @@ class EcoProdutosController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
+
+
+
 		if(isset($_POST['EcoProdutos']))
 		{
+			foreach ($_POST['EcoProdutos'] as $key => $value) {
+				if(strpos($key,'pro_img_') !== false){
+
+					$_POST['EcoProdutos'][$key] = $model->$key;
+					$uploadedFile[$key]=CUploadedFile::getInstance($model,$key);
+
+					if(!empty($uploadedFile[$key])){
+						
+						$uploadedFile[$key]=CUploadedFile::getInstance($model,$key);
+						$ext = $uploadedFile[$key]->name;
+
+						if(isset($model->$key)){
+							if(substr($ext, -3) != substr($model->$key, -3)){
+								$ext = substr($ext,(strlen($ext)-3),strlen($ext));
+
+								unlink(Yii::app()->basePath.'/../../public/images/produtos/'.$model->$key);
+								$model->$key = substr($model->$key, 0, -3).$ext;
+							}
+							$_POST['EcoProdutos'][$key] = $model->$key;
+						}else{
+							$_POST['EcoProdutos'][$key] = $uploadedFile[$key]->name;
+						}	
+					}else{
+						$uploadedFile[$key]=null;
+					}
+				}
+			}
 			$model->attributes=$_POST['EcoProdutos'];
 			if($model->save())
+				foreach ($uploadedFile as $key => $value) {
+					if($value){
+						if(!empty($value))
+		                {
+		                    $value->saveAs(Yii::app()->basePath.'/../../public/images/produtos/'.$model->$key);
+		                    chmod (Yii::app()->basePath.'/../../public/images/produtos/'.$model->$key, 0755);
+		                }
+	            	}
+				}
 				$this->redirect(array('view','id'=>$model->pro_id));
 		}
 
@@ -117,6 +185,11 @@ class EcoProdutosController extends Controller
 	 */
 	public function actionDelete($id)
 	{
+		foreach ($this->loadModel($id) as $key => $value) {
+			if(strpos($key,'pro_img_') !== false && $value != ''){
+				unlink(Yii::app()->basePath.'/../../public/images/produtos/'.$value);
+			}
+		}
 		$this->loadModel($id)->delete();
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
