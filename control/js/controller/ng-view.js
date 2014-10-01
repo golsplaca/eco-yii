@@ -1,8 +1,8 @@
 
 $app = angular.module('app', ['ngRoute', 'ui.bootstrap', 'chieffancypants.loadingBar']);
 $app.config(function($routeProvider, cfpLoadingBarProvider) {
-	$routeProvider.when("/", {controller : pageController,templateUrl : "view/modulos/site/home.html"});
-	$routeProvider.when("/contato", {controller : pageController,templateUrl : "view/modulos/site/contato.html"});
+	$routeProvider.when("/", {controller : null,templateUrl : "view/modulos/site/home.html"});
+	$routeProvider.when("/contato", {controller : null,templateUrl : "view/modulos/site/contato.html"});
 });
 /*
 	$.each(getCookies('page', true), function(i, item) {

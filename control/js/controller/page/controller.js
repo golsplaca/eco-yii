@@ -41,5 +41,15 @@ function pageController($scope, $http, $timeout, cfpLoadingBar){
 		url = 'myii/index.php?r=ecoBanner/index&json';
 		$scope.searchDb(url, null, null, 'banner');
 	};
+
+	$scope.carregarProdutos = function(){
+		url = 'myii/index.php?r=ecoProdutos/index&json';
+		$scope.searchDb(url, null, null, 'produtos');
+	};
+
+
+	useJs('head', 'view/modulos/site/js/carrinho.js');
+	scopeMainCarrinho($scope);
+
 	cfpLoadingBar.complete();
 }

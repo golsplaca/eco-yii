@@ -1,18 +1,18 @@
 <?php
-/* @var $this EcoProdutosController */
+/* @var $this EcoFaturaController */
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs=array(
-	'Eco Produtoses',
+	'Eco Faturas',
 );
 
 $this->menu=array(
-	array('label'=>'Create EcoProdutos', 'url'=>array('create')),
-	array('label'=>'Manage EcoProdutos', 'url'=>array('admin')),
+	array('label'=>'Create EcoFatura', 'url'=>array('create')),
+	array('label'=>'Manage EcoFatura', 'url'=>array('admin')),
 );
 ?>
 
-
+<h1>Eco Faturas</h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,

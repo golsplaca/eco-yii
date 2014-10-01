@@ -1,7 +1,11 @@
-function scopeMain($scope){
+function scopeMainCarrinho($scope){
+	$scope.titulo = 'd';
+	$scope.carrinho = function(nome){
+				$scope.carregarProdutos();
 
-	$scope.carrinho = function(){
-		$scope.scopeList['carrinho'] = getCookies("carrinho", true);
+		$scope.titulo = nome;
+		$scope.$digest;
+		//$scope.scopeList['carrinho'] = getCookies("carrinho", true);
 		/*
 		id_produto
 		quantidade

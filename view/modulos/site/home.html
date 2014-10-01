@@ -1,2 +1,7 @@
-<h1>Inicial</h1>
-<div class="slide-animate" ng-include="'view/modulos/site/banner.html'"></div>
+<h1 ng-init="carregarProdutos();" >Inicial {{titulo}}</h1>
+<div >{{i.pro_data}}</div>
+<!--
+<div class="slide-animate" ng-include="'view/modulos/site/banner.html'"></div> -->
+
+
+<div class="slide-animate" ng-include="'view/modulos/site/produtos.html'"></div>

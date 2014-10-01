@@ -1,0 +1,58 @@
+<style type="text/css">
+.produto_list{
+	height: 320px;
+	margin: 10px;
+	max-width: 255px;
+	box-shadow: 0px 0px 8px #999;
+	padding: 0px;
+}
+.produto_img{
+	height: 240px;
+	max-height: 240px;
+	text-align: center;
+}
+.produto_img img{
+	max-height: 240px;
+	max-width: 255px;
+	margin: 0 auto;
+}
+.produto_detalhes{
+	background: #ddd;
+	padding: 10px;
+	height: 80px;
+}
+.produto_detalhes > div{
+	margin: 0 auto;
+	margin-bottom: 5px;
+	font-weight: bold;
+	text-align: center;
+}
+.produto_detalhes > .botao_comprar{
+	float: right;
+	margin: 2px -10px 0 0;
+}
+.produto_detalhes > span{
+	font-style: italic;
+	font-size: 10px;
+}
+.botao_comprar .btn{
+	border-radius: 0;
+	padding: 10px 12px;
+}
+</style>
+
+  <div class="col-sm-3 produto_list" ng-repeat="i in scopeList['produtos']">
+
+  		<div class="produto_img" >
+  			<img src="public/images/produtos/{{i.pro_img_1}}" />
+  		</div>
+  		<div class="produto_detalhes" >
+  			<div>{{i.pro_nome}}</div>
+  			<div class="botao_comprar">
+  				<button class="btn btn-success" >Comprar <i class="glyphicon glyphicon-shopping-cart"></i></button>
+  			</div>
+  			<span>R$ {{i.pro_preco_de}}</span><br />
+  			<span>R$ {{i.pro_preco_por}}</span>
+  		</div>
+
+  </div>
