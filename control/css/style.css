@@ -46,13 +46,13 @@
  */
  .navbar-nav > li > a {
 padding-top: 15px;
-padding-bottom: 15px;
+padding-bottom: 0;
 background: transparent;
 color: #555;
 }
 .navbar-nav > li > a:hover {
 padding-top: 15px;
-padding-bottom: 15px;
+padding-bottom: 0;
 background: transparent;
 color: #999;
 }
@@ -132,6 +132,10 @@ img.logo{
 .div-login{
   background: #fff;
   padding: 20px 5px 20px 5px;
+}
+
+.ola_visitante{
+  float: right;
 }
 
 /*gerenciamento usuario*/

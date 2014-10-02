@@ -8,10 +8,22 @@ function scopeController($scope, data, locat, scope){
     });*/
 	$scope.scopeList[scope] = $.parseJSON(data);
 
-	if(scope == 'banner'){
-		$scope.scopeList[scope][0].active = 'active';
+	switch(scope){
+		case 'user':
+			$scope.usuario_logado = $scope.scopeList[scope].usu_nome;
+			if(data != 0 && data != 2){
+				window.location.href = "#/";
+			}
+			
+			break;
+		case 'banner':
+			$scope.showHideBanner = true;
+			break;
+		default:
 	}
-	console.log($scope.scopeList[scope]);
+	console.log($scope.scopeList);
+
+
 
 	//msg = "msg provisoria, a msg definitiva deve vir do retorno rest.";
 	//data['token'] = '1234';

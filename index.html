@@ -38,7 +38,7 @@
 
 		<div class="col-lg-4" style="font-size:12px;" >
           	<ul class="nav navbar-nav navbar-right" style="color: #333;">                
-				<li style="text-align: center; " ng-click="carrinho('conta');">
+				<li style="text-align: center; " ng-click="">
 					<a href="#">
 						<span class="glyphicon glyphicon-user " style="font-size: 20px;"></span>
 						<br> Minha conta </a>
@@ -50,6 +50,7 @@
                 </li>
             </ul>
         </div>
+         <div class="ola_visitante" ng-click="loginUser()">Olá, {{usuario_logado}}</div>
 
 	</div>
   </div>
@@ -87,11 +88,12 @@
 	        		<li class="dropdown">
 			          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Categoria <span class="glyphicon glyphicon-th"></span></a>
 			          <ul class="dropdown-menu" role="menu">
-			            <li  ng-repeat="i in scopeList['category']"><a href="#{{cat_id}}">{{i.cat_nome}}</a></li>
+			            <li  ng-repeat="i in scopeList['category']"><a href="#{{i.cat_id}}">{{i.cat_nome}}</a></li>
 			          </ul>
 			        </li>
 	      		</ul>
 	        </div>
+	       
 	        <!-- /.navbar-collapse -->
 	    </div>
 	    <!-- /.container -->

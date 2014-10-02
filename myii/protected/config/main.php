@@ -53,10 +53,10 @@ return array(
 		// uncomment the following to use a MySQL database
 		*/
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=ecommerce',
+			'connectionString' => 'mysql:host=186.202.152.191;dbname=samyashoes',
 			'emulatePrepare' => true,
-			'username' => 'root',
-			'password' => '64724100',
+			'username' => 'samyashoes',
+			'password' => 'shoes64724100',
 			'charset' => 'utf8',
 		),
 	

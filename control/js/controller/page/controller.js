@@ -7,10 +7,14 @@ function pageController($scope, $http, $timeout, cfpLoadingBar){
 		}, 100);
 	});
 
+		$scope.userPost = {};
+
 
 		cfpLoadingBar.complete();
-		console.log($scope.scopeList);
+
 	    $scope.scopeList = {};
+
+	    $scope.usuario_logado = "visitante. Entrar";
 
 	  $scope.currentPage = 1;
 	  $scope.executeScope = function(){
@@ -50,6 +54,24 @@ function pageController($scope, $http, $timeout, cfpLoadingBar){
 
 	useJs('head', 'view/modulos/site/js/carrinho.js');
 	scopeMainCarrinho($scope);
+
+	switch(new String(window.location).split('#')[1]){
+		case '/login':
+			useJs('head', 'view/modulos/security/js/login.js');
+			scopeMainLogin($scope);
+		break;
+		default:  
+
+	}
+
+
+	$scope.loginUser = function(){
+		useJs('head', 'view/modulos/security/js/login.js');
+		scopeMainLogin($scope);
+		window.location.href = "#/login";
+	};
+
+	
 
 	cfpLoadingBar.complete();
 }

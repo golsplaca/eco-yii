@@ -123,7 +123,7 @@ class EcoBannerController extends Controller
 	 */
 	public function actionDelete($id)
 	{
-		unlink(Yii::app()->basePath.'/../../public/images/banner/'.$this->loadModel($id)['ba_imagem']);
+		//unlink(Yii::app()->basePath.'/../../public/images/banner/'.$this->loadModel($id)['ba_imagem']);
 		$this->loadModel($id)->delete();
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
