@@ -47,11 +47,10 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'columns'=>array(
 		'pro_id',
 		'pro_id_cagegoria',
-		'pro_codigo',
+		/*'pro_codigo',*/
 		'pro_nome',
-		'pro_descricao',
+		/*'pro_descricao',
 		'pro_preco_de',
-		/*
 		'pro_preco_por',
 		'pro_data',
 		'pro_tamanho',
@@ -61,7 +60,7 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'pro_img_3',
 		'pro_img_4',
 		'pro_img_5',
-		*/
+		'pro_qd',*/
 		array(
 			'class'=>'CButtonColumn',
 		),

@@ -136,6 +136,12 @@ img.logo{
 
 .ola_visitante{
   float: right;
+  color: #444;
+}
+.ola_visitante span{
+  float: none;
+  font-style: italic;
+  font-size: 12px;
 }
 
 /*gerenciamento usuario*/
@@ -160,4 +166,9 @@ img.logo{
 .modal-dialog {
   width: 300px;
   margin: 50px auto;
+}
+
+
+.navbar-nav > li a{
+  cursor: pointer;
 }

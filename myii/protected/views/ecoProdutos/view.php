@@ -36,5 +36,6 @@ $this->menu=array(
 		'pro_img_3',
 		'pro_img_4',
 		'pro_img_5',
+		'pro_qd',
 	),
 )); ?>

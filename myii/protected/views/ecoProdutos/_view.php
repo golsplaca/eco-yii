@@ -33,7 +33,7 @@
 	<?php echo CHtml::encode($data->pro_preco_por); ?>
 	<br />
 
-	<?php /*
+
 	<b><?php echo CHtml::encode($data->getAttributeLabel('pro_data')); ?>:</b>
 	<?php echo CHtml::encode($data->pro_data); ?>
 	<br />
@@ -66,6 +66,9 @@
 	<?php echo CHtml::encode($data->pro_img_5); ?>
 	<br />
 
-	*/ ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('pro_qd')); ?>:</b>
+	<?php echo CHtml::encode($data->pro_img_5); ?>
+	<br />
+
 
 </div>

@@ -85,6 +85,10 @@
 		<?php echo $form->label($model,'pro_img_5'); ?>
 		<?php echo $form->textField($model,'pro_img_5',array('size'=>60,'maxlength'=>200)); ?>
 	</div>
+	<div class="row">
+		<?php echo $form->label($model,'pro_qd'); ?>
+		<?php echo $form->textField($model,'pro_qd',array('size'=>60,'maxlength'=>200)); ?>
+	</div>
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('Search'); ?>

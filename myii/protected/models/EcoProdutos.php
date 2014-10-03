@@ -19,6 +19,7 @@
  * @property string $pro_img_3
  * @property string $pro_img_4
  * @property string $pro_img_5
+ * @property string $pro_qd
  */
 class EcoProdutos extends CActiveRecord
 {
@@ -38,14 +39,14 @@ class EcoProdutos extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('pro_id_cagegoria, pro_codigo, pro_nome, pro_descricao, pro_preco_de, pro_preco_por, pro_data, pro_tamanho, pro_status, pro_img_1', 'required'),
-			array('pro_id_cagegoria, pro_codigo, pro_status', 'numerical', 'integerOnly'=>true),
+			array('pro_id_cagegoria, pro_codigo, pro_nome, pro_descricao, pro_preco_de, pro_preco_por, pro_data, pro_tamanho, pro_status, pro_img_1, pro_qd', 'required'),
+			array('pro_id_cagegoria, pro_codigo, pro_status, pro_qd', 'numerical', 'integerOnly'=>true),
 			array('pro_nome, pro_tamanho, pro_img_1, pro_img_2, pro_img_3, pro_img_4, pro_img_5', 'length', 'max'=>200),
 			array('pro_descricao', 'length', 'max'=>400),
 			array('pro_preco_de, pro_preco_por', 'length', 'max'=>20),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('pro_id, pro_id_cagegoria, pro_codigo, pro_nome, pro_descricao, pro_preco_de, pro_preco_por, pro_data, pro_tamanho, pro_status, pro_img_1, pro_img_2, pro_img_3, pro_img_4, pro_img_5', 'safe', 'on'=>'search'),
+			array('pro_id, pro_id_cagegoria, pro_codigo, pro_nome, pro_descricao, pro_preco_de, pro_preco_por, pro_data, pro_tamanho, pro_status, pro_img_1, pro_img_2, pro_img_3, pro_img_4, pro_img_5, pro_qd', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -81,6 +82,7 @@ class EcoProdutos extends CActiveRecord
 			'pro_img_3' => 'Imagem 3',
 			'pro_img_4' => 'Imagem 4',
 			'pro_img_5' => 'Imagem 5',
+			'pro_qd' => 'Quantidade',
 		);
 	}
 
@@ -117,6 +119,7 @@ class EcoProdutos extends CActiveRecord
 		$criteria->compare('pro_img_3',$this->pro_img_3,true);
 		$criteria->compare('pro_img_4',$this->pro_img_4,true);
 		$criteria->compare('pro_img_5',$this->pro_img_5,true);
+		$criteria->compare('pro_qd',$this->pro_qd,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

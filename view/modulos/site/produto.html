@@ -1,0 +1,40 @@
+
+        <!-- Include Cloud Zoom CSS. -->
+        <link rel="stylesheet" type="text/css" href="view/modulos/site/produtos/cloudzoom.css" />
+
+        <!-- Include Cloud Zoom script. -->
+        <script type="text/javascript" src="view/modulos/site/produtos/cloudzoom.js"></script>
+
+        <!-- Call quick start function. -->
+        <script type="text/javascript">
+            function carregarGaleria(){
+                CloudZoom.quickStart();
+                $('.cloudzoom-ajax-loader').hide();
+            }
+           setTimeout(carregarGaleria, 500);
+
+        </script>    
+
+        <div class="col-sm-5" style="text-align:center; background:#444; padding:0;">
+            <img class = "cloudzoom" src = "public/images/produtos/{{scopeList['produto'].pro_img_1}}"
+                 data-cloudzoom = "zoomImage: 'public/images/produtos/{{scopeList['produto'].pro_img_1}}'" />
+            <br/>
+            <img ng-repeat="i in imgProduto" class = 'cloudzoom-gallery' style="width:92px; height:80px;" src = "public/images/produtos/{{i}}"  data-cloudzoom = "useZoom: '.cloudzoom', image: 'public/images/produtos/{{i}}', zoomImage: 'public/images/produtos/{{i}}' " >
+        </div>
+
+        <div class="col-sm-7">
+           <h3>{{scopeList['produto'].pro_nome}}</h3>
+           <div style="float:right; font-size:12px; font-style:italic; margin:3px 0 0 10px;">Cód: {{scopeList['produto'].pro_codigo}}</div>
+           <hr />
+           <div class="col-sm-12" >
+               <div class="popover bottom col-sm-12" style="display:block; z-index:0; border-radius:0; min-width:100%;">
+          <div class="arrow"></div>
+          <h3 class="popover-title" style="font-weight:bold;">Descrição</h3>
+
+          <div class="popover-content">
+            <p>{{scopeList['produto'].pro_descricao}}</p>
+          </div>
+        </div>
+           </div>
+
+        </div>

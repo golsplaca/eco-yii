@@ -115,6 +115,13 @@
 		<?php echo $form->error($model,'pro_img_5'); ?>
 	</div>
 
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'pro_qd'); ?>
+		<?php echo $form->textField($model,'pro_qd',array('size'=>30,'maxlength'=>200)); ?>
+		<?php echo $form->error($model,'pro_qd'); ?>
+	</div>
+
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
 	</div>
