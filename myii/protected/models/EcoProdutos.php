@@ -6,6 +6,7 @@
  * The followings are the available columns in table 'eco_produtos':
  * @property integer $pro_id
  * @property integer $pro_id_cagegoria
+ * @property integer $pro_id_colecao
  * @property integer $pro_codigo
  * @property string $pro_nome
  * @property string $pro_descricao
@@ -40,13 +41,13 @@ class EcoProdutos extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('pro_id_cagegoria, pro_codigo, pro_nome, pro_descricao, pro_preco_de, pro_preco_por, pro_data, pro_tamanho, pro_status, pro_img_1, pro_qd', 'required'),
-			array('pro_id_cagegoria, pro_codigo, pro_status, pro_qd', 'numerical', 'integerOnly'=>true),
+			array('pro_id_cagegoria, pro_id_colecao, pro_codigo, pro_status, pro_qd', 'numerical', 'integerOnly'=>true),
 			array('pro_nome, pro_tamanho, pro_img_1, pro_img_2, pro_img_3, pro_img_4, pro_img_5', 'length', 'max'=>200),
 			array('pro_descricao', 'length', 'max'=>400),
 			array('pro_preco_de, pro_preco_por', 'length', 'max'=>20),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('pro_id, pro_id_cagegoria, pro_codigo, pro_nome, pro_descricao, pro_preco_de, pro_preco_por, pro_data, pro_tamanho, pro_status, pro_img_1, pro_img_2, pro_img_3, pro_img_4, pro_img_5, pro_qd', 'safe', 'on'=>'search'),
+			array('pro_id, pro_id_cagegoria, pro_id_colecao, pro_codigo, pro_nome, pro_descricao, pro_preco_de, pro_preco_por, pro_data, pro_tamanho, pro_status, pro_img_1, pro_img_2, pro_img_3, pro_img_4, pro_img_5, pro_qd', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -69,6 +70,7 @@ class EcoProdutos extends CActiveRecord
 		return array(
 			'pro_id' => 'Pro',
 			'pro_id_cagegoria' => 'Cagegoria',
+			'pro_id_colecao' => 'Coleção',
 			'pro_codigo' => 'Codigo',
 			'pro_nome' => 'Nome',
 			'pro_descricao' => 'Descricao',
@@ -106,6 +108,7 @@ class EcoProdutos extends CActiveRecord
 
 		$criteria->compare('pro_id',$this->pro_id);
 		$criteria->compare('pro_id_cagegoria',$this->pro_id_cagegoria);
+		$criteria->compare('pro_id_colecao',$this->pro_id_cagegoria);
 		$criteria->compare('pro_codigo',$this->pro_codigo);
 		$criteria->compare('pro_nome',$this->pro_nome,true);
 		$criteria->compare('pro_descricao',$this->pro_descricao,true);

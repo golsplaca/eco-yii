@@ -37,6 +37,13 @@
 		<?php echo $form->error($model,'pro_id_cagegoria'); ?>
 	</div>
 
+	<div class="row">
+		<?php echo $form->labelEx($model,'pro_id_colecao'); ?>
+		<?php echo $form->dropDownList($model,'pro_id_colecao', 
+		CHtml::listData(EcoColecoes::model()->findAll(), 'col_guid', 'col_nome')); ?>
+		<?php echo $form->error($model,'pro_id_colecao'); ?>
+	</div>
+
 	<div class="row" style="display:none;">   
 		<?php echo $form->labelEx($model,'pro_codigo'); ?>
 		<?php echo $form->textField($model,'pro_codigo', array('value' => rand(10, 10000))); ?>
@@ -51,7 +58,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'pro_descricao'); ?>
-		<?php echo $form->textField($model,'pro_descricao',array('size'=>60,'maxlength'=>400)); ?>
+		<?php echo $form->textArea($model,'pro_descricao',array('rows'=>6, 'cols'=>50)); ?>
 		<?php echo $form->error($model,'pro_descricao'); ?>
 	</div>
 

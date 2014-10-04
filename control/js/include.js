@@ -77,6 +77,7 @@ function useCss(tag, url, use){
 
 	//components
 	useJs('head', 'control/js/components/breadcrumb.js');
+	useJs('head', 'control/js/components/util.js');
 
 	//action
 	useJs('head', 'control/js/action/action.js');

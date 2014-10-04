@@ -1,3 +1,17 @@
+<style>
+  .tamanho_sandalia{
+    float: left;
+    padding: 5px 10px;
+    border: 2px solid #999;
+    margin: -5px 10px;
+    cursor: pointer;
+  }
+
+  .tamanho_sandalia:hover{
+    background: #999;
+  }
+</style>
+
 
         <!-- Include Cloud Zoom CSS. -->
         <link rel="stylesheet" type="text/css" href="view/modulos/site/produtos/cloudzoom.css" />
@@ -27,14 +41,37 @@
            <div style="float:right; font-size:12px; font-style:italic; margin:3px 0 0 10px;">Cód: {{scopeList['produto'].pro_codigo}}</div>
            <hr />
            <div class="col-sm-12" >
-               <div class="popover bottom col-sm-12" style="display:block; z-index:0; border-radius:0; min-width:100%;">
-          <div class="arrow"></div>
-          <h3 class="popover-title" style="font-weight:bold;">Descrição</h3>
+              <div class="popover bottom col-sm-12" style="display:block; z-index:0; position:relative; border-radius:0; min-width:100%;">
+                <div class="arrow"></div>
+                <h3 class="popover-title" style="font-weight:bold;">Descrição</h3>
 
-          <div class="popover-content">
-            <p>{{scopeList['produto'].pro_descricao}}</p>
-          </div>
-        </div>
+                <div class="popover-content">
+                  <p>{{scopeList['produto'].pro_descricao}}</p>
+                </div>
+              </div>
            </div>
 
-        </div>
+           <div class="col-sm-12" style="margin-top:20px;">
+
+            De <span style="font-weight:bold;"> R$ {{scopeList['produto'].pro_preco_de}}</span><br />
+            Por <span style="font-weight:bold;"> R$ {{scopeList['produto'].pro_preco_por}}</span> 
+            <span style="font-size:12px; font-style:italic;"> à vista </span>
+           </div>
+
+           <div class="col-sm-12" style="margin-top:20px;">
+            <div style="float:left; font-weight:bold;">Tamanho:</div>
+            <div class="classTamanho" style="float:left;">
+              <div ng-repeat="i in scopeList['produto'].pro_tamanho"
+                   ng-click="medidaProduto(i.trim())"
+                   class="tamanho_sandalia  {{i}}" >
+                  {{i}}
+             </div>
+            </div>
+           </div>
+           <div class="col-sm-12" style="margin-top:10px;">
+            <div class="alert alert-danger" ng-show="msgTamanho" role="alert">{{msgTamanho}}</div>
+           </div>
+
+          <div class="col-sm-12" ng-click="addCarrinho()" style="margin-top:50px;">
+            <button class="btn btn-danger" style="border-radius:2px" >Comprar <i class="glyphicon glyphicon-shopping-cart"></i></button>
+          </div>

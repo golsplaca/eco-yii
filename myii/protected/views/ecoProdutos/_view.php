@@ -13,6 +13,10 @@
 	<?php echo CHtml::encode($data->pro_id_cagegoria); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('pro_id_colecao')); ?>:</b>
+	<?php echo CHtml::encode($data->pro_id_cagegoria); ?>
+	<br />
+
 	<b><?php echo CHtml::encode($data->getAttributeLabel('pro_codigo')); ?>:</b>
 	<?php echo CHtml::encode($data->pro_codigo); ?>
 	<br />

@@ -6,6 +6,12 @@
 	box-shadow: 0px 0px 8px #999;
 	padding: 0px;
 }
+.produto_list .produto_img{
+	cursor: pointer;
+}
+.produto_list .produto_img:hover{
+	opacity: 0.8;
+}
 .produto_img{
 	height: 240px;
 	max-height: 240px;
@@ -45,10 +51,10 @@
   		<div class="produto_img" >
   			<img src="public/images/produtos/{{i.pro_img_1}}" />
   		</div>
-  		<div class="produto_detalhes" >
+  		<div class="produto_detalhes" style="cursor:pointer;" >
   			<div>{{i.pro_nome}}</div>
   			<div class="botao_comprar">
-  				<button class="btn btn-success" >Comprar <i class="glyphicon glyphicon-shopping-cart"></i></button>
+  				<button class="btn btn-danger" >Detalhes <i class="glyphicon glyphicon-plus-sign"></i></button>
   			</div>
   			<span>R$ {{i.pro_preco_de}}</span><br />
   			<span>R$ {{i.pro_preco_por}}</span>

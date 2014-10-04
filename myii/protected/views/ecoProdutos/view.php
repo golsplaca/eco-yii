@@ -23,6 +23,7 @@ $this->menu=array(
 	'attributes'=>array(
 		'pro_id',
 		'pro_id_cagegoria',
+		'pro_id_calecao',
 		'pro_codigo',
 		'pro_nome',
 		'pro_descricao',

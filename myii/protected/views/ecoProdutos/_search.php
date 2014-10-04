@@ -20,6 +20,10 @@
 		<?php echo $form->label($model,'pro_id_cagegoria'); ?>
 		<?php echo $form->textField($model,'pro_id_cagegoria'); ?>
 	</div>
+	<div class="row">
+		<?php echo $form->label($model,'pro_id_colecao'); ?>
+		<?php echo $form->textField($model,'pro_id_colecao'); ?>
+	</div>
 
 	<div class="row">
 		<?php echo $form->label($model,'pro_codigo'); ?>

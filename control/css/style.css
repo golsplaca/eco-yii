@@ -168,7 +168,11 @@ img.logo{
   margin: 50px auto;
 }
 
-
 .navbar-nav > li a{
   cursor: pointer;
 }
+
+ .dropdown-menu > li > a{
+    background: #f9f9f9;
+    border-bottom: #999;
+ }
