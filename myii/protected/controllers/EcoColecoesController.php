@@ -28,7 +28,7 @@ class EcoColecoesController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view', 'json'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -54,6 +54,17 @@ class EcoColecoesController extends Controller
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
 		));
+	}
+
+	public function actionJson()
+	{
+		$colecoes=EcoColecoes::model()->findAll();
+		for($i=1; $i < count($colecoes); $i++) { 
+			foreach ($colecoes[$i] as $key => $val) {
+				$dataValue[$i][$key] = $val;
+			}
+		}
+		echo json_encode($dataValue);
 	}
 
 	/**

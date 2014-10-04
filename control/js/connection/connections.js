@@ -22,6 +22,11 @@ function connection(url, data, location, $scope, cfpLoadingBar, scope){
 			cfpLoadingBar.complete();
   		})
         .fail(function(data){
+        	if(scope == 'produtos'){
+        		cfpLoadingBar.complete();
+        		window.location.href = '#/null';
+        		return;
+			}		    
 		    errorReporting(0, "Requisição desconhecida, por favor tente novamente! url: "+url);
 			cfpLoadingBar.complete();
   			$(".contentNgView").fadeIn(1000);

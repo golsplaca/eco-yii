@@ -41,8 +41,8 @@ class EcoProdutos extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('pro_id_cagegoria, pro_codigo, pro_nome, pro_descricao, pro_preco_de, pro_preco_por, pro_data, pro_tamanho, pro_status, pro_img_1, pro_qd', 'required'),
-			array('pro_id_cagegoria, pro_id_colecao, pro_codigo, pro_status, pro_qd', 'numerical', 'integerOnly'=>true),
-			array('pro_nome, pro_tamanho, pro_img_1, pro_img_2, pro_img_3, pro_img_4, pro_img_5', 'length', 'max'=>200),
+			array('pro_id_cagegoria, pro_id_colecao, pro_codigo, pro_status', 'numerical', 'integerOnly'=>true),
+			array('pro_nome, pro_tamanho, pro_img_1, pro_img_2, pro_img_3, pro_img_4, pro_img_5, pro_qd',  'length', 'max'=>200),
 			array('pro_descricao', 'length', 'max'=>400),
 			array('pro_preco_de, pro_preco_por', 'length', 'max'=>20),
 			// The following rule is used by search().

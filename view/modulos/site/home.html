@@ -1,4 +1,6 @@
-<div class="slide-animate" style="margin-top:-20px; width:100%;"  ng-include="'view/modulos/site/banner.html'"></div> 
-<h1 ng-init="carregarProdutos();" > Produtos </h1>
+<div ng-show="showHideBanner" class="slide-animate" style="margin:20px auto;  width:100%;"  
+	 ng-include="'view/modulos/site/banner.html'"></div> 
+<hr />
+<h3 ng-init="carregarProdutos();" > Produtos </h3>
 
 <div class="" style="float:left; width:100%;" ng-include="'view/modulos/site/produtos.html'"></div>

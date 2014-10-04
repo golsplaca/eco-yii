@@ -58,7 +58,7 @@
             <span style="font-size:12px; font-style:italic;"> à vista </span>
            </div>
 
-           <div class="col-sm-12" style="margin-top:20px;">
+           <div class="col-sm-12" style="margin-top:20px;  min-height:25px;">
             <div style="float:left; font-weight:bold;">Tamanho:</div>
             <div class="classTamanho" style="float:left;">
               <div ng-repeat="i in scopeList['produto'].pro_tamanho"
@@ -68,10 +68,11 @@
              </div>
             </div>
            </div>
-           <div class="col-sm-12" style="margin-top:10px;">
-            <div class="alert alert-danger" ng-show="msgTamanho" role="alert">{{msgTamanho}}</div>
+           <div class="col-sm-12" style="margin-top:10px; ">
+            <div class="alert alert-danger" style="position:relative;" ng-show="msgTamanho" role="alert">{{msgTamanho}}</div>
            </div>
 
-          <div class="col-sm-12" ng-click="addCarrinho()" style="margin-top:50px;">
+          <div class="col-sm-12" ng-click="addCarrinho()" style="margin-top:10px;">
             <button class="btn btn-danger" style="border-radius:2px" >Comprar <i class="glyphicon glyphicon-shopping-cart"></i></button>
+            <a ng-click="carrinho()" class="btn btn-default" style="float:right; border-radius:2px" >Ver <i class="glyphicon glyphicon-shopping-cart"></i></a>
           </div>

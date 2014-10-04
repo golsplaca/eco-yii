@@ -28,7 +28,7 @@ class EcoProdutosController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view', 'json'),
+				'actions'=>array('index','view', 'json', 'colecao', 'categoria'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -66,6 +66,28 @@ class EcoProdutosController extends Controller
 	public function actionJson(){
 
 		$produtos=EcoProdutos::model()->findAllByAttributes(array('pro_status' => 1), array('order' => 'rand()'));
+
+		for($i=0; $i < count($produtos); $i++) { 
+			foreach ($produtos[$i] as $key => $val) {
+						$dataValue[$i][$key] = $val;
+			}
+		}
+		echo json_encode($dataValue);
+	}
+	public function actionCategoria(){
+
+		$produtos=EcoProdutos::model()->findAllByAttributes(array('pro_id_cagegoria'=> $_GET['id'],'pro_status' => 1), array('order' => 'rand()'));
+
+		for($i=0; $i < count($produtos); $i++) { 
+			foreach ($produtos[$i] as $key => $val) {
+						$dataValue[$i][$key] = $val;
+			}
+		}
+		echo json_encode($dataValue);
+	}
+	public function actionColecao(){
+
+		$produtos=EcoProdutos::model()->findAllByAttributes(array('pro_id_colecao' => $_GET['id']), array('order' => 'rand()'));
 
 		for($i=0; $i < count($produtos); $i++) { 
 			foreach ($produtos[$i] as $key => $val) {

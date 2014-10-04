@@ -28,7 +28,7 @@ class EcoCategoriaController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view','json'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -62,6 +62,19 @@ class EcoCategoriaController extends Controller
 			'model'=>$this->loadModel($id),
 		));
 	}
+
+	public function actionJson()
+	{
+		$categoria=EcoCategoria::model()->findAll();
+
+		for($i=0; $i < count($categoria); $i++) { 
+			foreach ($categoria[$i] as $key => $val) {
+				$dataValue[$i][$key] = $val;
+			}
+		}
+		echo json_encode($dataValue);
+	}
+	
 
 	/**
 	 * Creates a new model.

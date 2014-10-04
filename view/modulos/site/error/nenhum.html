@@ -1,0 +1,23 @@
+<div class="col-sm-12" ng-init="showHideBanner = false;" style="margin-top:10px; ">
+<div class="alert alert-danger" style="position:relative; z-index:0" role="alert">
+	Nenhum produto encontrado para categoria escolhida!
+</div>
+
+
+<div class="col-sm-4" style="margin-top:10px; ">
+	<div class="list-group">
+	  <a style="background:#eee;" class="list-group-item disabled">
+	    coleções
+	  </a>
+	  <a ng-repeat="i in scopeList['colecoes']"  ng-click="buscarProdutos(i.col_id, 'colecoes', i.col_nome);" class="list-group-item" style="cursor:pointer;">{{i.col_nome}}</a>
+	</div>
+</div>
+<div class="col-sm-4" style="margin-top:10px; ">
+	<div class="list-group">
+	  <a style="background:#eee;" class="list-group-item disabled">
+	    Categoria
+	  </a>
+	  <a ng-repeat="i in scopeList['category']"  ng-click="buscarProdutos(i.cat_id, 'categoria', i.cat_nome);" class="list-group-item" style="cursor:pointer;">{{i.cat_nome}}</a>
+	</div>
+</div>
+</div>

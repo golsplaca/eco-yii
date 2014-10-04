@@ -176,3 +176,9 @@ img.logo{
     background: #f9f9f9;
     border-bottom: #999;
  }
+
+ .menu-categoria{     
+    border-bottom: 1px solid #eee;  
+    background: #fff;
+    height: 40px;
+  }
