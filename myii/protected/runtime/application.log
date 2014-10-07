@@ -9497,3 +9497,782 @@ Stack trace:
 REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoProdutos/categoria&id=5
 in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php (86)
 in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2014/10/04 23:09:40 [error] [php] Undefined variable: dataValue (/var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php:86)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoProdutosController->runAction()
+#1 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoProdutosController->filterAccessControl()
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoProdutosController->runActionWithFilters()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoProdutosController->run()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoProdutos/categoria&id=2
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php (86)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2014/10/04 23:09:42 [error] [php] Undefined variable: dataValue (/var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php:86)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoProdutosController->runAction()
+#1 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoProdutosController->filterAccessControl()
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoProdutosController->runActionWithFilters()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoProdutosController->run()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoProdutos/categoria&id=2
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php (86)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2014/10/04 23:09:43 [error] [php] Undefined variable: dataValue (/var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php:86)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoProdutosController->runAction()
+#1 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoProdutosController->filterAccessControl()
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoProdutosController->runActionWithFilters()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoProdutosController->run()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoProdutos/categoria&id=4
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php (86)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2014/10/04 23:09:45 [error] [php] Undefined variable: dataValue (/var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php:86)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoProdutosController->runAction()
+#1 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoProdutosController->filterAccessControl()
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoProdutosController->runActionWithFilters()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoProdutosController->run()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoProdutos/categoria&id=3
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php (86)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2014/10/04 23:09:45 [error] [php] Undefined variable: dataValue (/var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php:86)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoProdutosController->runAction()
+#1 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoProdutosController->filterAccessControl()
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoProdutosController->runActionWithFilters()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoProdutosController->run()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoProdutos/categoria&id=4
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php (86)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2014/10/04 23:09:46 [error] [php] Undefined variable: dataValue (/var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php:86)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoProdutosController->runAction()
+#1 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoProdutosController->filterAccessControl()
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoProdutosController->runActionWithFilters()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoProdutosController->run()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoProdutos/categoria&id=7
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php (86)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2014/10/04 23:09:46 [error] [php] Undefined variable: dataValue (/var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php:86)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoProdutosController->runAction()
+#1 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoProdutosController->filterAccessControl()
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoProdutosController->runActionWithFilters()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoProdutosController->run()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoProdutos/categoria&id=9
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php (86)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2014/10/04 23:09:47 [error] [php] Undefined variable: dataValue (/var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php:86)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoProdutosController->runAction()
+#1 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoProdutosController->filterAccessControl()
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoProdutosController->runActionWithFilters()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoProdutosController->run()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoProdutos/categoria&id=8
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php (86)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2014/10/04 23:09:48 [error] [php] Undefined variable: dataValue (/var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php:86)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoProdutosController->runAction()
+#1 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoProdutosController->filterAccessControl()
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoProdutosController->runActionWithFilters()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoProdutosController->run()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoProdutos/categoria&id=8
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php (86)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2014/10/04 23:09:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "colecoes".' in /var/www/html/lucweb/eco-yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CController.php(270): CController->missingAction('colecoes')
+#1 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): CController->run('colecoes')
+#2 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ecoProdutos/col...')
+#3 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoProdutos/colecoes&id=undefined
+HTTP_REFERER=http://localhost/lucweb/eco-yii/
+---
+2014/10/04 23:09:54 [error] [php] Undefined variable: dataValue (/var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php:86)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoProdutosController->runAction()
+#1 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoProdutosController->filterAccessControl()
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoProdutosController->runActionWithFilters()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoProdutosController->run()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoProdutos/categoria&id=2
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php (86)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2014/10/04 23:09:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "colecoes".' in /var/www/html/lucweb/eco-yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CController.php(270): CController->missingAction('colecoes')
+#1 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): CController->run('colecoes')
+#2 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ecoProdutos/col...')
+#3 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoProdutos/colecoes&id=undefined
+HTTP_REFERER=http://localhost/lucweb/eco-yii/
+---
+2014/10/04 23:09:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "colecoes".' in /var/www/html/lucweb/eco-yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CController.php(270): CController->missingAction('colecoes')
+#1 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): CController->run('colecoes')
+#2 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ecoProdutos/col...')
+#3 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoProdutos/colecoes&id=undefined
+HTTP_REFERER=http://localhost/lucweb/eco-yii/
+---
+2014/10/04 23:10:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "colecoes".' in /var/www/html/lucweb/eco-yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CController.php(270): CController->missingAction('colecoes')
+#1 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): CController->run('colecoes')
+#2 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ecoProdutos/col...')
+#3 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoProdutos/colecoes&id=undefined
+HTTP_REFERER=http://localhost/lucweb/eco-yii/
+---
+2014/10/04 23:10:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "colecoes".' in /var/www/html/lucweb/eco-yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CController.php(270): CController->missingAction('colecoes')
+#1 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): CController->run('colecoes')
+#2 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ecoProdutos/col...')
+#3 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoProdutos/colecoes&id=undefined
+HTTP_REFERER=http://localhost/lucweb/eco-yii/
+---
+2014/10/04 23:10:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "colecoes".' in /var/www/html/lucweb/eco-yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CController.php(270): CController->missingAction('colecoes')
+#1 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): CController->run('colecoes')
+#2 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ecoProdutos/col...')
+#3 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoProdutos/colecoes&id=undefined
+HTTP_REFERER=http://localhost/lucweb/eco-yii/
+---
+2014/10/04 23:10:10 [error] [php] Undefined variable: dataValue (/var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php:86)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoProdutosController->runAction()
+#1 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoProdutosController->filterAccessControl()
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoProdutosController->runActionWithFilters()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoProdutosController->run()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoProdutos/categoria&id=5
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php (86)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2014/10/04 23:10:18 [error] [php] Undefined variable: dataValue (/var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php:86)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoProdutosController->runAction()
+#1 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoProdutosController->filterAccessControl()
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoProdutosController->runActionWithFilters()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoProdutosController->run()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoProdutos/categoria&id=11
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php (86)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2014/10/04 23:10:20 [error] [php] Undefined variable: dataValue (/var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php:86)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoProdutosController->runAction()
+#1 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoProdutosController->filterAccessControl()
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoProdutosController->runActionWithFilters()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoProdutosController->run()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoProdutos/categoria&id=6
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php (86)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2014/10/04 23:10:21 [error] [php] Undefined variable: dataValue (/var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php:86)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoProdutosController->runAction()
+#1 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoProdutosController->filterAccessControl()
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoProdutosController->runActionWithFilters()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoProdutosController->run()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoProdutos/categoria&id=9
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php (86)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2014/10/04 23:10:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "colecoes".' in /var/www/html/lucweb/eco-yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CController.php(270): CController->missingAction('colecoes')
+#1 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): CController->run('colecoes')
+#2 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ecoProdutos/col...')
+#3 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoProdutos/colecoes&id=undefined
+HTTP_REFERER=http://localhost/lucweb/eco-yii/
+---
+2014/10/04 23:10:32 [error] [php] Undefined variable: dataValue (/var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php:86)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoProdutosController->runAction()
+#1 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoProdutosController->filterAccessControl()
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoProdutosController->runActionWithFilters()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoProdutosController->run()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoProdutos/categoria&id=7
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php (86)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2014/10/04 23:11:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "colecoes".' in /var/www/html/lucweb/eco-yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CController.php(270): CController->missingAction('colecoes')
+#1 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): CController->run('colecoes')
+#2 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ecoProdutos/col...')
+#3 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoProdutos/colecoes&id=2
+HTTP_REFERER=http://localhost/lucweb/eco-yii/
+---
+2014/10/06 13:28:49 [error] [php] Undefined variable: dataValue (/var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php:86)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoProdutosController->runAction()
+#1 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoProdutosController->filterAccessControl()
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoProdutosController->runActionWithFilters()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoProdutosController->run()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoProdutos/categoria&id=6
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php (86)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2014/10/06 13:28:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "colecoes".' in /var/www/html/lucweb/eco-yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CController.php(270): CController->missingAction('colecoes')
+#1 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): CController->run('colecoes')
+#2 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ecoProdutos/col...')
+#3 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoProdutos/colecoes&id=2
+HTTP_REFERER=http://localhost/lucweb/eco-yii/
+---
+2014/10/06 13:28:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "colecoes".' in /var/www/html/lucweb/eco-yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CController.php(270): CController->missingAction('colecoes')
+#1 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): CController->run('colecoes')
+#2 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ecoProdutos/col...')
+#3 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoProdutos/colecoes&id=2
+HTTP_REFERER=http://localhost/lucweb/eco-yii/
+---
+2014/10/06 13:29:00 [error] [php] Undefined variable: dataValue (/var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php:86)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoProdutosController->runAction()
+#1 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoProdutosController->filterAccessControl()
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoProdutosController->runActionWithFilters()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoProdutosController->run()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoProdutos/categoria&id=5
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php (86)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2014/10/06 20:33:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "colecoes".' in /var/www/html/lucweb/eco-yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CController.php(270): CController->missingAction('colecoes')
+#1 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): CController->run('colecoes')
+#2 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ecoProdutos/col...')
+#3 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoProdutos/colecoes&id=2
+HTTP_REFERER=http://localhost/lucweb/eco-yii/
+---
+2014/10/06 23:01:16 [error] [php] Undefined variable: dataValue (/var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php:86)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoProdutosController->runAction()
+#1 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoProdutosController->filterAccessControl()
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoProdutosController->runActionWithFilters()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoProdutosController->run()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoProdutos/categoria&id=3
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php (86)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2014/10/06 23:01:18 [error] [php] Undefined variable: dataValue (/var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php:86)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoProdutosController->runAction()
+#1 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoProdutosController->filterAccessControl()
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoProdutosController->runActionWithFilters()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoProdutosController->run()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoProdutos/categoria&id=2
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php (86)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2014/10/06 23:01:21 [error] [php] Undefined variable: dataValue (/var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php:86)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoProdutosController->runAction()
+#1 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoProdutosController->filterAccessControl()
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoProdutosController->runActionWithFilters()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoProdutosController->run()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoProdutos/categoria&id=6
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php (86)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2014/10/06 23:01:26 [error] [php] Undefined variable: dataValue (/var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php:86)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoProdutosController->runAction()
+#1 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoProdutosController->filterAccessControl()
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoProdutosController->runActionWithFilters()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoProdutosController->run()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoProdutos/categoria&id=2
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php (86)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2014/10/06 23:01:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "colecoes".' in /var/www/html/lucweb/eco-yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CController.php(270): CController->missingAction('colecoes')
+#1 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): CController->run('colecoes')
+#2 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ecoProdutos/col...')
+#3 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoProdutos/colecoes&id=2
+HTTP_REFERER=http://localhost/lucweb/eco-yii/
+---
+2014/10/06 23:01:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "colecoes".' in /var/www/html/lucweb/eco-yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CController.php(270): CController->missingAction('colecoes')
+#1 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): CController->run('colecoes')
+#2 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ecoProdutos/col...')
+#3 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoProdutos/colecoes&id=2
+HTTP_REFERER=http://localhost/lucweb/eco-yii/
+---
+2014/10/06 23:02:05 [error] [php] Undefined variable: dataValue (/var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php:86)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoProdutosController->runAction()
+#1 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoProdutosController->filterAccessControl()
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoProdutosController->runActionWithFilters()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoProdutosController->run()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoProdutos/categoria&id=3
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php (86)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2014/10/06 23:02:17 [error] [php] Undefined variable: dataValue (/var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php:86)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoProdutosController->runAction()
+#1 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoProdutosController->filterAccessControl()
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoProdutosController->runActionWithFilters()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoProdutosController->run()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoProdutos/categoria&id=3
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php (86)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2014/10/06 23:02:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "colecoes".' in /var/www/html/lucweb/eco-yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CController.php(270): CController->missingAction('colecoes')
+#1 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): CController->run('colecoes')
+#2 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ecoProdutos/col...')
+#3 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoProdutos/colecoes&id=2
+HTTP_REFERER=http://localhost/lucweb/eco-yii/
+---
+2014/10/06 23:02:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "colecoes".' in /var/www/html/lucweb/eco-yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CController.php(270): CController->missingAction('colecoes')
+#1 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): CController->run('colecoes')
+#2 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ecoProdutos/col...')
+#3 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoProdutos/colecoes&id=2
+HTTP_REFERER=http://localhost/lucweb/eco-yii/
+---
+2014/10/06 23:04:06 [error] [php] Undefined variable: dataValue (/var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php:86)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoProdutosController->runAction()
+#1 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoProdutosController->filterAccessControl()
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoProdutosController->runActionWithFilters()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoProdutosController->run()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoProdutos/categoria&id=4
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php (86)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2014/10/06 23:04:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "colecoes".' in /var/www/html/lucweb/eco-yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CController.php(270): CController->missingAction('colecoes')
+#1 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): CController->run('colecoes')
+#2 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ecoProdutos/col...')
+#3 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoProdutos/colecoes&id=2
+HTTP_REFERER=http://localhost/lucweb/eco-yii/
+---
+2014/10/06 23:04:41 [error] [php] Undefined variable: dataValue (/var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php:86)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoProdutosController->runAction()
+#1 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoProdutosController->filterAccessControl()
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoProdutosController->runActionWithFilters()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoProdutosController->run()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoProdutos/categoria&id=4
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php (86)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2014/10/06 23:04:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "colecoes".' in /var/www/html/lucweb/eco-yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CController.php(270): CController->missingAction('colecoes')
+#1 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): CController->run('colecoes')
+#2 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ecoProdutos/col...')
+#3 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoProdutos/colecoes&id=2
+HTTP_REFERER=http://localhost/lucweb/eco-yii/
+---
+2014/10/06 23:05:28 [error] [php] Undefined variable: dataValue (/var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php:86)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoProdutosController->runAction()
+#1 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoProdutosController->filterAccessControl()
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoProdutosController->runActionWithFilters()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoProdutosController->run()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoProdutos/categoria&id=2
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php (86)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2014/10/06 23:05:29 [error] [php] Undefined variable: dataValue (/var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php:86)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoProdutosController->runAction()
+#1 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoProdutosController->filterAccessControl()
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoProdutosController->runActionWithFilters()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoProdutosController->run()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoProdutos/categoria&id=3
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php (86)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2014/10/06 23:05:36 [error] [php] Undefined variable: dataValue (/var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php:86)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoProdutosController->runAction()
+#1 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoProdutosController->filterAccessControl()
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoProdutosController->runActionWithFilters()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoProdutosController->run()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoProdutos/categoria&id=8
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php (86)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2014/10/06 23:07:16 [error] [php] Undefined variable: dataValue (/var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php:86)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoProdutosController->runAction()
+#1 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoProdutosController->filterAccessControl()
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoProdutosController->runActionWithFilters()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoProdutosController->run()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoProdutos/categoria&id=2
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php (86)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2014/10/06 23:07:24 [error] [php] Undefined variable: dataValue (/var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php:86)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoProdutosController->runAction()
+#1 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoProdutosController->filterAccessControl()
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoProdutosController->runActionWithFilters()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoProdutosController->run()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoProdutos/categoria&id=4
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php (86)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2014/10/06 23:07:26 [error] [php] Undefined variable: dataValue (/var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php:86)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoProdutosController->runAction()
+#1 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoProdutosController->filterAccessControl()
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoProdutosController->runActionWithFilters()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoProdutosController->run()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoProdutos/categoria&id=2
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php (86)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2014/10/06 23:07:27 [error] [php] Undefined variable: dataValue (/var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php:86)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoProdutosController->runAction()
+#1 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoProdutosController->filterAccessControl()
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoProdutosController->runActionWithFilters()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoProdutosController->run()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoProdutos/categoria&id=4
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php (86)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2014/10/06 23:07:28 [error] [php] Undefined variable: dataValue (/var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php:86)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoProdutosController->runAction()
+#1 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoProdutosController->filterAccessControl()
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoProdutosController->runActionWithFilters()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoProdutosController->run()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoProdutos/categoria&id=6
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php (86)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2014/10/06 23:07:28 [error] [php] Undefined variable: dataValue (/var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php:86)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoProdutosController->runAction()
+#1 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoProdutosController->filterAccessControl()
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoProdutosController->runActionWithFilters()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoProdutosController->run()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoProdutos/categoria&id=4
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php (86)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2014/10/06 23:07:29 [error] [php] Undefined variable: dataValue (/var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php:86)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoProdutosController->runAction()
+#1 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoProdutosController->filterAccessControl()
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoProdutosController->runActionWithFilters()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoProdutosController->run()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoProdutos/categoria&id=9
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php (86)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2014/10/06 23:07:30 [error] [php] Undefined variable: dataValue (/var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php:86)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoProdutosController->runAction()
+#1 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoProdutosController->filterAccessControl()
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoProdutosController->runActionWithFilters()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoProdutosController->run()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoProdutos/categoria&id=4
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php (86)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2014/10/06 23:07:31 [error] [php] Undefined variable: dataValue (/var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php:86)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoProdutosController->runAction()
+#1 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoProdutosController->filterAccessControl()
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoProdutosController->runActionWithFilters()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoProdutosController->run()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoProdutos/categoria&id=2
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoProdutosController.php (86)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)

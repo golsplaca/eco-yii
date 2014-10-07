@@ -1,14 +1,17 @@
 function scopeMainCarrinho($scope){
 
 	$scope.scopeList['carrinho'] = getCookies('carrinho', true);
-	$scope.preco_subTotal = 0;
-	$scope.preco_frete = 0;
+
+
 	$scope.calcularSubtotal = function(){
+		$scope.preco_frete = 0;
+		subtTotal = 0;
 		$.each($scope.scopeList['carrinho'], function(key){
-			$scope.preco_subTotal = $scope.preco_subTotal + calcularMoeda($scope.scopeList['carrinho'][key].preco_total); 
-			console.log($scope.preco_subTotal);
+			subtTotal = subtTotal + parseFloat(calcularMoeda($scope.scopeList['carrinho'][key].preco_total)); 
 		});
-		$scope.preco_total = $scope.preco_subTotal + $scope.preco_frete;
+		$scope.preco_subTotal = formatReal(parseFloat(converteDecimal(subtTotal.toString())));
+
+		$scope.preco_total = formatReal(parseFloat(converteDecimal(subtTotal + parseFloat($scope.preco_frete).toString())));
 	};
 	
 	if($scope.scopeList['carrinho']){
@@ -22,6 +25,7 @@ function scopeMainCarrinho($scope){
 		total = calcularMoeda($scope.scopeList['carrinho'][i].preco) * $scope.scopeList['carrinho'][i].quantidade;
 		$scope.scopeList['carrinho'][i].preco_total = formatReal(total);
 		setUpdateCookies('carrinho', JSON.stringify($scope.scopeList['carrinho']));
+		$scope.calcularSubtotal();
 	};
 /*
 	$scope.addItemCarrinho = function(i){
@@ -41,11 +45,15 @@ function scopeMainCarrinho($scope){
 
 	$scope.carrinho = function(){
 		$scope.pageAcesso = 'Carrinho';
-		window.location.href = "#/carrinho"
-	}
+		window.location.href = "#/carrinho";
+	};
 
 	$scope.deleteItemCarrinho = function(index){
 		$scope.scopeList['carrinho'].splice(index, 1);
 		setUpdateCookies('carrinho', JSON.stringify($scope.scopeList['carrinho']));
-	}
+	};
+
+	$scope.continuarCompra = function(){
+		window.location.href = "#finalizar-compra";
+	};
 }

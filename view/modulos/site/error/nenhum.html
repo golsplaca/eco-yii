@@ -9,7 +9,7 @@
 	  <a style="background:#eee;" class="list-group-item disabled">
 	    coleções
 	  </a>
-	  <a ng-repeat="i in scopeList['colecoes']"  ng-click="buscarProdutos(i.col_id, 'colecoes', i.col_nome);" class="list-group-item" style="cursor:pointer;">{{i.col_nome}}</a>
+	  <a ng-repeat="i in scopeList['colecoes']"  ng-click="buscarProdutos(i.col_guid, 'colecao', i.col_nome);" class="list-group-item" style="cursor:pointer;">{{i.col_nome}}</a>
 	</div>
 </div>
 <div class="col-sm-4" style="margin-top:10px; ">

@@ -62,6 +62,7 @@ function scopeMainProdutos($scope){
 		}
 
 	$scope.addCarrinho = function(){
+
 		carrinho = getCookies('carrinho', true);
 		if($scope.tempTamanho == false){
 			$scope.msgTamanho = 'Por favor escolha um tamanho!';

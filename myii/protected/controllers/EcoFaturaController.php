@@ -45,6 +45,25 @@ class EcoFaturaController extends Controller
 		);
 	}
 
+	public function actionCielo(){
+		$data_cielo['CART_1_NAME'] = “Bermuda”;
+		$data_cielo['CART_1_DESCRIPTION'] = “”
+		$data_cielo['CART_1_UNITPRICE'] = “9500”
+		$data_cielo['CART_1_QUANTITY'] = “1”
+		$data_cielo['CART_1_TYPE'] = “1”
+		$data_cielo['CART_1_CODE'] = “9100012”
+		$data_cielo['CART_1_WEIGHT'] = “500” 
+		$data_cielo['CART_1_ZIPCODE'] = “220080-120”
+		$data_cielo['CART_2_NAME'] = “Blusa”
+		$data_cielo['CART_2_DESCRIPTION'] = “”
+		$data_cielo['CART_2_UNITPRICE'] = “8000”
+		$data_cielo['CART_2_QUANTITY'] = “1”
+		$data_cielo['CART_2_TYPE'] = “1”
+		$data_cielo['CART_2_CODE'] = “9100013”
+		$data_cielo['CART_2_WEIGHT'] = “300” 
+		$data_cielo['CART_2_ZIPCODE'] = “220080-120”
+	}
+
 	/**
 	 * Displays a particular model.
 	 * @param integer $id the ID of the model to be displayed

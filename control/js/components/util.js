@@ -23,7 +23,6 @@ $( document ).ready(function() {
 });
 
 function calcularMoeda(item){
-	console.log(item);
 	valor = item.replace('R$ ', '');
 	return valor.replace(',', '.');
 }
@@ -36,4 +35,8 @@ function formatReal(mixed){
 		tmp = tmp.replace(/([0-9]{3}),([0-9]{2}$)/g, ".$1,$2");
  
 	return 'R$ '+tmp;
+}
+
+function converteDecimal(item){
+	return item.substring(0, item.indexOf('.')+3);
 }

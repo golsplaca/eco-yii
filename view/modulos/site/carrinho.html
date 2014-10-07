@@ -17,7 +17,7 @@
   <div class="table-responsive">
     <table class="table table-striped">
       <thead>
-        <tr style="background:#444; color:#fff; ">
+        <tr style="background:#d43f3a; color:#fff; ">
           <th style="font-weight:bold;">Produto</th>
           <th style="font-weight:bold; width:200px;">Nome</th>
           <th style="font-weight:bold; width:20px; text-align:center;">QTDE</th>
@@ -50,7 +50,7 @@
           <td  style="vertical-align:middle; font-weight:bold;">{{i.preco_total}}</td>
         </tr>
 
-         <tr ng-repeat="i in scopeList['carrinho']">
+         <tr>
           <td colspan="4">
             
           </td>
@@ -60,7 +60,7 @@
           <td  style="vertical-align:middle; font-weight:bold;">{{preco_subTotal}}</td>
         </tr>
 
-         <tr ng-repeat="i in scopeList['carrinho']">
+         <tr>
           <td colspan="4">
             
           </td>
@@ -70,7 +70,7 @@
           <td  style="vertical-align:middle; font-weight:bold;">{{preco_frete}}</td>
         </tr>
 
-         <tr ng-repeat="i in scopeList['carrinho']">
+         <tr>
           <td colspan="4">
             
           </td>
@@ -85,3 +85,9 @@
     </table>
   </div>
 </div>
+
+<div class="col-sm-12" ng-click="" style="margin-top:10px;">
+
+            <a ng-click="" class="btn btn-default" style=" border-radius:2px" >Continuar comprando <i class="glyphicon glyphicon-inbox"></i></a>
+            <button ng-click="continuarCompra()" class="btn btn-danger" style="float:right;  border-radius:2px" >Continuar <i class="glyphicon glyphicon-arrow-right"></i></button>
+          </div>
