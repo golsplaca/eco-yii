@@ -1,0 +1,45 @@
+div.col-md-9-produtos{
+	margin-top: -30px;
+}
+div.eco-produtos{
+	width: 100%;
+	margin:10px 0 0 -20px;
+}
+div.eco-produtos img{
+	max-width: calc(100% + 41px);
+	margin:-20px -20px 10px -20px;
+}
+
+div.eco-produtos img:hover{
+	opacity: 0.5;
+}
+
+div.eco-produtos .col-lg-4{
+	max-width: 300px;
+	margin-bottom: 20px;
+}
+
+div.eco-produtos .col-lg-4 .widget-body{
+	min-height: 340px;
+	cursor: pointer;
+}
+
+div.eco-produtos .col-lg-4 .widget-body .img-produto{
+	height: 243px;
+}
+
+div.eco-produtos .col-lg-4 .comment{
+	font-size: 18px;
+	color: #444;
+	font-weight: bold;
+}
+div.eco-produtos .col-lg-4 .comment .reais{
+	font-size: 10px;
+	margin-top: 5px;
+	margin-right: 10px;
+	float: left;
+	color: #999;
+}
+.comment .reais{ width: 100%; }
+
+ul.pagination li.act-page  a{ background: #eee;}

@@ -13,6 +13,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Create EcoUsuario</h1>
+<h3>Create EcoUsuario</h3>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

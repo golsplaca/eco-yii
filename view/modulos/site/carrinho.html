@@ -13,81 +13,83 @@
 		opacity: 0.8;
 	}
 </style>
- <div class="col-sm-12" >
-  <div class="table-responsive">
-    <table class="table table-striped">
-      <thead>
-        <tr style="background:#d43f3a; color:#fff; ">
-          <th style="font-weight:bold;">Produto</th>
-          <th style="font-weight:bold; width:200px;">Nome</th>
-          <th style="font-weight:bold; width:20px; text-align:center;">QTDE</th>
-          <th style="font-weight:bold; width:50px;">Excluir</th>
-          <th style="font-weight:bold; width:150px;">Valor unitário R$</th>
-          <th style="font-weight:bold; width:100px;">Subtotal R$</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr ng-repeat="i in scopeList['carrinho']">
-          <td width="100px">
-          	<img src="public/images/produtos/{{i.imagem}}" style="width: 90px; height: 80px;" />
-          </td>
-          <td  style="vertical-align:middle;">{{i.nome}}<br />
-          	<span style="font-style:italic; font-size:10px;"> codigo: {{i.codigo}} </span></td>
-          <td  style="vertical-align:middle; text-align: center;">
-		  <span ng-click="quantidadeCarrinho($index, false);" ng-hide="(i.quantidade > 1) ? false : true;"
-		  		class="glyphicon glyphicon-minus-sign addQuantidadeProduto" ></span><br />
-          		{{i.quantidade}} <br />
-          <span ng-click="quantidadeCarrinho($index, true);"  ng-hide="(i.quantidade >= i.qt_max) ? true : false;"
-          		class="glyphicon glyphicon glyphicon-plus-sign addQuantidadeProduto" ></span></td>
-          <td  style="vertical-align:middle; text-align: center;">
-          <span class="label label-danger" ng-show="excluirIsto" ng-click="deleteItemCarrinho($index)"
-          style="cursor:pointer;" >sim</span><br />
-          	<span ng-click="excluirIsto = true;" class="glyphicon glyphicon-remove-sign deleteProduto" ></span>
-            <br />
-            <span style="cursor:pointer;" ng-click="excluirIsto = !excluirIsto" class="label label-default" ng-show="excluirIsto" >não</span>
-          </td>
-          <td  style="vertical-align:middle; font-weight:bold;">{{i.preco}}</td>
-          <td  style="vertical-align:middle; font-weight:bold;">{{i.preco_total}}</td>
-        </tr>
+   <div ng-show="verCarrinhoShowHide" class="col-sm-12" >
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+          <tr style="background:#d43f3a; color:#fff; ">
+            <th style="font-weight:bold;">Produto</th>
+            <th style="font-weight:bold; width:200px;">Nome</th>
+            <th style="font-weight:bold; width:20px; text-align:center;">QTDE</th>
+            <th style="font-weight:bold; width:50px;">Excluir</th>
+            <th style="font-weight:bold; width:150px;">Valor unitário R$</th>
+            <th style="font-weight:bold; width:100px;">Subtotal R$</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="i in scopeList['carrinho']">
+            <td width="100px">
+            	<img src="public/images/produtos/{{i.imagem}}" style="width: 90px; height: 80px;" />
+            </td>
+            <td  style="vertical-align:middle;">{{i.nome}}<br />
+            	<span style="font-style:italic; font-size:10px;"> codigo: {{i.codigo}} </span></td>
+            <td  style="vertical-align:middle; text-align: center;">
+  		  <span ng-click="quantidadeCarrinho($index, false);" ng-hide="(i.quantidade > 1) ? false : true;"
+  		  		class="glyphicon glyphicon-minus-sign addQuantidadeProduto" ></span><br />
+            		{{i.quantidade}} <br />
+            <span ng-click="quantidadeCarrinho($index, true);"  ng-hide="(i.quantidade >= i.qt_max) ? true : false;"
+            		class="glyphicon glyphicon glyphicon-plus-sign addQuantidadeProduto" ></span></td>
+            <td  style="vertical-align:middle; text-align: center;">
+            <span class="label label-danger" ng-show="excluirIsto" ng-click="deleteItemCarrinho($index)"
+            style="cursor:pointer;" >sim</span><br />
+            	<span ng-click="excluirIsto = true;" class="glyphicon glyphicon-remove-sign deleteProduto" ></span>
+              <br />
+              <span style="cursor:pointer;" ng-click="excluirIsto = !excluirIsto" class="label label-default" ng-show="excluirIsto" >não</span>
+            </td>
+            <td  style="vertical-align:middle; font-weight:bold;">{{i.preco}}</td>
+            <td  style="vertical-align:middle; font-weight:bold;">{{i.preco_total}}</td>
+          </tr>
 
-         <tr>
-          <td colspan="4">
-            
-          </td>
-        <td style="font-weight:bold;">
-            Subtotal:
-          </td>
-          <td  style="vertical-align:middle; font-weight:bold;">{{preco_subTotal}}</td>
-        </tr>
+           <tr>
+            <td colspan="4">
+              
+            </td>
+          <td style="font-weight:bold;">
+              Subtotal:
+            </td>
+            <td  style="vertical-align:middle; font-weight:bold;">{{preco_subTotal}}</td>
+          </tr>
 
-         <tr>
-          <td colspan="4">
-            
-          </td>
-        <td style="font-weight:bold;">
-            Frete:
-          </td>
-          <td  style="vertical-align:middle; font-weight:bold;">{{preco_frete}}</td>
-        </tr>
+           <tr>
+            <td colspan="4">
+              
+            </td>
+          <td style="font-weight:bold;">
+              Frete:
+            </td>
+            <td  style="vertical-align:middle; font-weight:bold;">{{preco_frete}}</td>
+          </tr>
 
-         <tr>
-          <td colspan="4">
-            
-          </td>
-        <td style="font-weight:bold;">
-            VALOR TOTAL:
-          </td>
-          <td  style="vertical-align:middle; font-weight:bold;">{{preco_total}}</td>
-        </tr>
+           <tr>
+            <td colspan="4">
+              
+            </td>
+          <td style="font-weight:bold;">
+              VALOR TOTAL:
+            </td>
+            <td  style="vertical-align:middle; font-weight:bold;">{{preco_total}}</td>
+          </tr>
 
-      </tbody>
+        </tbody>
 
-    </table>
+      </table>
+    </div>
+  
+    <div class="col-sm-12" style="margin-top:10px;">
+      <a ng-click="carregarProdutos()" onclick="window.location.href = '#/produtos';" class="btn btn-default" style=" border-radius:2px" >Continuar comprando <i class="glyphicon glyphicon-inbox"></i></a>
+      <button ng-click="continuarCompra()" class="btn btn-danger" style="float:right;  border-radius:2px" >Continuar <i class="glyphicon glyphicon-arrow-right"></i></button>
+    </div>
   </div>
+<div  class="col-sm-12" ng-show="!verCarrinhoShowHide">
+  <h2>Seu carrinho de compras está vazio!</h2>
 </div>
-
-<div class="col-sm-12" ng-click="" style="margin-top:10px;">
-
-            <a ng-click="" class="btn btn-default" style=" border-radius:2px" >Continuar comprando <i class="glyphicon glyphicon-inbox"></i></a>
-            <button ng-click="continuarCompra()" class="btn btn-danger" style="float:right;  border-radius:2px" >Continuar <i class="glyphicon glyphicon-arrow-right"></i></button>
-          </div>

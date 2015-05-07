@@ -1,22 +1,16 @@
 function pageController($scope, $http, $timeout, cfpLoadingBar){
-	
-	$(document).ready(function(){
-			$(".contentNgView").hide();
-		setTimeout(function(){	
-			$(".contentNgView").fadeIn(1000);
-		}, 100);
-	});
+
+		$scope.inputs = {};
 
 		$scope.userPost = {};
-
 
 		cfpLoadingBar.complete();
 
 	    $scope.scopeList = {};
+	   	user_logado = getCookies('user', true);	
+		$scope.usuario_logado = (user_logado) ? user_logado.usu_nome : 'Visitante' ;
 
-	    $scope.usuario_logado = "visitante. Entrar";
-
-	  $scope.currentPage = 1;
+	   $scope.currentPage = 1;
 	  $scope.executeScope = function(){
 	    $scope.setPage();
 	  }
@@ -53,8 +47,13 @@ function pageController($scope, $http, $timeout, cfpLoadingBar){
 
 	$scope.carregarProdutos = function(url){
 		if(!url){
-			$scope.showHideBanner = true;
 			url = 'myii/index.php?r=ecoProdutos/json';
+		}
+		if(url == 'search'){
+			$('.slide-animate').fadeOut(500);
+			url = 'myii/index.php?r=ecoProdutos/json&search='+$scope.inputs.search;
+		}else{
+			setUpdateCookies('produtos', url);
 		}
 		$scope.searchDb(url, null, null, 'produtos');
 	};
@@ -75,25 +74,22 @@ function pageController($scope, $http, $timeout, cfpLoadingBar){
 	scopeMainCarrinho($scope);
 
 	switch(new String(window.location).split('#')[1]){
-		case '/login':
+		case '/user':
 			useJs('head', 'view/modulos/security/js/login.js');
 			scopeMainLogin($scope);
 		break;
 		case '/produto':
 			$scope.verProduto(getCookies('produto', true));
 		break;
+		case '/produtos':
+			$scope.carregarProdutos(getCookies('produtos'));
+		break;
 		default:  
-
 	}
-
-
 	$scope.loginUser = function(){
 		useJs('head', 'view/modulos/security/js/login.js');
 		scopeMainLogin($scope);
-		window.location.href = "#/login";
+		window.location.href = "#/user";
 	};
-
-	
-
 	cfpLoadingBar.complete();
 }

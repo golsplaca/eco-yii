@@ -29,7 +29,13 @@ class SiteController extends Controller
 	{
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
-		$this->render('index');
+		$produtos = new EcoProdutos();
+		$this->render('index',array(
+			'banners' => EcoBanner::model()->findAll(), 
+			'categorias' => EcoCategoria::model()->findAll(), 
+			'produtos'   => $produtos->searchPagination(),
+			'colecoes' => EcoColecoes::model()->findAll(), 
+		));
 	}
 
 	/**

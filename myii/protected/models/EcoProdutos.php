@@ -24,6 +24,12 @@
  */
 class EcoProdutos extends CActiveRecord
 {
+	public $count;
+	public $countQt = 9;
+	public $page = 0;
+	public $limit = 20;
+	public $search;
+	public $pagination;
 	/**
 	 * @return string the associated database table name
 	 */
@@ -127,6 +133,78 @@ class EcoProdutos extends CActiveRecord
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
+	}
+
+	public function searchPagination(){
+		//$page = 0, $limit = 3, $search;
+		if(isset($_GET['search']))
+			$this->search = $_GET['search'];
+		if(isset($_GET['page']))
+			$this->page = $_GET['page'];
+
+		$this->countQt = 3;
+		$produtos = $this->model()->findAll($this->searchModel());
+	
+		$qd_m = 0;
+		if(($this->page - $this->countQt) >= 0){
+			$i = $this->page - $this->countQt;
+		}else{
+			$i = 0;
+			$qd_m = -($this->page - $this->countQt);
+		}
+
+		$t_p = ($this->count/$this->limit);
+		$resul_t_p = $t_p;
+		if(($t_p - $this->page) > 0){
+			if(($t_p - $this->page) <= $this->countQt){
+			 	$resul_t_p = $this->page + ($t_p - $this->page);
+			}else{
+				$resul_t_p = $this->page + ($this->countQt+1) + $qd_m;
+			}
+		}
+		$resul_t_p = ($t_p < $resul_t_p)?$t_p:$resul_t_p;
+		$pagination = array();
+		for($i; $i < $resul_t_p; $i++) { 
+			$pagination[] = $i;
+		}
+		if(isset($produtos[0])){
+			$produtos[0]->pagination = $pagination;
+			$produtos[0]->page = $this->page;
+		}
+
+		return $produtos;
+	}
+
+	public function searchModel()
+	{
+		$criteria=new CDbCriteria();
+		$criteria->compare('pro_id',$this->search,true, 'OR');
+		$criteria->compare('pro_codigo',$this->search,true, 'OR');
+		$criteria->compare('pro_nome',$this->search,true, 'OR');
+		$criteria->compare('pro_descricao',$this->search,true, 'OR');
+		$criteria->compare('pro_preco_de',$this->search,true, 'OR');
+		$criteria->compare('pro_preco_por',$this->search,true, 'OR');
+		$criteria->compare('pro_data',$this->search,true,	  'OR');
+		$criteria->compare('pro_tamanho',$this->search,true, 'OR');
+
+		//compare colection
+		if(isset($_GET['colecao']) && $_GET['colecao'] > 0)
+			$criteria->compare('pro_id_colecao',$_GET['colecao']);
+		else
+			$criteria->compare('pro_id_colecao',$this->search,true, 'OR');
+
+		//compare category
+		if(isset($_GET['categoria']) && $_GET['categoria'] > 0)
+			$criteria->compare('pro_id_cagegoria',$_GET['categoria']);
+		else
+			$criteria->compare('pro_id_cagegoria',$this->search,true, 'OR');
+
+		//count e config select products
+	    $this->count = $this->model()->count($criteria);
+		$criteria->limit = $this->limit;
+		$criteria->offset = $this->page * $this->limit;
+
+		return $criteria;
 	}
 
 	/**

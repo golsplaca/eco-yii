@@ -3,16 +3,16 @@
 /* @var $model EcoProdutos */
 
 $this->breadcrumbs=array(
-	'Eco Produtoses'=>array('index'),
-	'Create',
+	'Produtos'=>array('index'),
+	'criar',
 );
 
 $this->menu=array(
-	array('label'=>'List EcoProdutos', 'url'=>array('index')),
-	array('label'=>'Manage EcoProdutos', 'url'=>array('admin')),
+	array('label'=>'Listar Produtos', 'url'=>array('index')),
+	array('label'=>'Administrar Produtos', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create EcoProdutos</h1>
+<h1>Cadastrar Produto</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

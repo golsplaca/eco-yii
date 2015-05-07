@@ -1,0 +1,79 @@
+body
+{
+	background: #f1f1f1;
+}
+a{color: #555;  cursor: pointer; }
+.nav>li>a{padding-top: 5px; padding-bottom: 4px;}
+.nav>li>a:hover, .nav>li>a:focus{color: #d9534f; padding-top: 5px;  background: #fff;}
+.categorias-header{
+	text-align: right;
+	padding-right: 35px;
+}
+.categorias-header a{
+	border-bottom: 0;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+	font-size: 14px;
+	margin: 2px 0 0 10px;
+	border-color: #111;
+	color: #fff;
+	background: #444;
+}
+.categorias-header a:hover{
+	color: rgb(217, 83, 79);
+	border-color: rgb(217, 83, 79);
+	background: #fff;
+}
+.categorias-header a.active{
+	color: rgb(217, 83, 79);
+	border-color: rgb(217, 83, 79);
+	background: #fff;
+}
+
+
+div#header{
+	background: #fff;
+	height: 80px;
+	width: 100%;
+	box-shadow: 2px 2px 5px #999;
+	margin-bottom: 10px;
+	border-top: 5px solid  #444;/*#d9534f;*/
+	position: fixed;
+	z-index: 1000;
+}
+div#header img{
+	max-height: 70px;
+	margin-top: 5px;
+}
+
+.breadcrumbs{
+	margin-top: 10px;
+}
+
+.container .form-control{
+	border-radius: 2px;
+}
+
+div.row-page{
+	margin-top: 90px;
+}
+
+div.breadcrumbs{
+	margin-left: 15px;
+	font-size: 12px;
+}
+
+div#footer{
+	color: #444;
+	padding: 10px;
+	margin-top: 10px;
+	text-align: center;
+	margin-top:20px;
+}
+div#footer hr{
+	border-top:1px solid #999;
+}
+.facebook-acompanhar
+{
+	float: right;
+}

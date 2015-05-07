@@ -1,13 +1,5 @@
-<?php
+<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/eco-banner.css" />
 
-
-$this->menu=array(
-	array('label'=>'Create EcoBanner', 'url'=>array('create')),
-	array('label'=>'Manage EcoBanner', 'url'=>array('admin')),
-);
-?>
-
-<?php $this->widget('zii.widgets.CListView', array(
-	'dataProvider'=>$dataProvider,
-	'itemView'=>'_view',
-)); ?>
+<div class="eco-banner">
+	<img src="public/images/" /> 
+</div>

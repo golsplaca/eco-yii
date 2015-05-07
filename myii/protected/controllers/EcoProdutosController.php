@@ -32,7 +32,7 @@ class EcoProdutosController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('create','update','admin'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -50,22 +50,20 @@ class EcoProdutosController extends Controller
 	 * @param integer $id the ID of the model to be displayed
 	 */
 	public function actionView($id)
-	{
-		if(isset($_GET['json'])){
-			foreach ($this->loadModel($id) as $key => $value) {
-						$dataValue[0][$key] = $value;
-			}
-			echo json_encode($dataValue);
-			return;
-		}
+	{	
 		$this->render('view',array(
+			'categorias' => EcoCategoria::model()->findAll(),
 			'model'=>$this->loadModel($id),
 		));
 	}
 
 	public function actionJson(){
-
-		$produtos=EcoProdutos::model()->findAllByAttributes(array('pro_status' => 1), array('order' => 'rand()'));
+		$name = isset($_GET['search']) ? $_GET['search'] : '' ;
+		$dataValue = [];
+		$criteria = new CDbCriteria();
+		$criteria->compare('pro_nome', $name, true);
+		$criteria->order = 'rand()';
+		$produtos=EcoProdutos::model()->findAllByAttributes(array('pro_status' => 1), $criteria);
 
 		for($i=0; $i < count($produtos); $i++) { 
 			foreach ($produtos[$i] as $key => $val) {
@@ -75,9 +73,7 @@ class EcoProdutosController extends Controller
 		echo json_encode($dataValue);
 	}
 	public function actionCategoria(){
-
 		$produtos=EcoProdutos::model()->findAllByAttributes(array('pro_id_cagegoria'=> $_GET['id'],'pro_status' => 1), array('order' => 'rand()'));
-
 		for($i=0; $i < count($produtos); $i++) { 
 			foreach ($produtos[$i] as $key => $val) {
 						$dataValue[$i][$key] = $val;
@@ -87,7 +83,7 @@ class EcoProdutosController extends Controller
 	}
 	public function actionColecao(){
 
-		$produtos=EcoProdutos::model()->findAllByAttributes(array('pro_id_colecao' => $_GET['id']), array('order' => 'rand()'));
+		$produtos=EcoProdutos::model()->findAllByAttributes(array('pro_id_colecao' => $_GET['id'],'pro_status' => 1), array('order' => 'rand()'));
 
 		for($i=0; $i < count($produtos); $i++) { 
 			foreach ($produtos[$i] as $key => $val) {
@@ -236,24 +232,35 @@ class EcoProdutosController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('EcoProdutos');
+		$model = new EcoProdutos();
+		$banners    = EcoBanner::model()->findAll();
+		$colecoes    = EcoColecoes::model()->findAll();
+		$categorias = EcoCategoria::model()->findAll();
+		$produtos   = $model->searchPagination();
 		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
+			'produtos'  => $produtos,
+			'banners'   => $banners,
+			'categorias'=> $categorias,
+			'colecoes'  => $colecoes,
 		));
 	}
+
 
 	/**
 	 * Manages all models.
 	 */
 	public function actionAdmin()
 	{
+
 		$model=new EcoProdutos('search');
+		$categorias = EcoCategoria::model()->findAll();
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['EcoProdutos']))
 			$model->attributes=$_GET['EcoProdutos'];
 
 		$this->render('admin',array(
 			'model'=>$model,
+			'categorias'=> $categorias
 		));
 	}
 

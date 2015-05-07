@@ -1,7 +1,7 @@
 <div class="col-md-4">	
 	<div class="panel panel-danger" style="border-radius:2px;">
-      <div class="panel-heading" style="background:#e3503e; ">
-        <h3 class="panel-title" style="color:#fff;">DADOS PESSOAIS</h3>
+      <div class="panel-heading" style="background:#f1f1f1; ">
+        <h3 class="panel-title" style="color:#333;">DADOS PESSOAIS</h3>
       </div>
       <div class="panel-body">
 
@@ -12,36 +12,33 @@
 		        </div>
 		        
 
-          <p>E-Mail</p>
-          <input type="text" class="form-control"  id="" placeholder="e-mail">
+          <p>E-mail</p>
+          <input type="text" ng-model="user.usu_email" class="form-control"  id="" placeholder="e-mail">
           <br />
 
-	          <div ng-show="showHideUserCadastro" >
-		          <p>Primeiro nome </p>
-		          <input type="text" class="form-control" style="width:200px;" id="" placeholder="Primeiro nome">
-		           <br />
-		          <p>Ultimo nome</p>
-		          <input type="text" class="form-control" style="width:200px;"  id="" placeholder="Ultimo nome">
-		          <br />
+	          <div ng-show="showHideUserCadastro" >  
+		          <p>Nome </p>
+		          <input type="text" ng-model="user.usu_nome" class="form-control" style="width:200px;" id="" placeholder="Nome">
+		           <br />              
 		          <p>CPF</p>
-		          <input type="text" class="form-control" style="width:200px;" id="" placeholder="nome">
+		          <input type="text" ng-model="user.usu_cpf" class="form-control" style="width:200px;" id="" placeholder="___.___.___-__">
 		          <br />
 				  <p>Telefone </p>
-		          <input type="text" class="form-control" style="width:200px;" id="" placeholder="e-mail">
+		          <input type="text" ng-model="user.usu_fone" class="form-control" style="width:200px;" id="" placeholder="(00) 0000-0000">
 		          <br />
 
 		          <p>Senha:</p>
-		          <input type="password" class="form-control" style="width:145px; float:left; margin-right:15px;" id="" placeholder="senha">
-		          <input type="password" class="form-control" style="width:145px;" id="" placeholder="repita senha">
+		          <input type="password" ng-model="user.usu_senha" class="form-control" style="max-width:120px; float:left; margin-right:15px;" id="" placeholder="senha">
+		          <input type="password" ng-model="user.usu_senha_v" class="form-control" style="max-width:120px;" id="" placeholder="repita senha">
 		          <br />
-		                      <button ng-click="continuarCompra()"  class="form-control btn btn-danger" style="float:right;  border-radius:2px" >IR PARA ENTREGA <i class="glyphicon glyphicon-arrow-right"></i></button>
+		                      <button ng-click="cadastrarCompra()"  class="form-control btn btn-danger" style="float:right;  border-radius:2px" >IR PARA ENTREGA <i class="glyphicon glyphicon-arrow-right"></i></button>
 		      </div>
 	          <div ng-hide="showHideUserCadastro" >
 
 	          	<div ng-hide="enviarSenhaShow">
 
 		          <p>Senha:</p>
-		          <input type="password" class="form-control" id="" placeholder="senha">
+		          <input type="password" ng-model="user.usu_password" class="form-control" id="" placeholder="senha">
 		           <a ng-click="enviarSenhaShow = !enviarSenhaShow;" style="cursor:pointer;" >Esqueci à senha?</a> <br />
 
 		          <br />
@@ -64,8 +61,8 @@
 
 <div class="col-md-4">	
 	<div class="panel panel-danger" style="border-radius:2px;">
-      <div class="panel-heading" style="background:#e3503e; ">
-        <h3 class="panel-title" style="color:#fff;">ENTREGA</h3>
+      <div class="panel-heading" style="background:#f1f1f1; ">
+        <h3 class="panel-title" style="color:#333;">ENTREGA</h3>
       </div>
       <div class="panel-body">
         
@@ -77,8 +74,8 @@
 
 <div class="col-md-4">	
 	<div class="panel panel-danger" style="border-radius:2px;">
-      <div class="panel-heading" style="background:#e3503e; ">
-        <h3 class="panel-title" style="color:#fff;">RESUMO DO PEDIDO</h3>
+      <div class="panel-heading" style="background:#f1f1f1; ">
+        <h3 class="panel-title" style="color:#333;">RESUMO DO PEDIDO</h3>
       </div>
       <div class="panel-body">
           <div class="table-responsive">
@@ -146,5 +143,5 @@
     </div>
 </div>
 
-		        	<button ng-click="continuarCompra()"  class="form-control btn btn-danger" style="float:right;  border-radius:2px" > <i class="glyphicon glyphicon-usd"></i>  IR  PARA PAGAMENTO</button>
+<button ng-click="continuarCompra()"  class="form-control btn btn-default" style="float:right;  border-radius:2px" > <i class="glyphicon glyphicon-usd"></i>  IR  PARA PAGAMENTO</button>
 

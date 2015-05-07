@@ -17,41 +17,20 @@
 
 <body ng-controller='pageController' style="" >
 
-  <div class="container">
+  <div class="container" style="max-width:1024px;">
     <div class="col-lg-12">
         
         <div class="col-lg-4" >
-        	<div class="col-lg-12" style="margin: 0 0 10px 0;">
-          	<ul class="nav navbar-nav" style="color: #333;">                
-				<li style="text-align: center; " ng-click="">
-					<a >
-						<span class="glyphicon glyphicon-user " style="font-size: 14px;"></span>
-						Minha conta </a>
-				</li>
-                <li ng-click="carrinho('carrinho');" style="border-left:1px solid #444; text-align: center;">
-                	<a >
-                		<span class="glyphicon glyphicon-shopping-cart" style="font-size: 14px;"></span>
-                		 Meus pedidos</a>
-                </li>
-            </ul>
-            </div>
-        	<div class="input-group" >
- 				<input type="text" style=" height:32px; border-radius: 5px 0 0 5px; border-color: #555;" 
- 				class="form-control" placeholder="Pesquisar">
-  					<span class="input-group-addon" style="
-					    background: #333;
-					    border-color: #555;
-					    border-radius: 0 5px 5px 0;
-					"><span class="glyphicon glyphicon-search"></span></span>
-			</div>
+        	<img onclick="window.location.href='#/'" ng-click="carregarProdutos();" src="public/images/logo.png" style="cursor:pointer;max-height:70px; margin: 5px 0;" />
      	</div>
-        
-        <div class="col-lg-4" style="text-align:center;" >
-            <img onclick="window.location.href='#/'" ng-click="carregarProdutos();" src="public/images/logo.png" style="cursor:pointer;max-height:80px; margin: 5px 0;" />
-		</div>
 
-		<div class="col-lg-4" style="font-size:12px;" >
+		<div class="col-lg-8" style="font-size:12px;" >
           	<ul class="nav navbar-nav navbar-right" style="color: #333;">                
+				<li style="text-align: center; " ng-click="minhaConta()">
+					<a >
+						<span class="glyphicon glyphicon-inbox" style="font-size: 20px;"></span>
+						<br> Minha conta </a>
+				</li>                
 				<li style="text-align: center; " onclick="window.location.href = '#/contato';">
 					<a >
 						<span class="glyphicon glyphicon-phone-alt" style="font-size: 20px;"></span>
@@ -64,17 +43,13 @@
                 </li>
             </ul>
         </div>
-         <div class="ola_visitante" >Olá, 
-         <span ng-click="loginUser()"> {{usuario_logado}} </span>
-         <span ng-click="logoOfIn()"> {{ofIN}} </span></div>
-
 	</div>
   </div>
 
         <!-- Navigation -->
 	<nav class="navbar navbar-inverse" 
 		 style="background:#444; box-shadow:inset 0 0 100px rgba(0,0,0,.5); border-radius:0;" role="navigation">
-	    <div class="container">
+	    <div class="container" style="max-width:1024px;">
 	    <div class="col-lg-12">
 	        <div class="navbar-header">
 	            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -87,9 +62,17 @@
 	        <!-- Collect the nav links, forms, and other content for toggling -->
 	        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	            <ul ng-init="searchColecoes();" class="nav navbar-nav">
-	                <li ng-repeat="i in scopeList['colecoes']">
-	                    <a ng-click="buscarProdutos(i.col_guid, 'colecao', i.col_nome)">{{i.col_nome}}</a>
-	                </li>
+	            	<li style="margin-top:8px;">
+	            		<div class="input-group" style="width:300px;" >
+			 				<input type="text" id="search" ng-change="carregarProdutos('search')" ng-model="inputs.search" style=" height:32px; border-radius: 5px 0 0 5px; border-color: #555;" 
+			 				class="form-control" placeholder="Pesquisar">
+			  					<span class="input-group-addon" style="
+								    background: #333;
+								    border-color: #555;
+								    border-radius: 0 5px 5px 0;
+								"><span class="glyphicon glyphicon-search"></span></span>
+						</div>
+	            	</li>
 	                <!--
 	                <li>
 	                    <a href="#">Cantinho da cliente</a>
@@ -97,9 +80,13 @@
 	            </ul>
 
 	            <ul class="nav navbar-nav navbar-right" ng-init="searchCategory();">
+
+	                <li ng-repeat="i in scopeList['colecoes']">
+	                    <a style="font-weight:bold; color:#fff;" ng-click="buscarProdutos(i.col_guid, 'colecao', i.col_nome)">{{i.col_nome}}</a>
+	                </li>
 	        		<li class="dropdown showHideCategoria" >
-			          <a href="#" class="dropdown-toggle" style="color:#333; margin:0 0 -2px 0; height:49px;
-			          background:#fff;" data-toggle="dropdown">Categorias <span style="font-size:18px; margin-left:5px; " class="glyphicon glyphicon-th"></span></a>
+			          <a href="#" class="dropdown-toggle" style="color:#fff; font-weight:bold;" data-toggle="dropdown">
+			          Categorias <span style="font-size:14px; margin-left:5px; " class="glyphicon glyphicon-th"></span></a>
 			          <ul class="dropdown-menu " style="width:250px;margin-top: 2px;border: 1px solid #999;padding: 2px; box-shadow: 0 0 15px #999;" role="menu">
 			            <li  ng-repeat="i in scopeList['category']" class="menu-categoria">
 			            	<a style="height: 39px;" ng-click="buscarProdutos(i.cat_id, 'categoria', i.cat_nome);">{{i.cat_nome}}</a>
@@ -115,18 +102,34 @@
 	</nav>
 
     <!-- Page Content -->
-    <div class="container">
-        <div class="col-lg-12" style="background:#fff; margin:20px 0;">
-        <ol class="breadcrumb">
-        <li>Você está em: </li>
-		  <li><a href="#">Home</a></li>
-		  <li><a>{{pageAcesso}}</a></li>
-		  <li ng-show="{{produtoName}}" class="active">{{produtoName}}</li>
-		</ol>
-        	<div class="contentNgView" ng-view>
-        		
-        		
+<style type="text/css">
+	.content-banner{
+		width: 100%;
+		
+		background: 	#d9534f;
+	}
+</style>
+<div class="content-banner">
 
+</div>
+
+    <div class="container" style="max-width:1024px;">
+
+	<!-- 	<div class="slide-animate" style="margin:20px auto; padding:0 0 0 20px;  width:96%;"  
+			 ng-include="'view/modulos/site/banner.html'"></div>  -->
+
+        <div class="col-lg-12" style="background:#fff; margin:20px 0;">
+<!--         	<ol class="breadcrumb" style="background:#fff;">
+	          <li>Você está em: </li>
+			  <li><a href="#">Home</a></li>
+			  <li><a>{{pageAcesso}}</a></li>
+			  <li ng-show="{{produtoName}}" class="active">{{produtoName}}</li>
+	         	<div class="ola_visitante" style="float:right;">Olá, 
+		          <span ng-click="loginUser()" style="cursor:pointer;"> {{usuario_logado}} </span>
+		          <span ng-click="logoOfIn()"> {{ofIN}} </span>
+		        </div>
+			</ol> -->
+        	<div class="contentNgView" ng-view>
         	</div>
         </div>
     </div>

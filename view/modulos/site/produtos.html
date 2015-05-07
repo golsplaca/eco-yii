@@ -3,19 +3,26 @@
 	height: 320px;
 	margin: 10px;
 	max-width: 255px;
-	box-shadow: 0px 0px 8px #999;
+	box-shadow: 0px 0px 8px #d1d1d1;
 	padding: 0px;
 }
 .produto_list .produto_img{
 	cursor: pointer;
 }
 .produto_list .produto_img:hover{
-	opacity: 0.8;
+	opacity: 0.7;
 }
 .produto_img{
 	height: 240px;
 	max-height: 240px;
 	text-align: center;
+}
+.produto_img > span{
+	position: absolute;
+	margin: calc(50% - 15px);
+	font-size: 30px;
+	color: #fff;
+	display: none;
 }
 .produto_img img{
 	max-height: 240px;
@@ -23,7 +30,7 @@
 	margin: 0 auto;
 }
 .produto_detalhes{
-	background: #f3f3f3;
+	background: #fff;
 	padding: 10px;
 	height: 80px;
 }
@@ -39,27 +46,37 @@
 }
 .produto_detalhes > span{
 	font-style: italic;
-	font-size: 10px;
+	font-size: 14px;
 }
 .botao_comprar .btn{
 	border-radius: 0;
 	padding: 10px 12px;
 }
 </style>
-
-<h3 >{{pageAcesso}}</h3>
-
+<div ng-show="ngAlertProdutos" class="alert" style="color:#333; font-weight:bold; position:relative; z-index:0; border-radius:5px; background:#f1f1f1" role="alert">
+	Nenhum produto encontrado!
+</div>
+  <h3>Produtos em destaque</h3>
   <div class="col-sm-3 produto_list" style="margin:10px auto;" ng-repeat="i in scopeList['produtos']" ng-click="verProduto(i);">
+
   		<div class="produto_img" >
+  			<span class="glyphicon glyphicon-search"></span>
   			<img src="public/images/produtos/{{i.pro_img_1}}" />
   		</div>
   		<div class="produto_detalhes" style="cursor:pointer;" >
   			<div>{{i.pro_nome}}</div>
-  			<div class="botao_comprar">
+  			<!--<div class="botao_comprar">
   				<button class="btn btn-danger" >Detalhes <i class="glyphicon glyphicon-plus-sign"></i></button>
-  			</div>
+  			</div>-->
   			<span>R$ {{i.pro_preco_de}}</span><br />
   			<span>R$ {{i.pro_preco_por}}</span>
   		</div>
 
   </div>
+<script>
+	$(document).ready(function(){
+		$("div.produto_img").hover(function(){
+			alert('');
+		});
+	});
+</script>

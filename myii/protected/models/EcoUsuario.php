@@ -40,7 +40,7 @@ class EcoUsuario extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('usu_nivel, usu_login, usu_senha, usu_nome, usu_email, usu_fone, usu_nascimento, usu_cpf, usu_rg, usu_endereco, usu_estado, usu_cidade, usu_numero, usu_fonr_cel, usu_cep, usu_data', 'required'),
+			array('usu_nivel, usu_senha, usu_nome, usu_email, usu_fone', 'required'),
 			array('usu_cpf, usu_rg, usu_numero, usu_cep', 'numerical', 'integerOnly'=>true),
 			array('usu_nivel', 'length', 'max'=>20),
 			array('usu_login, usu_fone, usu_cidade, usu_fonr_cel', 'length', 'max'=>50),
@@ -70,23 +70,23 @@ class EcoUsuario extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'usu_id' => 'Usu',
-			'usu_nivel' => 'Usu Nivel',
-			'usu_login' => 'Usu Login',
-			'usu_senha' => 'Usu Senha',
-			'usu_nome' => 'Usu Nome',
-			'usu_email' => 'Usu Email',
-			'usu_fone' => 'Usu Fone',
-			'usu_nascimento' => 'Usu Nascimento',
-			'usu_cpf' => 'Usu Cpf',
-			'usu_rg' => 'Usu Rg',
-			'usu_endereco' => 'Usu Endereco',
-			'usu_estado' => 'Usu Estado',
-			'usu_cidade' => 'Usu Cidade',
-			'usu_numero' => 'Usu Numero',
-			'usu_fonr_cel' => 'Usu Fonr Cel',
-			'usu_cep' => 'Usu Cep',
-			'usu_data' => 'Usu Data',
+			'usu_id' => 'Codigo',
+			'usu_nivel' => 'Acesso',
+			'usu_login' => 'Login',
+			'usu_senha' => 'Senha',
+			'usu_nome' => 'Nome',
+			'usu_email' => 'Email',
+			'usu_fone' => 'Telefone',
+			'usu_nascimento' => 'Data de nascimento',
+			'usu_cpf' => 'CPF',
+			'usu_rg' => 'RG',
+			'usu_endereco' => 'Endereço',
+			'usu_estado' => 'Estado',
+			'usu_cidade' => 'Cidade',
+			'usu_numero' => 'Número',
+			'usu_fonr_cel' => 'Celular',
+			'usu_cep' => 'CEP',
+			'usu_data' => 'Data cadastro',
 		);
 	}
 

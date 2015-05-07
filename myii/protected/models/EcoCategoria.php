@@ -10,6 +10,8 @@
  */
 class EcoCategoria extends CActiveRecord
 {
+	public $carrinho;
+	public $config;
 	/**
 	 * @return string the associated database table name
 	 */
@@ -74,7 +76,7 @@ class EcoCategoria extends CActiveRecord
 		// @todo Please modify the following code to remove attributes that should not be searched.
 
 		$criteria=new CDbCriteria;
-
+		
 		$criteria->compare('cat_id',$this->cat_id);
 		$criteria->compare('cat_nome',$this->cat_nome,true);
 		$criteria->compare('cat_data',$this->cat_data,true);

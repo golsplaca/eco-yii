@@ -5,6 +5,10 @@
     border: 2px solid #999;
     margin: -5px 10px;
     cursor: pointer;
+    border-radius: 20px;
+    min-width: 40px;
+    min-height: 40px;
+    text-align: center;
   }
 
   .tamanho_sandalia:hover{
@@ -26,14 +30,13 @@
                 $('.cloudzoom-ajax-loader').hide();
             }
            setTimeout(carregarGaleria, 500);
-
         </script>    
 
-        <div class="col-sm-5" style="text-align:center; background:#444; padding:0;">
+        <div class="col-sm-5" style="text-align:center; background:#fff; padding:0;">
             <img class = "cloudzoom" src = "public/images/produtos/{{scopeList['produto'].pro_img_1}}"
                  data-cloudzoom = "zoomImage: 'public/images/produtos/{{scopeList['produto'].pro_img_1}}'" />
             <br/>
-            <img ng-repeat="i in imgProduto" class = 'cloudzoom-gallery' style="width:92px; height:80px;" src = "public/images/produtos/{{i}}"  data-cloudzoom = "useZoom: '.cloudzoom', image: 'public/images/produtos/{{i}}', zoomImage: 'public/images/produtos/{{i}}' " >
+            <img ng-repeat="i in imgProduto" class = 'cloudzoom-gallery' style="width:80px; height:80px;" src = "public/images/produtos/{{i}}"  data-cloudzoom = "useZoom: '.cloudzoom', image: 'public/images/produtos/{{i}}', zoomImage: 'public/images/produtos/{{i}}' " >
         </div>
 
         <div class="col-sm-7">
@@ -76,3 +79,13 @@
             <button class="btn btn-danger" style="border-radius:2px" >Comprar <i class="glyphicon glyphicon-shopping-cart"></i></button>
             <a ng-click="carrinho()" class="btn btn-default" style="float:right; border-radius:2px" >Ver <i class="glyphicon glyphicon-shopping-cart"></i></a>
           </div>
+<script>
+  
+$(document).ready(function(){
+  $('body').delegate("div.cloudzoom-blank", "hover", function(){
+    if($(this).text() == 'Unlicensed Cloud Zoom'){ 
+      //$(this).hide(); 
+    }; 
+  });
+});
+</script>

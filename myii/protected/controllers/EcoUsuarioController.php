@@ -28,7 +28,7 @@ class EcoUsuarioController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view', 'logar'),
+				'actions'=>array('index','view', 'logar', 'createUser'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -79,6 +79,31 @@ class EcoUsuarioController extends Controller
 			'model'=>$model,
 		));
 	}
+	public function actionCreateUser()
+	{
+		$model=new EcoUsuario;
+
+		// Uncomment the following line if AJAX validation is needed
+		// $this->performAjaxValidation($model);
+
+		if(isset($_POST))
+		{	
+			$_POST['usu_senha'] =  md5($_POST['usu_senha']);	
+			$model->attributes=$_POST;
+			if(EcoUsuario::model()->findByAttributes(array('usu_email'=>$model->usu_email))){
+				echo 8;
+			}else{
+				$model->usu_nivel = "demo";
+				if($model->save()){
+					echo json_encode($model->attributes);
+				}else{
+					echo 7;
+				}
+			}
+		}
+
+		
+	}
 
 	/**
 	 * Updates a particular model.
@@ -123,43 +148,26 @@ class EcoUsuarioController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('EcoUsuario');
+		$model = EcoUsuario::model()->findByAttributes(array('usu_login' => Yii::app()->user->getId()));
 		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
+			'model'=>$model,
+			'colecoes'=>EcoColecoes::model()->findAll(),
+			'categorias'=>EcoCategoria::model()->findAll(),
 		));
 	}
 
 	public function actionLogar(){
-
-		if(isset($_POST['nome'])){
-			$login = $_POST['nome'];
-			$senha = md5($_POST['senha']);
-			$data = EcoUsuario::model()->findAll(array("condition"=>"usu_login =  '$login' and usu_senha = '$senha'"));
-
-			if($data){
-
-				if($data[0]['usu_nivel'] != "inativo"){
-					$model=new LoginForm;
-
-					$model->attributes= array('username' => $data[0]['usu_nivel'], 'password' => $data[0]['usu_nivel']);
-					
-					if($model->validate() && $model->login())
-						foreach ($data[0] as $key => $value) {
-							if($key != "usu_senha"){
-								$dataValue[$key] = $value;
-							}
-						}
-						$_SESSION['dataUser'] = $dataValue;
-						echo json_encode($dataValue);
-				}else{
-					echo 2; //Usuário bloqueado!
-				}
-			}else{
-				echo 0; //Palavra passe ou senha está incorreta!
-			}
-		}else{
-			echo 3; //não existe 
+		$model=new LoginForm;
+		// collect user input data
+		if(isset($_POST['LoginForm']))
+		{
+			$model->attributes=$_POST['LoginForm'];
+			// validate user input and redirect to the previous page if valid
+			if($model->validate() && $model->login())
+				$this->redirect(Yii::app()->user->returnUrl);
 		}
+		// display the login form
+		$this->render('login',array('model'=>$model));
 	}
 
 	/**

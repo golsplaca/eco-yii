@@ -1,18 +1,48 @@
-<div class="col-sm-8">
+<div class="col-sm-5">
 	<h2> Acessar: </h2>
 	<hr/>
 	<form method="post"  class="validate login-form" >
 	<!--saga-web/rwadapter/authenticate/login-->
 	  	<div class="form-group">
-		    <label for="exampleInputEmail1">login:</label>
+		    <label for="exampleInputEmail1">E-mail:</label>
 		    <input type="text" class="form-control data required" ng-model="userPost.nome" id="username"  placeholder="Enter email">
 	  	</div>
 		  <div class="form-group">
 		    <label for="exampleInputPassword1">Senha:</label>
 		    <input type="password" class="form-control" ng-model="userPost.senha" id="password" placeholder="Password">
 		  </div>
-		<br /> 
-	  	<button type="reset" class="btn btn-default" >Limpar</button>
-	    <button class="btn btn-success" ng-click="logar();" >Entrar</button> 
+		<br />
+	    <button class="btn btn-danger" ng-click="logar();" style="border-radius:2px" >Entrar</button> 
+	    <a h-ref="" style="cursor:pointer; float:right;" >Esqueci à senha</a> 
+	</form>
+</div>
+
+<div class="col-sm-2"></div>
+
+<div class="col-sm-5">
+	<h2> Criar um novo cadastro: </h2>
+	Cadastre-se é rápido e fácil.
+	<hr/>
+	<form method="post"  class="validate login-form" >
+	    <div>  
+	      <p>E-mail</p>
+          <input type="text" ng-model="user.usu_email" class="form-control"  id="" placeholder="e-mail">
+          <br />
+          <p>Nome </p>
+          <input type="text" ng-model="user.usu_nome" class="form-control" style="width:100%;" id="" placeholder="Primeiro nome">
+           <br />              
+          <p>CPF</p>
+          <input type="text" ng-model="user.usu_cpf" class="form-control" style="width:200px;" id="" placeholder="___.___.___-__">
+          <br />
+		  <p>Telefone </p>
+          <input type="text" ng-model="user.usu_fone" class="form-control" style="width:200px;" id="" placeholder="(00) 0000-0000">
+          <br />
+
+          <p>Senha</p>
+          <input type="password" ng-model="user.usu_senha" class="form-control" style="width:145px; float:left; margin-right:15px;" id="" placeholder="senha">
+          <input type="password" ng-model="user.usu_senha_v" class="form-control" style="width:145px;" id="" placeholder="repita senha">
+          <br />
+          <button ng-click="cadastrarCompra()"  class="form-control btn btn-danger" style="float:right;  border-radius:2px" >Cadastrar <i class="glyphicon glyphicon-ok-sign"></i></button>
+      </div>
 	</form>
 </div>

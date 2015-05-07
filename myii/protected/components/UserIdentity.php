@@ -17,17 +17,14 @@ class UserIdentity extends CUserIdentity
 	 */
 	public function authenticate()
 	{
-		$users=array(
-			// username => password
-			'demo'=>'demo',
-			'admin'=>'admin',
-		);
-		if(!isset($users[$this->username]))
-			$this->errorCode=self::ERROR_USERNAME_INVALID;
-		elseif($users[$this->username]!==$this->password)
-			$this->errorCode=self::ERROR_PASSWORD_INVALID;
-		else
-			$this->errorCode=self::ERROR_NONE;
-		return !$this->errorCode;
+		$record = EcoUsuario::model()->findByAttributes(array('usu_login' => $this->username));
+        if ($record === NULL)
+            $this->errorCode = self::ERROR_USERNAME_INVALID;
+        else if ($record->usu_senha !== md5($this->password))
+            $this->errorCode = self::ERROR_PASSWORD_INVALID;
+        else {
+            $this->errorCode = self::ERROR_NONE;
+        }
+        return !$this->errorCode;
 	}
 }
