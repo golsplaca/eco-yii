@@ -46,3 +46,10 @@
 	        
 	    </div>
 	</div>
+
+
+<script>
+	$(document).ready(function(){
+		$('div.eco-produtos .col-lg-4').fadeIn(1000);
+	});
+</script>

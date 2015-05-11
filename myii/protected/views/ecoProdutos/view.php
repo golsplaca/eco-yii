@@ -8,23 +8,9 @@
 ?>
  <div class="col-md-12 col-md-9-produtos">
 
-
-
-<style>
-
-  .tamanho_sandalia{
-  	margin-top: -5px;
-   	padding: 0px 10px;
-    text-align: center;
-  }
-	body .popover.bottom>.arrow{
-		margin-left: -45%;
-	}
-</style>
-
-
-        <!-- Include Cloud Zoom CSS. -->
-		<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/protected/views/ecoProdutos/components/cloudzoom.css" />
+    <!-- Include Cloud Zoom CSS. -->
+    <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/protected/views/ecoProdutos/components/cloudzoom.css" />
+		<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/protected/views/ecoProdutos/css/view.css" />
         <!-- Include Cloud Zoom script. -->
         <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/protected/views/ecoProdutos/components/cloudzoom.js"></script>
 
@@ -80,12 +66,11 @@
             <div style="float:left; font-weight:bold;">Tamanho:</div>
             <div class="classTamanho" style="float:left;">
 
-
               <div class="tamanho_sandalia" >
-					<?php echo CHtml::dropDownList('fooBarTamanho', '', array('0' => 'Selecione'), array(
-					    'class' => 'form-control'
-					)); ?>            
-             </div>
+      					<?php echo CHtml::dropDownList('fooBarTamanho', '', array('0' => 'Selecione'), array(
+      					    'class' => 'form-control'
+      					)); ?>            
+              </div>
 
             </div>
            </div>
@@ -95,11 +80,13 @@
             <div class="alert alert-danger alert-msg-tamanho" style="position:relative; display:none;" role="alert"></div>
            </div>
 
-          <div class="col-sm-12" ng-click="addCarrinho()" style="margin-top:10px;">
-            <button class="btn btn-danger" style="border-radius:2px" >Comprar <i class="glyphicon glyphicon-shopping-cart"></i></button>
-          
-            <a ng-click="carrinho()" class="btn btn-default" style="float:right; border-radius:2px" >Continuar comprando <i class="glyphicon glyphicon-ok"></i></a>
-          
+          <div class="col-sm-12" style="margin-top:10px;">
+            <a href="?r=ecoCarrinho/add&add=<?php echo $model->pro_id; ?>" class="btn btn-danger">
+              Comprar <i class="glyphicon glyphicon-shopping-cart"></i>
+            </a>
+            <a href="?r=ecoProdutos" class="btn btn-default btn-continuar-comprando">
+              Continuar comprando <i class="glyphicon glyphicon-ok"></i>
+            </a>
           </div>
  		</div>
 

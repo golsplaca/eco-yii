@@ -4633,3 +4633,1090 @@ REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoUsuario/
 in /var/www/html/lucweb/eco-yii/myii/protected/views/ecoUsuario/index.php (6)
 in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoUsuarioController.php (156)
 in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2015/05/07 22:18:21 [error] [php] Trying to get property of non-object (/var/www/html/lucweb/eco-yii/myii/protected/views/ecoUsuario/index.php:6)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CController.php(869): EcoUsuarioController->renderFile()
+#1 /var/www/html/lucweb/eco-yii/framework/web/CController.php(782): EcoUsuarioController->renderPartial()
+#2 /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoUsuarioController.php(156): EcoUsuarioController->render()
+#3 /var/www/html/lucweb/eco-yii/framework/web/actions/CInlineAction.php(49): EcoUsuarioController->actionIndex()
+#4 /var/www/html/lucweb/eco-yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoUsuarioController->runAction()
+#6 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoUsuarioController->filterAccessControl()
+#9 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoUsuarioController->runActionWithFilters()
+#12 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoUsuarioController->run()
+#13 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoUsuario/
+in /var/www/html/lucweb/eco-yii/myii/protected/views/ecoUsuario/index.php (6)
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoUsuarioController.php (156)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2015/05/09 11:35:50 [error] [exception.CException] exception 'CException' with message 'A propriedade "LoginForm.usu_nivel" não está definida.' in /var/www/html/lucweb/eco-yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/helpers/CHtml.php(2529): CComponent->__get('usu_nivel')
+#1 /var/www/html/lucweb/eco-yii/framework/web/helpers/CHtml.php(1802): CHtml::resolveValue(Object(LoginForm), 'usu_nivel')
+#2 /var/www/html/lucweb/eco-yii/framework/web/widgets/CActiveForm.php(847): CHtml::activeDropDownList(Object(LoginForm), 'usu_nivel', Array, Array)
+#3 /var/www/html/lucweb/eco-yii/myii/protected/views/ecoUsuario/_newUser.php(38): CActiveForm->dropDownList(Object(LoginForm), 'usu_nivel', Array)
+#4 /var/www/html/lucweb/eco-yii/framework/web/CBaseController.php(126): require('/var/www/html/l...')
+#5 /var/www/html/lucweb/eco-yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/l...', Array, true)
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/html/l...', Array, true)
+#7 /var/www/html/lucweb/eco-yii/myii/protected/views/site/login.php(71): CController->renderPartial('../ecoUsuario/_...', Array)
+#8 /var/www/html/lucweb/eco-yii/framework/web/CBaseController.php(126): require('/var/www/html/l...')
+#9 /var/www/html/lucweb/eco-yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/l...', Array, true)
+#10 /var/www/html/lucweb/eco-yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/html/l...', Array, true)
+#11 /var/www/html/lucweb/eco-yii/framework/web/CController.php(782): CController->renderPartial('login', Array, true)
+#12 /var/www/html/lucweb/eco-yii/myii/protected/controllers/SiteController.php(108): CController->render('login', Array)
+#13 /var/www/html/lucweb/eco-yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#14 /var/www/html/lucweb/eco-yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#15 /var/www/html/lucweb/eco-yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#16 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): CController->run('login')
+#18 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#19 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#20 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=site/login
+---
+2015/05/09 11:37:44 [error] [php] Undefined variable: model (/var/www/html/lucweb/eco-yii/myii/protected/views/ecoUsuario/_newUser.php:33)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CController.php(869): SiteController->renderFile()
+#1 /var/www/html/lucweb/eco-yii/myii/protected/views/site/login.php(71): SiteController->renderPartial()
+#2 /var/www/html/lucweb/eco-yii/framework/web/CBaseController.php(126): require()
+#3 /var/www/html/lucweb/eco-yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#4 /var/www/html/lucweb/eco-yii/framework/web/CController.php(869): SiteController->renderFile()
+#5 /var/www/html/lucweb/eco-yii/framework/web/CController.php(782): SiteController->renderPartial()
+#6 /var/www/html/lucweb/eco-yii/myii/protected/controllers/SiteController.php(108): SiteController->render()
+#7 /var/www/html/lucweb/eco-yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#9 /var/www/html/lucweb/eco-yii/framework/web/CController.php(286): SiteController->runAction()
+#10 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#11 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): SiteController->run()
+#12 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#13 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=site/login
+in /var/www/html/lucweb/eco-yii/myii/protected/views/ecoUsuario/_newUser.php (33)
+in /var/www/html/lucweb/eco-yii/myii/protected/views/site/login.php (71)
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/SiteController.php (108)
+2015/05/09 11:37:44 [error] [php] Undefined variable: model (/var/www/html/lucweb/eco-yii/myii/protected/views/ecoUsuario/_newUser.php:33)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CController.php(869): SiteController->renderFile()
+#1 /var/www/html/lucweb/eco-yii/myii/protected/views/site/login.php(71): SiteController->renderPartial()
+#2 /var/www/html/lucweb/eco-yii/framework/web/CBaseController.php(126): require()
+#3 /var/www/html/lucweb/eco-yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#4 /var/www/html/lucweb/eco-yii/framework/web/CController.php(869): SiteController->renderFile()
+#5 /var/www/html/lucweb/eco-yii/framework/web/CController.php(782): SiteController->renderPartial()
+#6 /var/www/html/lucweb/eco-yii/myii/protected/controllers/SiteController.php(108): SiteController->render()
+#7 /var/www/html/lucweb/eco-yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#9 /var/www/html/lucweb/eco-yii/framework/web/CController.php(286): SiteController->runAction()
+#10 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#11 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): SiteController->run()
+#12 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#13 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=site/login
+in /var/www/html/lucweb/eco-yii/myii/protected/views/ecoUsuario/_newUser.php (33)
+in /var/www/html/lucweb/eco-yii/myii/protected/views/site/login.php (71)
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/SiteController.php (108)
+2015/05/09 11:50:41 [error] [php] Object of class EcoUsuario could not be converted to string (/var/www/html/lucweb/eco-yii/framework/web/helpers/CHtml.php:2155)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/helpers/CHtml.php(744): inputField()
+#1 /var/www/html/lucweb/eco-yii/myii/protected/views/ecoUsuario/_newUser.php(55): passwordField()
+#2 /var/www/html/lucweb/eco-yii/framework/web/CBaseController.php(126): require()
+#3 /var/www/html/lucweb/eco-yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#4 /var/www/html/lucweb/eco-yii/framework/web/CController.php(869): SiteController->renderFile()
+#5 /var/www/html/lucweb/eco-yii/myii/protected/views/site/login.php(71): SiteController->renderPartial()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CBaseController.php(126): require()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CController.php(869): SiteController->renderFile()
+#9 /var/www/html/lucweb/eco-yii/framework/web/CController.php(782): SiteController->renderPartial()
+#10 /var/www/html/lucweb/eco-yii/myii/protected/controllers/SiteController.php(108): SiteController->render()
+#11 /var/www/html/lucweb/eco-yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#12 /var/www/html/lucweb/eco-yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#13 /var/www/html/lucweb/eco-yii/framework/web/CController.php(286): SiteController->runAction()
+#14 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#15 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): SiteController->run()
+#16 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#17 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#18 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=site/login
+in /var/www/html/lucweb/eco-yii/myii/protected/views/ecoUsuario/_newUser.php (55)
+in /var/www/html/lucweb/eco-yii/myii/protected/views/site/login.php (71)
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/SiteController.php (108)
+2015/05/09 11:50:46 [error] [php] Object of class EcoUsuario could not be converted to string (/var/www/html/lucweb/eco-yii/framework/web/helpers/CHtml.php:2155)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/helpers/CHtml.php(744): inputField()
+#1 /var/www/html/lucweb/eco-yii/myii/protected/views/ecoUsuario/_newUser.php(55): passwordField()
+#2 /var/www/html/lucweb/eco-yii/framework/web/CBaseController.php(126): require()
+#3 /var/www/html/lucweb/eco-yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#4 /var/www/html/lucweb/eco-yii/framework/web/CController.php(869): SiteController->renderFile()
+#5 /var/www/html/lucweb/eco-yii/myii/protected/views/site/login.php(71): SiteController->renderPartial()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CBaseController.php(126): require()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CController.php(869): SiteController->renderFile()
+#9 /var/www/html/lucweb/eco-yii/framework/web/CController.php(782): SiteController->renderPartial()
+#10 /var/www/html/lucweb/eco-yii/myii/protected/controllers/SiteController.php(108): SiteController->render()
+#11 /var/www/html/lucweb/eco-yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#12 /var/www/html/lucweb/eco-yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#13 /var/www/html/lucweb/eco-yii/framework/web/CController.php(286): SiteController->runAction()
+#14 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#15 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): SiteController->run()
+#16 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#17 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#18 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=site/login
+in /var/www/html/lucweb/eco-yii/myii/protected/views/ecoUsuario/_newUser.php (55)
+in /var/www/html/lucweb/eco-yii/myii/protected/views/site/login.php (71)
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/SiteController.php (108)
+2015/05/09 12:05:53 [warning] [application] Failed to set unsafe attribute "usu_nome" of "LoginForm".
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/SiteController.php (101)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2015/05/09 12:05:53 [warning] [application] Failed to set unsafe attribute "usu_email" of "LoginForm".
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/SiteController.php (101)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2015/05/09 12:05:53 [warning] [application] Failed to set unsafe attribute "usu_fonr_cel" of "LoginForm".
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/SiteController.php (101)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2015/05/09 12:05:53 [warning] [application] Failed to set unsafe attribute "usu_senha" of "LoginForm".
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/SiteController.php (101)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2015/05/09 12:05:53 [error] [exception.CException] exception 'CException' with message 'LoginForm and its behaviors do not have a method or closure named "save".' in /var/www/html/lucweb/eco-yii/framework/base/CComponent.php:266
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/myii/protected/controllers/SiteController.php(102): CComponent->__call('save', Array)
+#1 /var/www/html/lucweb/eco-yii/myii/protected/controllers/SiteController.php(102): LoginForm->save()
+#2 /var/www/html/lucweb/eco-yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#3 /var/www/html/lucweb/eco-yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/html/lucweb/eco-yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): CController->run('login')
+#7 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#8 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=site/login
+HTTP_REFERER=http://localhost/lucweb/eco-yii/myii/index.php?r=site/login
+---
+2015/05/09 12:57:23 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::execute(): SQLSTATE[HY000]: General error: 1364 Field 'usu_login' doesn't have a default value. A declaração SQL executada foi: INSERT INTO `eco_usuario` (`usu_nome`, `usu_email`, `usu_fonr_cel`, `usu_senha`, `usu_nivel`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4).
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/SiteController.php (103)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2015/05/09 12:57:23 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[HY000]: General error: 1364 Field 'usu_login' doesn't have a default value. The SQL statement executed was: INSERT INTO `eco_usuario` (`usu_nome`, `usu_email`, `usu_fonr_cel`, `usu_senha`, `usu_nivel`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4)' in /var/www/html/lucweb/eco-yii/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/db/ar/CActiveRecord.php(1077): CDbCommand->execute()
+#1 /var/www/html/lucweb/eco-yii/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 /var/www/html/lucweb/eco-yii/myii/protected/controllers/SiteController.php(103): CActiveRecord->save()
+#3 /var/www/html/lucweb/eco-yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#4 /var/www/html/lucweb/eco-yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/html/lucweb/eco-yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): CController->run('login')
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#9 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=site/login
+HTTP_REFERER=http://localhost/lucweb/eco-yii/myii/index.php?r=site/login
+---
+2015/05/09 12:58:25 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::execute(): SQLSTATE[HY000]: General error: 1364 Field 'usu_login' doesn't have a default value. A declaração SQL executada foi: INSERT INTO `eco_usuario` (`usu_nome`, `usu_email`, `usu_fonr_cel`, `usu_senha`, `usu_nivel`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4).
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/SiteController.php (104)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2015/05/09 12:58:25 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[HY000]: General error: 1364 Field 'usu_login' doesn't have a default value. The SQL statement executed was: INSERT INTO `eco_usuario` (`usu_nome`, `usu_email`, `usu_fonr_cel`, `usu_senha`, `usu_nivel`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4)' in /var/www/html/lucweb/eco-yii/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/db/ar/CActiveRecord.php(1077): CDbCommand->execute()
+#1 /var/www/html/lucweb/eco-yii/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 /var/www/html/lucweb/eco-yii/myii/protected/controllers/SiteController.php(104): CActiveRecord->save()
+#3 /var/www/html/lucweb/eco-yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#4 /var/www/html/lucweb/eco-yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/html/lucweb/eco-yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): CController->run('login')
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#9 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=site/login
+HTTP_REFERER=http://localhost/lucweb/eco-yii/myii/index.php?r=site/login
+---
+2015/05/09 12:58:45 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::execute(): SQLSTATE[HY000]: General error: 1364 Field 'usu_login' doesn't have a default value. A declaração SQL executada foi: INSERT INTO `eco_usuario` (`usu_nome`, `usu_email`, `usu_fonr_cel`, `usu_senha`, `usu_nivel`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4).
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/SiteController.php (104)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2015/05/09 12:58:45 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[HY000]: General error: 1364 Field 'usu_login' doesn't have a default value. The SQL statement executed was: INSERT INTO `eco_usuario` (`usu_nome`, `usu_email`, `usu_fonr_cel`, `usu_senha`, `usu_nivel`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4)' in /var/www/html/lucweb/eco-yii/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/db/ar/CActiveRecord.php(1077): CDbCommand->execute()
+#1 /var/www/html/lucweb/eco-yii/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 /var/www/html/lucweb/eco-yii/myii/protected/controllers/SiteController.php(104): CActiveRecord->save()
+#3 /var/www/html/lucweb/eco-yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#4 /var/www/html/lucweb/eco-yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/html/lucweb/eco-yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): CController->run('login')
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#9 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=site/login
+HTTP_REFERER=http://localhost/lucweb/eco-yii/myii/index.php?r=site/login
+---
+2015/05/09 12:58:46 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::execute(): SQLSTATE[HY000]: General error: 1364 Field 'usu_login' doesn't have a default value. A declaração SQL executada foi: INSERT INTO `eco_usuario` (`usu_nome`, `usu_email`, `usu_fonr_cel`, `usu_senha`, `usu_nivel`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4).
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/SiteController.php (104)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2015/05/09 12:58:46 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[HY000]: General error: 1364 Field 'usu_login' doesn't have a default value. The SQL statement executed was: INSERT INTO `eco_usuario` (`usu_nome`, `usu_email`, `usu_fonr_cel`, `usu_senha`, `usu_nivel`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4)' in /var/www/html/lucweb/eco-yii/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/db/ar/CActiveRecord.php(1077): CDbCommand->execute()
+#1 /var/www/html/lucweb/eco-yii/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 /var/www/html/lucweb/eco-yii/myii/protected/controllers/SiteController.php(104): CActiveRecord->save()
+#3 /var/www/html/lucweb/eco-yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#4 /var/www/html/lucweb/eco-yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/html/lucweb/eco-yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): CController->run('login')
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#9 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=site/login
+HTTP_REFERER=http://localhost/lucweb/eco-yii/myii/index.php?r=site/login
+---
+2015/05/09 13:03:41 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::execute(): SQLSTATE[HY000]: General error: 1364 Field 'usu_fone' doesn't have a default value. A declaração SQL executada foi: INSERT INTO `eco_usuario` (`usu_nome`, `usu_email`, `usu_fonr_cel`, `usu_senha`, `usu_nivel`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4).
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/SiteController.php (104)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2015/05/09 13:03:41 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[HY000]: General error: 1364 Field 'usu_fone' doesn't have a default value. The SQL statement executed was: INSERT INTO `eco_usuario` (`usu_nome`, `usu_email`, `usu_fonr_cel`, `usu_senha`, `usu_nivel`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4)' in /var/www/html/lucweb/eco-yii/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/db/ar/CActiveRecord.php(1077): CDbCommand->execute()
+#1 /var/www/html/lucweb/eco-yii/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 /var/www/html/lucweb/eco-yii/myii/protected/controllers/SiteController.php(104): CActiveRecord->save()
+#3 /var/www/html/lucweb/eco-yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#4 /var/www/html/lucweb/eco-yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/html/lucweb/eco-yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): CController->run('login')
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#9 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=site/login
+HTTP_REFERER=http://localhost/lucweb/eco-yii/myii/index.php?r=site/login
+---
+2015/05/09 13:04:26 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::execute(): SQLSTATE[HY000]: General error: 1364 Field 'usu_nascimento' doesn't have a default value. A declaração SQL executada foi: INSERT INTO `eco_usuario` (`usu_nome`, `usu_email`, `usu_fonr_cel`, `usu_senha`, `usu_nivel`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4).
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/SiteController.php (104)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2015/05/09 13:04:26 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[HY000]: General error: 1364 Field 'usu_nascimento' doesn't have a default value. The SQL statement executed was: INSERT INTO `eco_usuario` (`usu_nome`, `usu_email`, `usu_fonr_cel`, `usu_senha`, `usu_nivel`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4)' in /var/www/html/lucweb/eco-yii/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/db/ar/CActiveRecord.php(1077): CDbCommand->execute()
+#1 /var/www/html/lucweb/eco-yii/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 /var/www/html/lucweb/eco-yii/myii/protected/controllers/SiteController.php(104): CActiveRecord->save()
+#3 /var/www/html/lucweb/eco-yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#4 /var/www/html/lucweb/eco-yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/html/lucweb/eco-yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): CController->run('login')
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#9 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=site/login
+HTTP_REFERER=http://localhost/lucweb/eco-yii/myii/index.php?r=site/login
+---
+2015/05/09 13:04:51 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::execute(): SQLSTATE[HY000]: General error: 1364 Field 'usu_data' doesn't have a default value. A declaração SQL executada foi: INSERT INTO `eco_usuario` (`usu_nome`, `usu_email`, `usu_fonr_cel`, `usu_senha`, `usu_nivel`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4).
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/SiteController.php (104)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2015/05/09 13:04:51 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[HY000]: General error: 1364 Field 'usu_data' doesn't have a default value. The SQL statement executed was: INSERT INTO `eco_usuario` (`usu_nome`, `usu_email`, `usu_fonr_cel`, `usu_senha`, `usu_nivel`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4)' in /var/www/html/lucweb/eco-yii/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/db/ar/CActiveRecord.php(1077): CDbCommand->execute()
+#1 /var/www/html/lucweb/eco-yii/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 /var/www/html/lucweb/eco-yii/myii/protected/controllers/SiteController.php(104): CActiveRecord->save()
+#3 /var/www/html/lucweb/eco-yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#4 /var/www/html/lucweb/eco-yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/html/lucweb/eco-yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): CController->run('login')
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#9 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=site/login
+HTTP_REFERER=http://localhost/lucweb/eco-yii/myii/index.php?r=site/login
+---
+2015/05/09 13:05:32 [error] [exception.CException] exception 'CException' with message 'A propriedade "LoginForm.usu_id" não está definida.' in /var/www/html/lucweb/eco-yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/myii/protected/controllers/SiteController.php(106): CComponent->__get('usu_id')
+#1 /var/www/html/lucweb/eco-yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#2 /var/www/html/lucweb/eco-yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /var/www/html/lucweb/eco-yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#4 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): CController->run('login')
+#6 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#7 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#8 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=site/login
+HTTP_REFERER=http://localhost/lucweb/eco-yii/myii/index.php?r=site/login
+---
+2015/05/09 13:06:03 [error] [exception.CException] exception 'CException' with message 'A propriedade "LoginForm.usu_id" não está definida.' in /var/www/html/lucweb/eco-yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/myii/protected/controllers/SiteController.php(106): CComponent->__get('usu_id')
+#1 /var/www/html/lucweb/eco-yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#2 /var/www/html/lucweb/eco-yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /var/www/html/lucweb/eco-yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#4 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): CController->run('login')
+#6 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#7 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#8 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=site/login
+HTTP_REFERER=http://localhost/lucweb/eco-yii/myii/index.php?r=site/login
+---
+2015/05/09 13:07:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Não foi possível resolver a requisição "asdfasd/view".' in /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('asdfasd/view')
+#1 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=asdfasd/view
+HTTP_REFERER=http://localhost/lucweb/eco-yii/myii/index.php?r=site/login
+---
+2015/05/09 13:08:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Não foi possível resolver a requisição "asdfasd/view".' in /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('asdfasd/view')
+#1 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=asdfasd/view
+HTTP_REFERER=http://localhost/lucweb/eco-yii/myii/index.php?r=site/login
+---
+2015/05/09 13:48:14 [error] [php] include(usu_email.php): failed to open stream: No such file or directory (/var/www/html/lucweb/eco-yii/framework/YiiBase.php:427)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/validators/CValidator.php(186): import()
+#1 /var/www/html/lucweb/eco-yii/framework/base/CModel.php(287): createValidator()
+#2 /var/www/html/lucweb/eco-yii/framework/base/CModel.php(260): EcoUsuario->createValidators()
+#3 /var/www/html/lucweb/eco-yii/framework/base/CModel.php(304): EcoUsuario->getValidators()
+#4 /var/www/html/lucweb/eco-yii/framework/web/helpers/CHtml.php(1414): EcoUsuario->isAttributeRequired()
+#5 /var/www/html/lucweb/eco-yii/framework/web/widgets/CActiveForm.php(597): activeLabelEx()
+#6 /var/www/html/lucweb/eco-yii/myii/protected/views/ecoUsuario/_newUser.php(14): CActiveForm->labelEx()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CBaseController.php(126): require()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#9 /var/www/html/lucweb/eco-yii/framework/web/CController.php(869): SiteController->renderFile()
+#10 /var/www/html/lucweb/eco-yii/myii/protected/views/site/login.php(71): SiteController->renderPartial()
+#11 /var/www/html/lucweb/eco-yii/framework/web/CBaseController.php(126): require()
+#12 /var/www/html/lucweb/eco-yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#13 /var/www/html/lucweb/eco-yii/framework/web/CController.php(869): SiteController->renderFile()
+#14 /var/www/html/lucweb/eco-yii/framework/web/CController.php(782): SiteController->renderPartial()
+#15 /var/www/html/lucweb/eco-yii/myii/protected/controllers/SiteController.php(118): SiteController->render()
+#16 /var/www/html/lucweb/eco-yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#17 /var/www/html/lucweb/eco-yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#18 /var/www/html/lucweb/eco-yii/framework/web/CController.php(286): SiteController->runAction()
+#19 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#20 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): SiteController->run()
+#21 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#22 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#23 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=site/login
+in /var/www/html/lucweb/eco-yii/myii/protected/views/ecoUsuario/_newUser.php (14)
+in /var/www/html/lucweb/eco-yii/myii/protected/views/site/login.php (71)
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/SiteController.php (118)
+2015/05/09 15:25:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Não foi possível resolver a requisição "ecoCarrinho/".' in /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ecoCarrinho/')
+#1 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoCarrinho/
+HTTP_REFERER=http://localhost/lucweb/eco-yii/myii/index.php?r=site/contact
+---
+2015/05/09 15:25:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Não foi possível resolver a requisição "ecoCarrinho/index.php".' in /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ecoCarrinho/ind...')
+#1 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoCarrinho/index.php
+---
+2015/05/09 15:26:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'O sistema não foi capaz de encontrar a ação "index.php" solicitada.' in /var/www/html/lucweb/eco-yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CController.php(270): CController->missingAction('index.php')
+#1 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): CController->run('index.php')
+#2 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ecoCarrinho/ind...')
+#3 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoCarrinho/index.php
+---
+2015/05/09 15:26:21 [error] [exception.CException] exception 'CException' with message 'EcoCarrinhoController não pôde encontrar a visualização "index" solicitada.' in /var/www/html/lucweb/eco-yii/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#1 /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoCarrinhoController.php(58): CController->render('index', Array)
+#2 /var/www/html/lucweb/eco-yii/framework/web/actions/CInlineAction.php(49): EcoCarrinhoController->actionIndex()
+#3 /var/www/html/lucweb/eco-yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#10 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): CController->run('')
+#12 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ecoCarrinho/')
+#13 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoCarrinho/
+---
+2015/05/09 15:27:05 [error] [exception.CException] exception 'CException' with message 'EcoCarrinhoController não pôde encontrar a visualização "index" solicitada.' in /var/www/html/lucweb/eco-yii/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#1 /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoCarrinhoController.php(58): CController->render('index', Array)
+#2 /var/www/html/lucweb/eco-yii/framework/web/actions/CInlineAction.php(49): EcoCarrinhoController->actionIndex()
+#3 /var/www/html/lucweb/eco-yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#10 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): CController->run('')
+#12 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ecoCarrinho/')
+#13 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoCarrinho/
+---
+2015/05/09 15:27:05 [error] [exception.CException] exception 'CException' with message 'EcoCarrinhoController não pôde encontrar a visualização "index" solicitada.' in /var/www/html/lucweb/eco-yii/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#1 /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoCarrinhoController.php(58): CController->render('index', Array)
+#2 /var/www/html/lucweb/eco-yii/framework/web/actions/CInlineAction.php(49): EcoCarrinhoController->actionIndex()
+#3 /var/www/html/lucweb/eco-yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#10 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): CController->run('')
+#12 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ecoCarrinho/')
+#13 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoCarrinho/
+---
+2015/05/09 15:27:17 [error] [exception.CException] exception 'CException' with message 'EcoCarrinhoController não pôde encontrar a visualização "index" solicitada.' in /var/www/html/lucweb/eco-yii/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#1 /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoCarrinhoController.php(58): CController->render('index', Array)
+#2 /var/www/html/lucweb/eco-yii/framework/web/actions/CInlineAction.php(49): EcoCarrinhoController->actionIndex()
+#3 /var/www/html/lucweb/eco-yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#10 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): CController->run('')
+#12 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ecoCarrinho/')
+#13 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoCarrinho/
+---
+2015/05/09 15:29:31 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Você não está autorizado a realizar essa operação.' in /var/www/html/lucweb/eco-yii/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Voc?? n??o est?...')
+#1 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): CController->run('add')
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ecoCarrinho/add')
+#9 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoCarrinho/add
+---
+2015/05/09 15:35:19 [error] [exception.CException] exception 'CException' with message 'A propriedade "EcoCarrinho.action" não está definida.' in /var/www/html/lucweb/eco-yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/myii/protected/models/EcoCarrinho.php(30): CComponent->__get('action')
+#1 /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoCarrinhoController.php(66): EcoCarrinho->addCarrinho()
+#2 /var/www/html/lucweb/eco-yii/framework/web/actions/CInlineAction.php(49): EcoCarrinhoController->actionAdd()
+#3 /var/www/html/lucweb/eco-yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#10 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): CController->run('add')
+#12 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ecoCarrinho/add')
+#13 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoCarrinho/add
+---
+2015/05/09 15:44:47 [error] [php] Undefined variable: _SESSION (/var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoCarrinhoController.php:17)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#1 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoCarrinho/add&add=13
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoCarrinhoController.php (17)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2015/05/09 15:54:58 [error] [php] array_unshift() expects parameter 1 to be array, null given (/var/www/html/lucweb/eco-yii/myii/protected/models/EcoCarrinho.php:29)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/actions/CInlineAction.php(49): EcoCarrinhoController->actionAdd()
+#1 /var/www/html/lucweb/eco-yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoCarrinhoController->runAction()
+#3 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#5 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoCarrinhoController->filterAccessControl()
+#6 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoCarrinhoController->runActionWithFilters()
+#9 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoCarrinhoController->run()
+#10 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#11 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoCarrinho/add&add=13
+in /var/www/html/lucweb/eco-yii/myii/protected/models/EcoCarrinho.php (29)
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoCarrinhoController.php (69)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2015/05/09 15:56:45 [error] [php] array_push() expects parameter 1 to be array, null given (/var/www/html/lucweb/eco-yii/myii/protected/models/EcoCarrinho.php:29)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/actions/CInlineAction.php(49): EcoCarrinhoController->actionAdd()
+#1 /var/www/html/lucweb/eco-yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoCarrinhoController->runAction()
+#3 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#5 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoCarrinhoController->filterAccessControl()
+#6 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoCarrinhoController->runActionWithFilters()
+#9 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoCarrinhoController->run()
+#10 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#11 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoCarrinho/add&add=9
+in /var/www/html/lucweb/eco-yii/myii/protected/models/EcoCarrinho.php (29)
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoCarrinhoController.php (69)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2015/05/09 16:10:56 [error] [php] Trying to get property of non-object (/var/www/html/lucweb/eco-yii/myii/protected/models/EcoCarrinho.php:32)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoCarrinhoController->runAction()
+#2 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoCarrinhoController->filterAccessControl()
+#5 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoCarrinhoController->runActionWithFilters()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoCarrinhoController->run()
+#9 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoCarrinho/add&add=13
+in /var/www/html/lucweb/eco-yii/myii/protected/models/EcoCarrinho.php (32)
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoCarrinhoController.php (67)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2015/05/09 16:11:35 [error] [php] Trying to get property of non-object (/var/www/html/lucweb/eco-yii/myii/protected/models/EcoCarrinho.php:33)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoCarrinhoController->runAction()
+#2 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoCarrinhoController->filterAccessControl()
+#5 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoCarrinhoController->runActionWithFilters()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoCarrinhoController->run()
+#9 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoCarrinho/add&add=13
+in /var/www/html/lucweb/eco-yii/myii/protected/models/EcoCarrinho.php (33)
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoCarrinhoController.php (67)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2015/05/09 16:12:05 [error] [php] Trying to get property of non-object (/var/www/html/lucweb/eco-yii/myii/protected/models/EcoCarrinho.php:32)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoCarrinhoController->runAction()
+#2 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoCarrinhoController->filterAccessControl()
+#5 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoCarrinhoController->runActionWithFilters()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoCarrinhoController->run()
+#9 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoCarrinho/add&add=13
+in /var/www/html/lucweb/eco-yii/myii/protected/models/EcoCarrinho.php (32)
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoCarrinhoController.php (67)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2015/05/09 16:12:28 [error] [php] Trying to get property of non-object (/var/www/html/lucweb/eco-yii/myii/protected/models/EcoCarrinho.php:32)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoCarrinhoController->runAction()
+#2 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoCarrinhoController->filterAccessControl()
+#5 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoCarrinhoController->runActionWithFilters()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoCarrinhoController->run()
+#9 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoCarrinho/add&add=13
+in /var/www/html/lucweb/eco-yii/myii/protected/models/EcoCarrinho.php (32)
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoCarrinhoController.php (67)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2015/05/09 16:12:29 [error] [php] Trying to get property of non-object (/var/www/html/lucweb/eco-yii/myii/protected/models/EcoCarrinho.php:32)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoCarrinhoController->runAction()
+#2 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoCarrinhoController->filterAccessControl()
+#5 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoCarrinhoController->runActionWithFilters()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoCarrinhoController->run()
+#9 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoCarrinho/add&add=13
+in /var/www/html/lucweb/eco-yii/myii/protected/models/EcoCarrinho.php (32)
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoCarrinhoController.php (67)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2015/05/09 16:13:00 [error] [php] Attempt to increment/decrement property of non-object (/var/www/html/lucweb/eco-yii/myii/protected/models/EcoCarrinho.php:33)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoCarrinhoController->runAction()
+#2 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoCarrinhoController->filterAccessControl()
+#5 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoCarrinhoController->runActionWithFilters()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoCarrinhoController->run()
+#9 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoCarrinho/add&add=13
+in /var/www/html/lucweb/eco-yii/myii/protected/models/EcoCarrinho.php (33)
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoCarrinhoController.php (67)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2015/05/09 16:13:25 [error] [php] Trying to get property of non-object (/var/www/html/lucweb/eco-yii/myii/protected/models/EcoCarrinho.php:32)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoCarrinhoController->runAction()
+#2 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoCarrinhoController->filterAccessControl()
+#5 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoCarrinhoController->runActionWithFilters()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoCarrinhoController->run()
+#9 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoCarrinho/add&add=13
+in /var/www/html/lucweb/eco-yii/myii/protected/models/EcoCarrinho.php (32)
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoCarrinhoController.php (67)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2015/05/09 16:13:28 [error] [php] Trying to get property of non-object (/var/www/html/lucweb/eco-yii/myii/protected/models/EcoCarrinho.php:32)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoCarrinhoController->runAction()
+#2 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoCarrinhoController->filterAccessControl()
+#5 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoCarrinhoController->runActionWithFilters()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoCarrinhoController->run()
+#9 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoCarrinho/add&add=13
+in /var/www/html/lucweb/eco-yii/myii/protected/models/EcoCarrinho.php (32)
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoCarrinhoController.php (67)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2015/05/09 16:13:50 [error] [php] Trying to get property of non-object (/var/www/html/lucweb/eco-yii/myii/protected/models/EcoCarrinho.php:33)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoCarrinhoController->runAction()
+#2 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoCarrinhoController->filterAccessControl()
+#5 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoCarrinhoController->runActionWithFilters()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoCarrinhoController->run()
+#9 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoCarrinho/add&add=13
+in /var/www/html/lucweb/eco-yii/myii/protected/models/EcoCarrinho.php (33)
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoCarrinhoController.php (67)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2015/05/09 16:14:11 [error] [php] Trying to get property of non-object (/var/www/html/lucweb/eco-yii/myii/protected/models/EcoCarrinho.php:33)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoCarrinhoController->runAction()
+#2 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoCarrinhoController->filterAccessControl()
+#5 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoCarrinhoController->runActionWithFilters()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoCarrinhoController->run()
+#9 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoCarrinho/add&add=13
+in /var/www/html/lucweb/eco-yii/myii/protected/models/EcoCarrinho.php (33)
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoCarrinhoController.php (67)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2015/05/09 16:14:17 [error] [php] Invalid argument supplied for foreach() (/var/www/html/lucweb/eco-yii/myii/protected/models/EcoCarrinho.php:31)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoCarrinhoController->runAction()
+#2 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoCarrinhoController->filterAccessControl()
+#5 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoCarrinhoController->runActionWithFilters()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoCarrinhoController->run()
+#9 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoCarrinho/add&add=13
+in /var/www/html/lucweb/eco-yii/myii/protected/models/EcoCarrinho.php (31)
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoCarrinhoController.php (67)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2015/05/09 16:22:17 [error] [php] Undefined index: EcoCarrinho (/var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoCarrinhoController.php:75)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoCarrinhoController->runAction()
+#1 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoCarrinhoController->filterAccessControl()
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoCarrinhoController->runActionWithFilters()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoCarrinhoController->run()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoCarrinho/remove&remove=0
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoCarrinhoController.php (75)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2015/05/09 16:22:23 [error] [php] Undefined index: EcoCarrinho (/var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoCarrinhoController.php:75)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoCarrinhoController->runAction()
+#1 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoCarrinhoController->filterAccessControl()
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoCarrinhoController->runActionWithFilters()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoCarrinhoController->run()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoCarrinho/remove&=0
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoCarrinhoController.php (75)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2015/05/09 17:00:33 [error] [php] Invalid argument supplied for foreach() (/var/www/html/lucweb/eco-yii/myii/protected/views/ecoCarrinho/index.php:33)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CController.php(869): EcoCarrinhoController->renderFile()
+#1 /var/www/html/lucweb/eco-yii/framework/web/CController.php(782): EcoCarrinhoController->renderPartial()
+#2 /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoCarrinhoController.php(58): EcoCarrinhoController->render()
+#3 /var/www/html/lucweb/eco-yii/framework/web/actions/CInlineAction.php(49): EcoCarrinhoController->actionIndex()
+#4 /var/www/html/lucweb/eco-yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoCarrinhoController->runAction()
+#6 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoCarrinhoController->filterAccessControl()
+#9 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoCarrinhoController->runActionWithFilters()
+#12 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoCarrinhoController->run()
+#13 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoCarrinho/
+in /var/www/html/lucweb/eco-yii/myii/protected/views/ecoCarrinho/index.php (33)
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoCarrinhoController.php (58)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2015/05/09 17:08:40 [error] [php] Trying to get property of non-object (/var/www/html/lucweb/eco-yii/myii/protected/models/EcoCarrinho.php:33)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoCarrinhoController->runAction()
+#2 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoCarrinhoController->filterAccessControl()
+#5 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoCarrinhoController->runActionWithFilters()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoCarrinhoController->run()
+#9 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoCarrinho/add&add=undefined
+in /var/www/html/lucweb/eco-yii/myii/protected/models/EcoCarrinho.php (33)
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoCarrinhoController.php (66)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2015/05/09 17:09:26 [error] [php] Trying to get property of non-object (/var/www/html/lucweb/eco-yii/myii/protected/models/EcoCarrinho.php:33)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoCarrinhoController->runAction()
+#2 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoCarrinhoController->filterAccessControl()
+#5 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoCarrinhoController->runActionWithFilters()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoCarrinhoController->run()
+#9 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoCarrinho/add&add=undefined
+in /var/www/html/lucweb/eco-yii/myii/protected/models/EcoCarrinho.php (33)
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoCarrinhoController.php (66)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2015/05/09 17:19:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'O sistema não foi capaz de encontrar a ação "ecoCarrinho" solicitada.' in /var/www/html/lucweb/eco-yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CController.php(270): CController->missingAction('ecoCarrinho')
+#1 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): CController->run('ecoCarrinho')
+#2 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ecoCarrinho/eco...')
+#3 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoCarrinho/ecoCarrinho
+HTTP_REFERER=http://localhost/lucweb/eco-yii/myii/index.php?r=ecoCarrinho/add&add=13
+---
+2015/05/09 17:19:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'O sistema não foi capaz de encontrar a ação "ecoCarrinho" solicitada.' in /var/www/html/lucweb/eco-yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CController.php(270): CController->missingAction('ecoCarrinho')
+#1 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): CController->run('ecoCarrinho')
+#2 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ecoCarrinho/eco...')
+#3 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoCarrinho/ecoCarrinho
+HTTP_REFERER=http://localhost/lucweb/eco-yii/myii/index.php?r=ecoCarrinho/add&add=13
+---
+2015/05/09 17:20:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'O sistema não foi capaz de encontrar a ação "ecoCarrinho" solicitada.' in /var/www/html/lucweb/eco-yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CController.php(270): CController->missingAction('ecoCarrinho')
+#1 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): CController->run('ecoCarrinho')
+#2 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ecoCarrinho/eco...')
+#3 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoCarrinho/ecoCarrinho
+HTTP_REFERER=http://localhost/lucweb/eco-yii/myii/index.php?r=ecoCarrinho/
+---
+2015/05/09 17:22:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Não foi possível resolver a requisição "carrinho".' in /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('carrinho')
+#1 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=carrinho&add=14
+HTTP_REFERER=http://localhost/lucweb/eco-yii/myii/index.php?r=ecoProdutos/view&id=14
+---
+2015/05/09 17:22:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Não foi possível resolver a requisição "carrinho".' in /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController('carrinho')
+#1 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/html/lucweb/eco-yii/myii/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=carrinho&add=14
+HTTP_REFERER=http://localhost/lucweb/eco-yii/myii/index.php?r=ecoProdutos/view&id=14
+---
+2015/05/09 19:16:06 [error] [php] Undefined index: EcoCarrinho (/var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoCarrinhoController.php:74)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoCarrinhoController->runAction()
+#1 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoCarrinhoController->filterAccessControl()
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoCarrinhoController->runActionWithFilters()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoCarrinhoController->run()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoCarrinho/remove&remove=3
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoCarrinhoController.php (74)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2015/05/09 19:16:17 [error] [php] Undefined index: EcoCarrinho (/var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoCarrinhoController.php:74)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoCarrinhoController->runAction()
+#1 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoCarrinhoController->filterAccessControl()
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoCarrinhoController->runActionWithFilters()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoCarrinhoController->run()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoCarrinho/remove&remove=3
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoCarrinhoController.php (74)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2015/05/09 19:16:38 [error] [php] Undefined index: EcoCarrinho (/var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoCarrinhoController.php:55)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoCarrinhoController->runAction()
+#1 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoCarrinhoController->filterAccessControl()
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoCarrinhoController->runActionWithFilters()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoCarrinhoController->run()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoCarrinho/index
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoCarrinhoController.php (55)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2015/05/09 19:16:42 [error] [php] Undefined index: EcoCarrinho (/var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoCarrinhoController.php:55)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoCarrinhoController->runAction()
+#1 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoCarrinhoController->filterAccessControl()
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoCarrinhoController->runActionWithFilters()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoCarrinhoController->run()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoCarrinho/index
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoCarrinhoController.php (55)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2015/05/09 19:16:47 [error] [php] Undefined index: EcoCarrinho (/var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoCarrinhoController.php:55)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoCarrinhoController->runAction()
+#1 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoCarrinhoController->filterAccessControl()
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoCarrinhoController->runActionWithFilters()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoCarrinhoController->run()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoCarrinho/index
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoCarrinhoController.php (55)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2015/05/09 19:30:18 [error] [php] Array to string conversion (/var/www/html/lucweb/eco-yii/myii/protected/views/ecoCarrinho/index.php:54)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CController.php(869): EcoCarrinhoController->renderFile()
+#1 /var/www/html/lucweb/eco-yii/framework/web/CController.php(782): EcoCarrinhoController->renderPartial()
+#2 /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoCarrinhoController.php(57): EcoCarrinhoController->render()
+#3 /var/www/html/lucweb/eco-yii/framework/web/actions/CInlineAction.php(49): EcoCarrinhoController->actionIndex()
+#4 /var/www/html/lucweb/eco-yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoCarrinhoController->runAction()
+#6 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoCarrinhoController->filterAccessControl()
+#9 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoCarrinhoController->runActionWithFilters()
+#12 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoCarrinhoController->run()
+#13 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoCarrinho/index
+in /var/www/html/lucweb/eco-yii/myii/protected/views/ecoCarrinho/index.php (54)
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoCarrinhoController.php (57)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2015/05/09 19:33:11 [error] [php] Trying to get property of non-object (/var/www/html/lucweb/eco-yii/myii/protected/models/EcoCarrinho.php:39)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoCarrinhoController->runAction()
+#2 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoCarrinhoController->filterAccessControl()
+#5 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoCarrinhoController->runActionWithFilters()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoCarrinhoController->run()
+#9 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoCarrinho/add&add=13
+in /var/www/html/lucweb/eco-yii/myii/protected/models/EcoCarrinho.php (39)
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoCarrinhoController.php (66)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2015/05/09 20:37:59 [error] [php] Missing argument 1 for CUserIdentity::__construct(), called in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoCarrinhoController.php on line 56 and defined (/var/www/html/lucweb/eco-yii/framework/web/auth/CUserIdentity.php:43)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoCarrinhoController->runAction()
+#2 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoCarrinhoController->filterAccessControl()
+#5 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoCarrinhoController->runActionWithFilters()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoCarrinhoController->run()
+#9 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoCarrinho/index
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoCarrinhoController.php (56)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2015/05/10 09:48:04 [error] [php] Trying to get property of non-object (/var/www/html/lucweb/eco-yii/myii/protected/components/CalculadorFrete.php:55)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoCarrinhoController->runAction()
+#2 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoCarrinhoController->filterAccessControl()
+#5 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoCarrinhoController->runActionWithFilters()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoCarrinhoController->run()
+#9 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoCarrinho/index
+in /var/www/html/lucweb/eco-yii/myii/protected/components/CalculadorFrete.php (55)
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoCarrinhoController.php (57)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)
+2015/05/10 11:11:37 [error] [php] Trying to get property of non-object (/var/www/html/lucweb/eco-yii/myii/protected/components/CalculadorFrete.php:55)
+Stack trace:
+#0 /var/www/html/lucweb/eco-yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(133): EcoCarrinhoController->runAction()
+#2 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/html/lucweb/eco-yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#4 /var/www/html/lucweb/eco-yii/framework/web/filters/CInlineFilter.php(58): EcoCarrinhoController->filterAccessControl()
+#5 /var/www/html/lucweb/eco-yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#6 /var/www/html/lucweb/eco-yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/html/lucweb/eco-yii/framework/web/CController.php(265): EcoCarrinhoController->runActionWithFilters()
+#8 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(282): EcoCarrinhoController->run()
+#9 /var/www/html/lucweb/eco-yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /var/www/html/lucweb/eco-yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/html/lucweb/eco-yii/myii/index.php(13): CWebApplication->run()
+REQUEST_URI=/lucweb/eco-yii/myii/index.php?r=ecoCarrinho/index
+in /var/www/html/lucweb/eco-yii/myii/protected/components/CalculadorFrete.php (55)
+in /var/www/html/lucweb/eco-yii/myii/protected/controllers/EcoCarrinhoController.php (57)
+in /var/www/html/lucweb/eco-yii/myii/index.php (13)

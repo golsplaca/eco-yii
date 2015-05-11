@@ -1,4 +1,5 @@
 <?php
+ini_set('display_errors', 1);
 date_default_timezone_set('America/Sao_Paulo');
 // uncomment the following to define a path alias
 // Yii::setPathOfAlias('local','path/to/local-folder');
@@ -6,8 +7,11 @@ date_default_timezone_set('America/Sao_Paulo');
 // This is the main Web application configuration. Any writable
 // CWebApplication properties can be configured here.
 return array(
+    'charset'        => 'UTF-8',
+    'language'       => 'pt_br',
+    'sourceLanguage' => 'pt_br',
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'My Web Application',
+	'name'=>'Samya shoes',
 
 	// preloading 'log' component
 	'preload'=>array('log'),

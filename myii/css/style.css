@@ -2,6 +2,9 @@ body
 {
 	background: #f1f1f1;
 }
+div{
+	display: none;
+}
 a{color: #555;  cursor: pointer; }
 .nav>li>a{padding-top: 5px; padding-bottom: 4px;}
 .nav>li>a:hover, .nav>li>a:focus{color: #d9534f; padding-top: 5px;  background: #fff;}

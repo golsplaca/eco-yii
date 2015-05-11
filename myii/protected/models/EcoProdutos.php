@@ -30,6 +30,8 @@ class EcoProdutos extends CActiveRecord
 	public $limit = 20;
 	public $search;
 	public $pagination;
+
+	public $params = array('qt'=>1,'preco'=>0);
 	/**
 	 * @return string the associated database table name
 	 */

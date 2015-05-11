@@ -24,6 +24,7 @@
 
 	  <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-1.9.1.min.js"></script>
 	  <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap.min.js"></script>
+	  <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/controller.js"></script>
 	
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 </head>
@@ -57,7 +58,7 @@
 							<br> Minha conta </a>
 					</li>     
 	                <li style="text-align: center;">
-	                	<a href="index.php?r=carrinho/" id="carrinho">
+	                	<a href="index.php?r=ecoCarrinho/" id="ecoCarrinho">
 	                		<span class="glyphicon glyphicon-shopping-cart" style="font-size: 10px;"></span>
 	                		<br> Carrinho</a>
 	                </li>

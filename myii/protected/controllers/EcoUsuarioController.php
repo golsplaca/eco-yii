@@ -1,4 +1,4 @@
-<?php
+]<?php
 
 class EcoUsuarioController extends Controller
 {
@@ -13,6 +13,8 @@ class EcoUsuarioController extends Controller
 	 */
 	public function filters()
 	{
+		if(!Yii::app()->user->getId())
+			exit();
 		return array(
 			'accessControl', // perform access control for CRUD operations
 			'postOnly + delete', // we only allow deletion via POST request

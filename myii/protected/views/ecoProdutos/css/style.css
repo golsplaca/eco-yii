@@ -17,6 +17,7 @@ div.eco-produtos img:hover{
 div.eco-produtos .col-lg-4{
 	max-width: 300px;
 	margin-bottom: 20px;
+	display: none;
 }
 
 div.eco-produtos .col-lg-4 .widget-body{

@@ -75,7 +75,11 @@ class SiteController extends Controller
 				$this->refresh();
 			}
 		}
-		$this->render('contact',array('model'=>$model));
+		$this->render('contact',array(
+			'model'=>$model,
+			'colecoes'=>EcoColecoes::model()->findAll(),
+			'categorias'=>EcoCategoria::model()->findAll(),
+		));
 	}
 
 	/**
@@ -83,17 +87,27 @@ class SiteController extends Controller
 	 */
 	public function actionLogin()
 	{
-		if(!isset($_SESSION)){
-
-			//$_POST['LoginForm'] = $_SESSION['LoginForm'];
-
-			$model=new LoginForm;
+			$model   = new LoginForm;
+			$usuario = new EcoUsuario();
 
 			// if it is ajax validation request
 			if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
 			{
 				echo CActiveForm::validate($model);
 				Yii::app()->end();
+			}elseif(isset($_POST['EcoUsuario']))
+			{	
+				$usuario->attributes=$_POST['EcoUsuario'];
+
+				if($usuario->usu_senha != $_POST['usu_senha'])
+					//$usuario->usu_senha = null;
+				if($usuario->usu_senha)
+					$usuario->usu_senha = md5($usuario->usu_senha);
+
+				$usuario->usu_nivel = 'demo';
+				$usuario->usu_data = date('m-d-y');
+				if($usuario->save())
+					$this->redirect(array('ecoProdutos/'));
 			}
 
 			// collect user input data
@@ -105,11 +119,11 @@ class SiteController extends Controller
 					$this->redirect(Yii::app()->user->returnUrl);
 			}
 			// display the login form
-			$this->render('login',array('model'=>$model));
-
-		}else{
-			echo 4;
-		}
+			$this->render('login',array(
+				'model'=>$model, 
+				'usuario'=>$usuario,
+				'categorias'=>EcoCategoria::model()->findAll(),
+			));
 	}
 
 	/**

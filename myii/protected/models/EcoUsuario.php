@@ -40,7 +40,8 @@ class EcoUsuario extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('usu_nivel, usu_senha, usu_nome, usu_email, usu_fone', 'required'),
+			array('usu_nivel, usu_senha, usu_nome, usu_email, usu_fonr_cel', 'required'),
+			array('usu_email', 'email'),
 			array('usu_cpf, usu_rg, usu_numero, usu_cep', 'numerical', 'integerOnly'=>true),
 			array('usu_nivel', 'length', 'max'=>20),
 			array('usu_login, usu_fone, usu_cidade, usu_fonr_cel', 'length', 'max'=>50),
