@@ -1,0 +1,13 @@
+div{
+	display: block;
+}
+
+.tamanho_sandalia{
+	margin-top: -5px;
+	padding: 0px 10px;
+text-align: center;
+}
+body .popover.bottom>.arrow{
+	margin-left: -45%;
+}
+.btn-continuar-comprando{float:right; border-radius:2px;}

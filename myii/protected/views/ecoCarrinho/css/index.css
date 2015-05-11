@@ -1,0 +1,19 @@
+.carrinho_produto img{
+  max-width: 100px;
+}
+
+.label-carrinho
+{
+	width: 100%; 
+	text-align:left; 
+	white-space: normal; 
+	font-size: 12px; 
+	border: 1px solid #ddd; 
+	background: #fdfdfd; 
+	border-radius: 10px; 
+	margin-left: 10px; 
+	color: #666; 
+	font-weight: normal; 
+	padding: 0.4em 0.8em 0.5em; 
+	display: inline-block;
+}
