@@ -17,3 +17,13 @@
 	padding: 0.4em 0.8em 0.5em; 
 	display: inline-block;
 }
+
+.errorMessage {
+	margin: 0;
+	color: rgb(217, 83, 79);
+}
+
+.alert-error-cep{
+	font-size: 12px;
+	display: none;
+}

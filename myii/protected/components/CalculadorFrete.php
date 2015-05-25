@@ -4,7 +4,7 @@ class CalculadorFrete
 {
 	public $cep = '76450000';
 
-	public function calcular()
+	public function calcular($session)
 	{
 		$parametros = array();
 		
@@ -51,18 +51,20 @@ class CalculadorFrete
 		$dados = curl_exec($curl);
 		$dados = simplexml_load_string($dados);
 		
-		$result = array();
+		$resultado = null;
+		$i = 0;
 		foreach($dados->cServico as $linhas) {
 			if($linhas->Erro == 0) {
-				$result[] = $linhas;
-				// echo $linhas->Codigo.'</br>';
-				// echo $linhas->Valor .'</br>';
-				// echo $linhas->PrazoEntrega.' Dias </br>';
+				$session[0]->frete[$i] = json_encode(array(
+					'codigo' => $linhas->Codigo,
+					'valor'  => $linhas->Valor,
+				    'prazo'  =>$linhas->PrazoEntrega));
+				$i++;
 			}else {
 				//echo $linhas->MsgErro;
 			}
 		}
-		return $result;
+		return $session;
 	}
 }
 ?>

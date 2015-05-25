@@ -1,4 +1,4 @@
-]<?php
+<?php
 
 class EcoUsuarioController extends Controller
 {
@@ -14,7 +14,7 @@ class EcoUsuarioController extends Controller
 	public function filters()
 	{
 		if(!Yii::app()->user->getId())
-			exit();
+			$this->redirect('?r=site/login');
 		return array(
 			'accessControl', // perform access control for CRUD operations
 			'postOnly + delete', // we only allow deletion via POST request
@@ -150,7 +150,7 @@ class EcoUsuarioController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$model = EcoUsuario::model()->findByAttributes(array('usu_login' => Yii::app()->user->getId()));
+		$model = EcoUsuario::model()->findByAttributes(array('usu_email' => Yii::app()->user->getId()));
 		$this->render('index',array(
 			'model'=>$model,
 			'colecoes'=>EcoColecoes::model()->findAll(),

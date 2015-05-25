@@ -22,7 +22,7 @@
  * @property integer $usu_cep
  * @property string $usu_data
  */
-class EcoUsuario extends CActiveRecord
+class EcoUsuario extends CActiveRecord 
 {
 	/**
 	 * @return string the associated database table name

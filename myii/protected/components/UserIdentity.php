@@ -17,7 +17,7 @@ class UserIdentity extends CUserIdentity
 	 */
 	public function authenticate()
 	{
-		$record = EcoUsuario::model()->findByAttributes(array('usu_login' => $this->username));
+		$record = EcoUsuario::model()->findByAttributes(array('usu_email' => $this->username));
         if ($record === NULL)
             $this->errorCode = self::ERROR_USERNAME_INVALID;
         else if ($record->usu_senha !== md5($this->password))

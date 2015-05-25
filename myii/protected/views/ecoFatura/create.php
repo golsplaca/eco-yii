@@ -1,3 +1,5 @@
+<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/protected/views/ecoUsuario/css/style.css" />
+
 <?php
 /* @var $this EcoFaturaController */
 /* @var $model EcoFatura */

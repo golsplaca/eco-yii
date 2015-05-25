@@ -28,7 +28,7 @@ class EcoCarrinhoController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','json', 'add', 'remove'),
+				'actions'=>array('index', 'calcularFrete', 'view','json', 'add', 'remove'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -51,15 +51,33 @@ class EcoCarrinhoController extends Controller
 	 */
 	public function actionIndex()
 	{	
+		$_SESSION['cep'] = null;
+		$frete = null;
+		if(isset($_POST['cep'])){
+			$calcularFrete = new CalculadorFrete();
+			$_SESSION['EcoCarrinho'][0]->cep = $_POST['cep'];
+			$_SESSION['cep'] = $calcularFrete->cep;
+			if(isset($_SESSION['EcoCarrinho'][0])){
+				$_SESSION['EcoCarrinho'] = $calcularFrete->calcular($_SESSION['EcoCarrinho']);
+			}
+		}
+		$_SESSION['EcoCarrinho'] = isset($_SESSION['EcoCarrinho'][0])?$_SESSION['EcoCarrinho']:null;
 
-		$calcularFrete = new CalculadorFrete();
-		$calcularFrete->cep = '76450000';
-		$calcularFrete->calcular();
+		if(count($_SESSION['EcoCarrinho']) < 1){
+			$this->render('s_produto',array(
+				'model'=>$_SESSION['EcoCarrinho'],
+				'categorias'=>EcoCategoria::model()->findAll(),
+				'colecoes'=>EcoColecoes::model()->findAll(),
+				'frete'=> $frete,
+			));
 
+			exit;	
+		}
 
 		$this->render('index',array(
-			'model'=>isset($_SESSION['EcoCarrinho'])?$_SESSION['EcoCarrinho']:null,
+			'model'=>$_SESSION['EcoCarrinho'],
 			'categorias'=>EcoCategoria::model()->findAll(),
+			'frete'=> $frete,
 		));
 	}
 
@@ -79,5 +97,14 @@ class EcoCarrinhoController extends Controller
 			unset($_SESSION['EcoCarrinho'][$_GET['remove']]);
 		$model->carrinho = $_SESSION['EcoCarrinho'];
 		$this->redirect(array('index'));
+	}
+	public function actionCalcularFrete()
+	{   
+		$frete = new CalculadorFrete();
+		$frete->cep = '76450000';
+		echo json_encode($frete->calcular());
+		// echo $linhas->Codigo.'</br>';
+				// echo $linhas->Valor .'</br>';
+				// echo $linhas->PrazoEntrega.' Dias </br>';
 	}
 }

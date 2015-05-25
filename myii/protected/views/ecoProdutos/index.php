@@ -19,4 +19,3 @@
 // );
 	$this->renderPartial('produtos', array('produtos' => $produtos));
 ?>
-</div>

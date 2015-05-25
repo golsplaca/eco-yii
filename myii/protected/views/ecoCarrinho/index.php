@@ -9,13 +9,9 @@
 		$this->menu = $categorias;
 		$this->menu[0]->carrinho = array();
 	}
-
 	if(isset($colecoes))
 		$this->renderPartial('../ecoColecoes/index', array('colecoes'=>$colecoes));
-
 	echo '<div class="col-md-9 col-md-9-produtos">';
-
-	
 ?>
 <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/protected/views/ecoCarrinho/css/index.css" />
 <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/protected/views/ecoCarrinho/js/controller.js"></script>
@@ -77,67 +73,31 @@
         <h5 class="text-right">Subtotal R$ <?= $valor_total ?></h5>
     </div>
 
-          <div class="col-sm-12">
-
-            <div class="col-md-6">
-              <div class="form-group" style="margin-top:11px;">
-                <div id="grupo-campo-cep" class="input-group">
-                  <input type="text" class="form-control" id="box_modal_carrinho_cep" placeholder="Digite o CEP"
-                   name="cep" value="">
-                  <span class="input-group-btn">
-                    <button id="consultar_cep" onclick="carrinho_frete_calcular(); return false;" data-loading-text="Aguarde..." class="btn btn-primary" style="">Calcular</button>
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-6 text-right">
-              
-              <h5 class="label label-carrinho">
-                <label style="text-align:left; font-weight: normal; line-height: 18px;">
-                  <input type="radio" value="pac" name="box_carrinho_tipo_entrega" onclick="carrinho_selecionar_entrega(16.5,&quot;PAC&quot;);">&nbsp;&nbsp;
-                  PAC: <b>R$ 16,50</b> - Em até <b>6 dias úteis</b>.
-                </label>
-              </h5>
-
-              <h5 class="label label-carrinho">
-              <label style="text-align:left; font-weight: normal; line-height: 18px;">
-                <input type="radio" value="sedex" name="box_carrinho_tipo_entrega" onclick="carrinho_selecionar_entrega(34.7,&quot;SEDEX&quot;);">&nbsp;&nbsp;
-                SEDEX: <b>R$ 34,70</b> - Em até <b>4 dias úteis</b>.
-              </label>
-              </h5>
-
-            </div>
+    <?php 
+      if($model[0])
+        $this->renderPartial('frete', array('frete' => $model[0]->frete));
+    ?>
+                
+    <div class="col-sm-12 box_modal_carrinho_total" style="margin-top: 30px">
+      <div class="row">
+          <div class="col-xs-12 text-right">
+            <h3 style="white-space: nowrap">Total: R$ <span>166,40</span></h3>
           </div>
-
-          <div class="col-sm-12 box_modal_carrinho_total" style="margin-top: 30px">
-            <div class="row">
-                <div class="col-xs-12 text-right">
-                  <h3 style="white-space: nowrap">Total: R$ <span>166,40</span></h3>
-                </div>
-            </div>
-          </div>
-
-
-      <div class="col-sm-12" style="margin-top: 30px">
-
-        <div class="row">
-
-          <div class="col-xs-3 col-sm-3">
-            <button id="continuar_comprando" class="btn btn-primary btn-sm" style="width:100%" onclick="window.open('http://www.uselorenashoes.com.br','_top');"><span class="visible-sm visible-md visible-lg">Adicionar mais produtos</span><span class="visible-xs">←</span></button>
-          </div>
-
-          <div class="col-xs-9 col-sm-3 col-sm-offset-6">
-
-            <img id="ajax-endereco" src="/images/loading.gif" style="display:none;">
-            <button id="btn-informe-cep" class="btn btn-success btn-lg" onclick="alert('Informe o CEP.');" style="width: 100%; font-weight: bold; display: none;">Pagamento</button>
-                <button id="btn-seguir-pagamento" class="btn-success btn btn-lg" style="width: 100%; font-weight: bold;" onclick="entrega();">Pagamento</button>
-
-          </div>
-
-        </div>
-
       </div>
-
     </div>
+    <div class="col-sm-12" style="margin-top: 30px">
+      <div class="row">
+        <div class="col-xs-3 col-sm-3">
+          <a href="?r=ecoProdutos/index" class="btn btn-primary btn-sm" style="width:100%; border-radius:2px;">
+            <span class="visible-sm visible-md visible-lg">Adicionar mais produtos</span><span class="visible-xs">←</span>
+          </a>
+        </div>
+        <div class="col-xs-9 col-sm-3 col-sm-offset-6">
+          <img id="ajax-endereco" src="/images/loading.gif" style="display:none;">
+              <a href="?r=ecoFatura/create" id="btn-seguir-pagamento" class="btn-success btn btn-lg" style="width: 100%; border-radius:2px; font-weight: bold;" 
+                      onclick="return finalizarCompra();">Pagamento</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
